@@ -1,0 +1,49 @@
+extends layouts/base
+block page-content
+	+row()
+		+col("12","12","12","12","12")     
+			+basiccard("Ribbon") 
+
+				.ui.two.column.grid
+					.column
+						.ui.raised.segment
+							a.ui.red.ribbon.label Overview
+							span Account Details
+							p.
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							a.ui.blue.ribbon.label Community
+							p.
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					.column
+						.ui.segment
+							a.ui.orange.right.ribbon.label Specs
+							p.
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							a.ui.teal.right.ribbon.label Reviews
+							p.
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							
+			+basiccard("Image Ribbon") 
+				.ui.two.column.grid
+					.column
+						.ui.fluid.image
+							.ui.black.ribbon.label
+								i.hotel.icon
+							img(src='./assets/img/landscape/3.jpg' style="height:200px")
+					.column
+						.ui.fluid.image
+							.ui.blue.ribbon.label
+								i.spoon.icon
+							img(src='./assets/img/landscape/1.jpg' style="height:200px")
+			+basiccard("Corner Ribbon") 
+				.ui.two.column.grid
+					.column
+						.ui.fluid.image
+							a.ui.left.corner.label
+								i.heart.icon
+							img(src='./assets/img/landscape/2.jpg' style="height:200px")
+					.column
+						.ui.fluid.image
+							a.ui.red.right.corner.label
+								i.save.icon
+							img(src='./assets/img/landscape/4.jpg' style="height:200px")

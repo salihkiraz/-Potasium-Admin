@@ -1,0 +1,19 @@
+.page-breadcrumb{
+    z-index: 99;
+    .ui.segment{
+        background: transparent!important;
+        &.breadcrumb-segment{
+        border:0;
+        box-shadow: 0;
+        margin-bottom: 20px;
+        border-radius: 0;
+        height: 170px;
+        background: $breadcrumb-bg-color!important;
+        }
+        .page-subtitle{
+            margin-top: 5px;
+            color:$breadcrumb-title-color;
+        }
+        
+    }
+}

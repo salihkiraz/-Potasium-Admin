@@ -1,0 +1,45 @@
+html {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: 'Quicksand', sans-serif !important;
+  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins Bold', sans-serif !important;
+  font-weight: 700;
+}
+
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+  background: $bg-color;
+}
+
+html.ios {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+html.ios,
+html.ios body {
+  height: initial !important;
+}
+//Sweet Alert 2 Body Scroll fixed
+html.swal2-shown,
+body.swal2-shwon {
+  overflow-y: auto !important;
+}

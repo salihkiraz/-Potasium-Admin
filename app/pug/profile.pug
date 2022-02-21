@@ -1,0 +1,155 @@
+extends layouts/base
+block styles
+	link(rel='stylesheet', href='css/pages/timeline.css')
+block  page-title
+	|	Potasium Admin Profile
+block breadcrumb-item-1
+	| 	Pages
+block breadcrumb-item-2
+	| 	Profile Page
+block page-content
+	.row(style="margin-bottom:0")
+		.col-12
+			.card.profile-card
+				.card-body
+	.row.no-gutters.profile-content
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-3
+			.card.profile-info-card
+				.card-body   
+					.row
+						.col-md-12.mb-5
+							img.profile-img.ui.circular.image.small.z-depth-2(src="assets/img/people/1.jpg")
+						.col-md-12.mb-5.text-center
+							.ui.labeled.icon.button.text-ARSENIC
+								i.iconfont.icon.icon-tuandui
+								| Follow
+						.col-md-6.text-center
+							h4.text-BDAZZLEDBLUE Follower
+							h1.text-ARSENIC 354
+						.col-md-6.text-center
+							h4.text-BDAZZLEDBLUE Following
+							h1.text-ARSENIC 298
+						.col-md-12.text-center
+							.ui.divider
+							h3.text-BDAZZLEDBLUE Performance
+							p.text-ARSENIC 58 and 43 Reviews
+							.ui.divider
+						.col-md-12.mb-2
+							h3.text-BDAZZLEDBLUE
+								i.icon.iconfont.icon-jingjide
+								| Projects
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/1.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/2.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/3.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/4.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/5.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/6.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/7.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/8.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/9.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/10.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/11.jpeg")
+						.col-md-4.mb-4
+							img.ui.rounded.image.fluid.z-depth-2(src="assets/img/building/12.jpeg")
+
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-9
+			.card.card-profile-header
+				.card-body
+					.row
+						.col-md-6
+							h4.text-ARSENIC Isabella Henry
+							h6.text-ARSENIC Senior Civil Engineer 
+						.col-md-6
+							.d-flex.justify-content-end
+								button.ui.icon.button
+									i.comment.icon
+								button.ui.button.blue
+									i.fire.icon
+									|     Send Friend Request
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
+				.row
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
+						.card.card-profile-content
+							.card-body
+								.ui.link.items.divided
+									.item
+										.ui.tiny.image.rounded
+											img(src="assets/img/people/1.jpg")  
+										.content
+											.header Isabella Henry
+											.meta
+												span.price 10 Hours Ago
+											.description
+												p Hi, my new portfolio update with my last projects 
+													a.text-primary #build 
+													a.text-primary #portfolio
+											.extra
+												.ui.label
+													i.star.icon.yellow
+													|  6
+												.ui.label
+													i.comment.icon
+													|  8
+												.ui.label
+													i.share.icon
+													|  12
+									.item
+										.ui.tiny.image.rounded
+											img(src="assets/img/people/1.jpg")  
+										.content
+											.header Isabella Henry
+											.meta
+												span.price 1 Days Ago
+											.description
+												.row
+													.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-3.mb-3
+														img.ui.rounded.fluid.image.z-depth-3(src="assets/img/building/5.jpeg")
+													.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-3.mb-3
+														img.ui.rounded.fluid.image.z-depth-3(src="assets/img/building/3.jpeg")
+													.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-3.mb-3
+														img.ui.rounded.fluid.image.z-depth-3(src="assets/img/building/8.jpeg")
+													.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-3.mb-3
+														a.ui.rounded.fluid.image.z-depth-3(href="#")
+															img(src="assets/img/building/2.jpeg") 
+															span.more-image +2
+											.extra
+												.ui.label
+													i.star.icon.yellow
+													|  5
+												.ui.label
+													i.comment.icon
+													|  18
+												.ui.label
+													i.share.icon
+													|  4
+									.item
+										.ui.tiny.image.rounded
+											img(src="assets/img/people/1.jpg")  
+										.content
+											.header Isabella Henry
+											.meta
+												span.price 3 Days Ago
+											.description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+											.extra
+												.ui.label
+													i.star.icon.yellow
+													|  12
+												.ui.label
+													i.comment.icon
+													|  4
+												.ui.label
+													i.share.icon
+													|  1
+block scripts
+	script( src='libs/vertical-timeline-codyhouse/js/main.js')

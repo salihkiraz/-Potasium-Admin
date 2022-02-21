@@ -1,0 +1,65 @@
+extends layouts/base
+block page-content
+	+row()
+		+col("12","12","12","12","4")
+			+basiccard("Basic Star Rating")
+				.ui.rating(data-max-rating='5')
+		+col("12","12","12","12","4")
+			+basiccard("Styled Star Rating")
+				.ui.star.rating(data-rating='8')
+		+col("12","12","12","12","4")
+			+basiccard("Heart Rating")
+				.ui.heart.rating(data-rating='1', data-max-rating='8')
+	+row()
+		+col("12","12","12","12","6")
+			+basiccard("Inverted Loader")
+				.ui.segment
+					p
+						img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')
+					.ui.active.dimmer
+						.ui.text.loader Please Wait...
+					p Lorem ipsum
+		+col("12","12","12","12","6")
+			+basiccard("Default Loader")
+				.ui.segment
+					p
+						img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')
+					.ui.active.inverted.dimmer
+						.ui.text.loader Loading
+					p Lorem ipsum
+	+row()
+		+col("12","12","12","12","6")
+			+basiccard("Remote Data Search Api")
+				.ex_search1
+					.ui.search
+						.ui.left.icon.input.fluid
+							input.prompt(type='text', placeholder='Search GitHub(Min 3 Char.)')
+							i.github.icon
+		+col("12","12","12","12","6")
+			+basiccard("Local Data Search Api")
+				.ex_search2
+					.ui.search
+						.ui.icon.input.fluid
+							input.prompt(type='text', placeholder='Search countries...')
+							i.search.icon
+						.results
+	+row()
+		+col("12","12","12","12","6")
+			+basiccard("Dimmer Image")
+				.ui.image.dimmer-example
+					.ui.dimmer
+						.content
+							h2.ui.inverted.header Jane Doe
+							.ui.primary.button Add
+							.ui.button View
+					img.ui.fluid.image(src='./assets/img/gallery/42.jpeg')
+		+col("12","12","12","12","6")
+			+basiccard("Circular Dimmer Image")
+				.ui.circular.image.dimmer-example
+					.ui.dimmer
+						.content
+							.ui.small.primary.button Add
+							.ui.small.button View
+					img.ui.fluid.image(src='./assets/img/gallery/38.jpeg')
+block scripts
+	script( src='./js/pages/extra-ui.min.js')

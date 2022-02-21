@@ -1,0 +1,63 @@
+@mixin linear-gradient-b($args...) {
+    background-image: -o-linear-gradient($args); 
+    background-image: -moz-linear-gradient($args); 
+    background-image: -webkit-linear-gradient($args); 
+    background-image: linear-gradient($args); 
+   }
+   .plum-plate-g{
+    @include linear-gradient-b(45deg, #667eea , #764ba2);
+   }
+   .cherry-g{
+    @include linear-gradient-b(45deg, #EB3349, #F45C43);
+   }
+   .sea-weed-g{
+    @include linear-gradient-b(45deg, #4CB8C4, #3CD3AD);
+   }
+   .aqua-marine-g{
+    @include linear-gradient-b(45deg, #1A2980, #26D0CE);
+   }
+   .aubergine-g{
+    @include linear-gradient-b(45deg, #AA076B, #61045F);
+   }
+   .mango-pulp-g{
+    @include linear-gradient-b(45deg, #F09819, #EDDE5D);
+   }
+   .rose-water-g{ 
+    @include linear-gradient-b(45deg, #E55D87, #5FC3E4);
+   }
+   .nimvelo-g{
+    @include linear-gradient-b(45deg, #314755, #26a0da);
+   }
+   .purple-love-g{
+    @include linear-gradient-b(45deg, #cc2b5e, #753a88);
+   }
+   .night-fade-g{
+    @include linear-gradient-b(45deg, #a18cd1, #fbc2eb);
+   }
+   .tempting-azure-g{
+    @include linear-gradient-b(45deg, #84fab0, #8fd3f4);
+   }
+   .malibu-beach-g{
+    @include linear-gradient-b(45deg, #4facfe, #00f2fe);
+   }
+   .sexy-blue-g{
+    @include linear-gradient-b(45deg, #2193b0, #6dd5ed);
+   }
+   // https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html 
+  //
+  // grayscale      ex: filter: grayscale(100%);
+  // sepia          ex: filter: sepia(100%);
+  // saturate       ex: filter: saturate(0%);
+  // hue-rotate     ex: filter: hue-rotate(45deg);
+  // invert         ex: filter: invert(100%);
+  // brightness     ex: filter: brightness(15%);
+  // contrast       ex: filter: contrast(200%);
+  // blur           ex: filter: blur(2px);
+  
+  @mixin filter($filter-type,$filter-amount) { 
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+  }

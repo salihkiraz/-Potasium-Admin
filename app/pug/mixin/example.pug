@@ -1,0 +1,10 @@
+- var items = [{header: "Checkout", content: "Check Reviews",color:"#E15554"},{header: "Research", content: "Research for Google",color:"#4D9DE0"},{header: "Research", content: "Research for Google",color:"#4D9DE0"},{header: "Research", content: "Research for Google",color:"#4D9DE0"}];
+mixin cols()
+  .ui.equal.width.grid
+    .row
+        each item in items
+            .column
+                .ui.segment.n-segment
+                    .segment-header=item.header
+                    .segment-body=item.content
+                    .segment-footer=item.color

@@ -1,0 +1,58 @@
+extends layouts/base
+block  page-title
+	| Html5 Editor
+block breadcrumb-item-1
+	| Form
+block breadcrumb-item-2
+	| Html5 Editor
+block page-content
+
+	+row()
+	+col("12","12","12","12","12")     
+		+basiccard("Html5 Editor") 
+			#editor
+				h2 This editor is the default build of Trumbowyg.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aliquam, minima fugiat placeat provident  optio nam reiciendis eius beatae quibusdam!
+				p | The text is derived from Cicero's De Finibus Bonorum et Malorum (On the Ends of Goods and Evils, or alternatively [About] The Purposes of Good and Evil). The original passage began: Neque porro quisquam est
+				|      qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit (Translation: &quot;Neither is there
+				|      anyone who loves grief itself since it is grief and thus wants to obtain it&quot;).
+		+basiccard("Html5 Editor Multi Lang(ar)") 
+			#editor_lang
+				h2 This editor is the default build of Trumbowyg.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aliquam, minima fugiat placeat provident  optio nam reiciendis eius beatae quibusdam!
+				p | The text is derived from Cicero's De Finibus Bonorum et Malorum (On the Ends of Goods and Evils, or alternatively [About] The Purposes of Good and Evil). The original passage began: Neque porro quisquam est
+				|      qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit (Translation: &quot;Neither is there
+				|      anyone who loves grief itself since it is grief and thus wants to obtain it&quot;).
+block styles
+	link(rel="stylesheet" href="libs/trumbowyg/dist/ui/trumbowyg.min.css")
+	link(rel="stylesheet" href="libs/trumbowyg/dist/plugins/colors/ui/trumbowyg.colors.min.css")
+block scripts
+	script( src="libs/trumbowyg/dist/trumbowyg.min.js")
+	script( src="libs/trumbowyg/dist/langs/ar.min.js")
+	script( src="libs/trumbowyg/dist/plugins/base64/trumbowyg.base64.min.js")
+	script( src="libs/trumbowyg/dist/plugins/colors/trumbowyg.colors.min.js")
+	
+
+
+	script.
+			$('#editor').trumbowyg({
+				 btns: [
+							['viewHTML'],
+							['undo', 'redo'], // Only supported in Blink browsers
+							['formatting'],
+							['strong', 'em', 'del'],
+							['superscript', 'subscript'],
+							['link'],
+							['insertImage'],
+							['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+							['unorderedList', 'orderedList'],
+							['horizontalRule'],
+							['removeformat'],
+							['fullscreen'],
+							['base64'],['foreColor', 'backColor']
+						]
+			});
+			$('#editor_lang').trumbowyg({
+				lang:'ar'
+			});
+

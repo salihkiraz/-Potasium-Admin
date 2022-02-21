@@ -1,0 +1,59 @@
+include ../menu/menu.pug
+	.ui.fluid.vertical.accordion.styled.inverted.menu.side-menu
+		each menu_item in menu
+			if (menu_item.child.length>0)
+				.title.item
+					i(class="title-icon icon iconfont "+ menu_item.icon)
+					span.accordion-text #{menu_item.text}
+					i.dropdown.icon.accordion-icon
+				.content
+					each sub_menu in menu_item.child
+						if sub_menu.child
+							.vertical.accordion.menu.l-1
+								.title.item
+									span.accordion-text #{sub_menu.text}
+									i.dropdown.icon.accordion-icon
+								.content
+									each sub_menu2 in sub_menu.child
+										if sub_menu2.child
+											.vertical.accordion.menu.l-2
+												.title.item
+													span.accordion-text #{sub_menu2.text}
+													i.dropdown.icon.accordion-icon
+												.content
+													each sub_menu3 in sub_menu.child
+														a.item(href=""+sub_menu3.link+"") #{sub_menu3.text}
+										else
+											a.item(href=""+sub_menu2.link+"") #{sub_menu2.text}
+						else
+							a.item(href=""+sub_menu.link+"") #{sub_menu.text}                        
+		each menu_item in menu
+			if (menu_item.child.length>0)
+				.ui.dropdown.item.display-none
+					i(class="title-icon icon iconfont "+ menu_item.icon )
+					.menu.display-none
+						.drop-header #{menu_item.text}
+						each sub_menu in menu_item.child
+							if sub_menu.child
+								.item
+									i.dropdown.icon
+									span.text #{sub_menu.text}
+									.menu.sub-drop-menu
+										.sub-drop-header #{sub_menu.text}
+										each sub_menu2 in sub_menu.child
+											if sub_menu2.child
+												.item
+													i.dropdown.icon
+													span.text #{sub_menu2.text}
+													.menu.sub-drop-menu
+														.sub-drop-header #{sub_menu2.text}
+														each sub_menu3 in sub_menu.child
+															a.item(href=""+sub_menu3.link+"") #{sub_menu3.text}
+											else
+												a.item(href=""+sub_menu2.link+"") #{sub_menu2.text}
+							else
+								a.item(href=""+sub_menu.link+"") #{sub_menu.text}
+			else
+				a.item.single-item(href=""+menu_item.link+"")
+					i(class="title-icon icon iconfont "+ menu_item.icon)
+					span #{menu_item.text}

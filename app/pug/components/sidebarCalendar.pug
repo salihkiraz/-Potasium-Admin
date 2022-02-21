@@ -1,0 +1,20 @@
+include ../mixin/todo.pug
+.ui.right.sidebar.vertical.push.calendar-side-menu
+    .header
+        .ui.pointing.secondary.two.item.tabular.menu.inverted.calendar-tab-menu
+            a.item.active(data-tab='first')
+                i.icon.iconfont.icon-hotdrinksglass
+            a.item(data-tab='second')
+                i.icon.iconfont.icon-palette
+    .ui.tab.active(data-tab="first")
+        .ui.equal.width.center.aligned.stackable.padded.grid
+            .row
+                .column
+                    h2 Wednesday
+                    h4 12.December 2018
+                    #calendar
+                    +todo-list()
+    .ui.tab(data-tab="second")
+        .ui.basic.segment
+            a.ui.black.button.theme-select(data-theme="dark") Dark
+            a.ui.button.theme-select(data-theme="light") Light

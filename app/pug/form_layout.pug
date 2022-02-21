@@ -1,0 +1,335 @@
+extends layouts/base
+block page-content
+	+row()
+		+col("12","12","12","12","12")            
+				+basiccard("Horizontal Form" )
+					.col-md-12
+						.form-group.row
+							label.col-md-2(for='input-text-1') Text Input 
+							input#input-id-1.form-control.col-md-10(type='email', placeholder='Enter email')
+						.form-group.row
+							label.col-md-2(for='input-password-1') Password
+							input#input-password-1.form-control.col-md-10(type='password', placeholder='Password')
+						.form-group.row
+							label.col-md-2(for='select-1') Select
+							select#select-1.form-control.col-md-10
+										option(value='none', selected='', disabled='') select 1
+										option(value='select2') select 2
+										option(value='select3') select 3
+										option(value='select4') select 4
+										option(value='select5') select 5
+										option(value='select6') select 6
+											
+						.form-group.row
+							label.col-md-2(for='exampleFormControlSelect2') Example multiple select
+							select#exampleFormControlSelect2.form-control.col-md-10(multiple='')
+								option 1
+								option 2
+								option 3
+								option 4
+								option 5
+
+
+					fieldset.form-group
+						.row
+							legend.col-form-legend.col-sm-2 Radios
+							.col-sm-10
+								.form-check
+									label.form-check-label 
+										input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='option1', checked='') 
+										|  Option one is this and that—be sure to include why it's great
+								.form-check
+									label.form-check-label 
+										input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
+										|  Option two can be something else and selecting it will deselect option one
+								.form-check.disabled
+									label.form-check-label
+										input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')  
+										|  Option three is disabled
+					.form-group.row
+						label.col-md-2(for='select-1') Checkbox
+						.form-check.col-md-10
+							label.form-check-label
+								input.form-check-input(type='checkbox', value='')
+								|  Option one is this and that—be sure to include why it's great
+					.form-actions
+
+							button.btn.btn-grey(type='submit') Reset 
+							button.btn.btn-primary.mr-1(type='button') Save 
+								i.fa.fa-floppy-o
+
+				+basiccard("Horizontal Form")
+					form
+						.form-body
+							h4.form-section User İnfo
+								i.fa.fa-user
+							.row
+								.col-md-6
+									.form-group.row
+										label.col-md-3(for='userinput1') Fist Name
+										.col-md-9
+											input#userinput1.form-control(type='text', placeholder='First Name', name='firstname')
+								.col-md-6
+									.form-group.row
+										label.col-md-3(for='userinput2') Last Name
+										.col-md-9
+											input#userinput2.form-control(type='text', placeholder='Last Name', name='lastname')
+							.row
+								.col-md-6
+									.form-group.row
+										label.col-md-3(for='userinput3') Username
+										.col-md-9
+											input#userinput3.form-control(type='text', placeholder='Username', name='username')
+								.col-md-6
+									.form-group.row
+										label.col-md-3(for='userinput4') Nick Name
+										.col-md-9
+											input#userinput4.form-control(type='text', placeholder='Nick Name', name='nickname')
+							h4.form-section Detail info
+								i.fa.fa-id-card
+							.row
+								.col-md-6
+									.form-group.row
+										label.col-md-3(for='userinput5') Email
+										.col-md-9
+											input#userinput5.form-control(type='email', placeholder='email')
+									.form-group.row
+										label.col-md-3(for='userinput6') Website
+										.col-md-9
+											input#userinput6.form-control(type='url', placeholder='http://')
+									.form-group.row
+										label.col-md-3 Contact Number
+										.col-md-9
+											input#userinput7.form-control(type='tel', placeholder='Contact Number')
+								.col-md-6
+									.form-group.row
+										label.col-md-2(for='userinput8') Resume
+										.col-md-10
+											textarea#userinput8.form-control(rows='7', name='resume', placeholder='resume')
+
+
+		+col("12","12","12","12","6")            
+				+basiccard("Vertical Form" )
+					.col-md-12
+						.form-group(style='position: static;')
+							label(for='input-text-1') Text Input
+							input#input-id-1.form-control(type='email', placeholder='Enter email')
+						.form-group
+							label(for='input-password-1') Password
+							input#input-password-1.form-control(type='password', placeholder='Password')
+						.form-group
+							label(for='select-1') Select
+							select#select-1.form-control
+										option(value='none', selected='', disabled='') select 1
+										option(value='select2') select 2
+										option(value='select3') select 3
+										option(value='select4') select 4
+										option(value='select5') select 5
+										option(value='select6') select 6  
+											
+						.form-group
+							label(for='exampleFormControlSelect2') Example multiple select
+							select#exampleFormControlSelect2.form-control(multiple='')
+								option 1
+								option 2
+								option 3
+								option 4
+								option 5      
+
+
+						fieldset.form-group
+							.row
+								legend.col-form-legend.col-sm-2 Radios
+								.col-sm-10
+									.form-check
+										label.form-check-label 
+											input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='option1', checked='') 
+											|  Option one is this and that—be sure to include why it's great
+									.form-check
+										label.form-check-label 
+											input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
+											|  Option two can be something else and selecting it will deselect option one
+									.form-check.disabled
+										label.form-check-label
+											input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')  
+											|  Option three is disabled
+						.form-group
+							label(for='select-1') Checkbox
+							.form-check
+								label.form-check-label
+									input.form-check-input(type='checkbox', value='')
+									|  Option one is this and that—be sure to include why it's great
+						.form-group
+							.form-check.disabled
+								label.form-check-label
+									input.form-check-input(type='checkbox', value='', disabled='')
+									|  Option two is disabled
+						.form-group
+							label(for='disabledTextInput') Disabled input
+							input#disabledTextInput.form-control(type='text',disabled="disabled", placeholder='Disabled input')
+												
+						.form-group
+							label(for='inputDate') Schedule Preview Date
+								input.form-control(type='date', class='id=', name='inputDate', placeholder='Enter date')
+
+						.form-group
+							label  Price
+								.input-group
+									span.input-group-prepend 
+										.input-group-text $
+									input.form-control(type='text', placeholder='Price enter', name='price')
+									span.input-group-append 
+										.input-group-text .00
+						.form-actions
+								button.btn.btn-gray(type='submit') Reset 
+								
+								button.btn.btn-primary.mr-1(type='button') Save 
+									i.fa.fa-floppy-o
+		+col("12","12","12","12","6") 
+				+basiccard("Vertical Form")
+					form#contact_form.well.form-horizontal(action=' ', method='post')       
+						fieldset
+
+							// Text input
+							.form-group
+								label.col-md-12.control-label First Name
+								.col-md-12.inputGroupContainer
+									.input-group
+										span.input-group-prepend
+											.input-group-text
+												i.fa.fa-user
+										input.form-control(name='first_name', placeholder='First Name', type='text')
+							// Text input
+							.form-group
+								label.col-md-12.control-label Last Name
+								.col-md-12.inputGroupContainer
+									.input-group
+										span.input-group-prepend
+											.input-group-text
+												i.fa.fa-user
+										input.form-control(name='last_name', placeholder='Last Name', type='text')
+							// Text input
+							.form-group
+								label.col-md-12.control-label E-Mail
+								.col-md-12.inputGroupContainer
+									.input-group
+										span.input-group-prepend
+											.input-group-text
+												i.fa.fa-envelope
+										input.form-control(name='email', placeholder='E-Mail Address', type='text')
+							// Text input
+							.form-group
+								label.col-md-12.control-label Phone 
+								.col-md-12.inputGroupContainer
+									.input-group
+										span.input-group-prepend
+											.input-group-text
+												i.fa.fa-phone
+										input.form-control(name='phone', placeholder='(845)555-1212', type='text')
+							// Text input
+							.form-group
+								label.col-md-12.control-label Address
+								.col-md-12.inputGroupContainer
+									.input-group
+										span.input-group-prepend
+											.input-group-text
+												i.fa.fa-home
+										input.form-control(name='address', placeholder='Address', type='text')
+							// Text input
+							.form-group
+								label.col-md-12.control-label City
+								.col-md-12.inputGroupContainer
+									.input-group
+										span.input-group-prepend
+											.input-group-text
+												i.fa.fa-home
+										input.form-control(name='city', placeholder='city', type='text')
+							// Select Basic
+							.form-group
+								label.col-md-12.control-label State
+								.col-md-12.selectContainer
+									.input-group
+										span.input-group-prepend
+											.input-group-text
+												i.fa.fa-map
+										select.form-control.selectpicker(name='state')
+											option(value=' ') Please select your state
+											option Alabama
+											option Alaska
+											option Arizona
+											option Arkansas
+											option California
+											option Colorado
+											option Connecticut
+											option Delaware
+											option District of Columbia
+											option  Florida
+											option Georgia
+											option Hawaii
+											option daho
+											option Illinois
+											option Indiana
+											option Iowa
+											option  Kansas
+											option Kentucky
+											option Louisiana
+											option Maine
+											option Maryland
+											option  Mass
+											option Michigan
+											option Minnesota
+											option Mississippi
+											option Missouri
+											option Montana
+											option Nebraska
+											option Nevada
+											option New Hampshire
+											option New Jersey
+											option New Mexico
+											option New York
+											option North Carolina
+											option North Dakota
+											option Ohio
+											option Oklahoma
+											option Oregon
+											option Pennsylvania
+											option Rhode Island
+											option South Carolina
+											option South Dakota
+											option Tennessee
+											option Texas
+											option  Uttah
+											option Vermont
+											option Virginia
+											option Washington
+											option West Virginia
+											option Wisconsin
+											option Wyoming
+							// Text input
+							.form-group
+								label.col-md-12.control-label Zip Code
+								.col-md-12.inputGroupContainer
+									.input-group
+										span.input-group-prepend
+											.input-group-text
+												i.fa.fa-id-card
+										input.form-control(name='zip', placeholder='Zip Code', type='text')
+							// Text input
+							.form-group
+								label.col-md-12.control-label Website or domain name
+								.col-md-12.inputGroupContainer
+									.input-group
+										span.input-group-prepend
+											.input-group-text
+												i.fa.fa-globe
+										input.form-control(name='website', placeholder='Website or domain name', type='text')
+							
+							// Success message
+							#info_message.mb-30.alert.alert-info(role='info')  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+							// Success message
+							#info_message.alert.alert-danger(role='danger')  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+							.form-actions
+
+								button.btn.btn-gray(type='submit') Reset 
+								button.btn.btn-primary.mr-1(type='button') Save 
+									i.fa.fa-floppy-o

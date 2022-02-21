@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IconFont</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+    <div class="main markdown">
+        <h1>IconFont 图标</h1>
+        <ul class="icon_lists clear">
+            
+                <li>
+                <i class="icon iconfont icon-butcher_knife"></i>
+                    <div class="name">butcher_knife</div>
+                    <div class="fontclass">.icon-butcher_knife</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-floppy_disk"></i>
+                    <div class="name">floppy_disk</div>
+                    <div class="fontclass">.icon-floppy_disk</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-barcode_scanner"></i>
+                    <div class="name">barcode_scanner</div>
+                    <div class="fontclass">.icon-barcode_scanner</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-bike_fixed"></i>
+                    <div class="name">bike_fixed</div>
+                    <div class="fontclass">.icon-bike_fixed</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-french_press"></i>
+                    <div class="name">french_press</div>
+                    <div class="fontclass">.icon-french_press</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-fire_extinguish"></i>
+                    <div class="name">fire_extinguish</div>
+                    <div class="fontclass">.icon-fire_extinguish</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-home"></i>
+                    <div class="name">home</div>
+                    <div class="fontclass">.icon-home</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-hatchet"></i>
+                    <div class="name">hatchet</div>
+                    <div class="fontclass">.icon-hatchet</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-idea"></i>
+                    <div class="name">idea</div>
+                    <div class="fontclass">.icon-idea</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-meat_cleaver"></i>
+                    <div class="name">meat_cleaver</div>
+                    <div class="fontclass">.icon-meat_cleaver</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-reminder"></i>
+                    <div class="name">reminder</div>
+                    <div class="fontclass">.icon-reminder</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-revolver"></i>
+                    <div class="name">revolver</div>
+                    <div class="fontclass">.icon-revolver</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-skull_and"></i>
+                    <div class="name">skull_and</div>
+                    <div class="fontclass">.icon-skull_and</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-trash"></i>
+                    <div class="name">trash</div>
+                    <div class="fontclass">.icon-trash</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-skull_and_"></i>
+                    <div class="name">skull_and_7</div>
+                    <div class="fontclass">.icon-skull_and_</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-tardis"></i>
+                    <div class="name">tardis</div>
+                    <div class="fontclass">.icon-tardis</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-uk_phone"></i>
+                    <div class="name">uk_phone</div>
+                    <div class="fontclass">.icon-uk_phone</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-snowman_melting"></i>
+                    <div class="name">snowman_melting</div>
+                    <div class="fontclass">.icon-snowman_melting</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zippo_lighter"></i>
+                    <div class="name">zippo_lighter</div>
+                    <div class="fontclass">.icon-zippo_lighter</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-umbrella"></i>
+                    <div class="name">umbrella</div>
+                    <div class="fontclass">.icon-umbrella</div>
+                </li>
+            
+        </ul>
+
+        <h2 id="font-class-">font-class引用</h2>
+        <hr>
+
+        <p>font-class是unicode使用方式的一种变种，主要是解决unicode书写不直观，语意不明确的问题。</p>
+        <p>与unicode使用方式相比，具有如下特点：</p>
+        <ul>
+        <li>兼容性良好，支持ie8+，及所有现代浏览器。</li>
+        <li>相比于unicode语意明确，书写更直观。可以很容易分辨这个icon是什么。</li>
+        <li>因为使用class来定义图标，所以当要替换图标时，只需要修改class里面的unicode引用。</li>
+        <li>不过因为本质上还是使用的字体，所以多色图标还是不支持的。</li>
+        </ul>
+        <p>使用步骤如下：</p>
+        <h3 id="-fontclass-">第一步：引入项目下面生成的fontclass代码：</h3>
+
+
+        <pre><code class="lang-js hljs javascript"><span class="hljs-comment">&lt;link rel="stylesheet" type="text/css" href="./iconfont.css"&gt;</span></code></pre>
+        <h3 id="-">第二步：挑选相应图标并获取类名，应用于页面：</h3>
+        <pre><code class="lang-css hljs">&lt;<span class="hljs-selector-tag">i</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">iconfont</span> <span class="hljs-selector-tag">icon-xxx</span>"&gt;&lt;/<span class="hljs-selector-tag">i</span>&gt;</code></pre>
+        <blockquote>
+        <p>"iconfont"是你项目下的font-family。可以通过编辑项目查看，默认是"iconfont"。</p>
+        </blockquote>
+    </div>
+</body>
+</html>

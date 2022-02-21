@@ -1,0 +1,60 @@
+extends layouts/base
+block page-content
+	+row()
+		+analysticcard("Ideas",45,'icon-lights',"analystic-chart-1",'#17cedc')
+		+analysticcard("Experiments",23,'icon-raw',"analystic-chart-2",'#02a2ec')
+		+analysticcard("Win/Success Rate",'15.6%','icon-haoping',"analystic-chart-3",'#f46092')
+		+analysticcard("Total Points",'99+','icon-jinnang',"analystic-chart-4",'#7d57ce')
+	+row()
+		+col("12","12","12","12","8")
+			+analysticcard-1("Revenue","This Year","revenue-chart")
+		+col("12","12","12","12","4")
+			+analysticcard-1("Emails Sent","This Month","email-chart")
+	+row()
+		+col("12","12","12","12","6")
+			+analysticcard-1("Domain Activity","This Year","domain-chart")
+		+col("12","12","12","12","6")
+			+analysticcard-1("Category Activity","This Year","category-chart")
+	+row()
+		+col("12","12","12","12","8")
+			.card
+				h5.card-header Experiment Progress
+				.card-body(style="padding:0")
+					#experiment-chart(style="width:100%;height:400px",class="dash-charts")
+			.card.tab-card
+				.card-body
+					.ui.pointing.secondary.menu.stackable
+						a.active.item(data-tab="first") Requiring Attention
+						a.item(data-tab="second") Coming Up
+						a.item(data-tab="third") To-Do List
+					.ui.active.tab.segment(data-tab="first")
+						.ui.divided.items
+							+analysticcard-2("20 Apr 2017","Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.")
+							+analysticcard-2("24 May 2017","Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat.")
+							+analysticcard-2("01 June 2017","Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ac diam sit.")
+					.ui.tab.segment(data-tab="second")
+						.ui.divided.items
+							+analysticcard-2("10 Jan 2017","Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.")
+							+analysticcard-2("22 May 2017","Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet.")
+							+analysticcard-2("30 Jul 2017","Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur.")
+					.ui.tab.segment(data-tab="third")
+						.ui.divided.items
+							+analysticcard-2("18 Feb 2017","Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat.")
+							+analysticcard-2("02 Aug 2017","Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat.")
+							+analysticcard-2("15 Oct 2017","Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque.")
+		+col("12","12","12","12","4")
+			.card
+				.h5.card-header Recent Activity
+				.card-body.feed-card
+					.ui.feed
+						+analysticcard-3("1","1 Hour Ago","Zoey Franklin","Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.","6 Comment")
+						+analysticcard-3("3","8 Hour Ago","Esther Lewis","Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.","2 Comment")
+						+analysticcard-3("5","1 Days Ago","Erica Oliver","Curabitur aliquet quam id dui posuere blandit.Pellentesque in ipsum","24 Comment")
+						+analysticcard-3("7","3 Days Ago","Alyssa Rogers","Vestibulum ac diam sit amet quam vehicula elementum sed sit","14 Comment")
+						+analysticcard-3("19","3 Week Ago","Shannon Ray","Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.Sed porttitor lectus nibh.","32 Comment")
+						+analysticcard-3("21","1 Month Ago","Lance Richards","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque","8 Comment")
+						+analysticcard-3("24","12 Month Ago","Corey Reed","Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada.","23 Comment")
+block scripts
+	//Echarts
+	script( src='./libs/echarts/dist/echarts.min.js')
+	script( src='./js/dashboards/analystic-dashboard.min.js')

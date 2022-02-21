@@ -1,0 +1,86 @@
+extends layouts/base
+block  page-title
+	|	Semantic-Ui Transitions
+block breadcrumb-item-1
+	| 	Animations
+block breadcrumb-item-2
+	| 	Semantic-Ui Transitions
+block page-content
+	+row()
+		+col()
+			+basiccardwithactions("Semantic-Ui Delayed Transitions")
+				.transition.demo
+					.ui.small.images
+						img.ui.image(src="assets/img/svg/8.svg")
+	    
+						img.ui.image(src="assets/img/svg/8.svg")
+	    
+						img.ui.image(src="assets/img/svg/8.svg")
+	    
+						img.ui.image(src="assets/img/svg/8.svg")
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="horizontal flip") H.Flip
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="vertical flip") V.Flip
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="fade") Fade
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="fade up") Fade Up
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="fade down") Fade Down
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="scale") Scale
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="slide down") Slide Down
+		+col()       
+			+basiccardwithactions("Semantic ui Delayed Transitions")
+				.transition.demo
+					.ui.small.images
+						img.ui.image(src="assets/img/svg/8.svg")
+	    
+						img.ui.image(src="assets/img/svg/8.svg")
+	    
+						img.ui.image(src="assets/img/svg/8.svg")
+	    
+						img.ui.image(src="assets/img/svg/8.svg")
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="slide up") Slide Up                  
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="flash") Flash
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="shake") Shake
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="pulse") Pulse
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="tada") Tada
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="bounce") Bounce
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="drop") Drop
+					a.transitioneffect.gradient-button.alchemist-lab(data-transition="browse") Browse
+	+row()
+		+semantic-transition-card("Scale","scale")
+		+semantic-transition-card("Zoom","zoom")
+		+semantic-transition-card("Fade Up","fade up")
+		+semantic-transition-card("Fade Down","fade down")
+	+row()
+		+semantic-transition-card("Fade Left","fade left")
+		+semantic-transition-card("Fade Right","fade right")
+		+semantic-transition-card("Horizontal Flip","horizontal flip")
+		+semantic-transition-card("Vertical Flip","vertical flip")
+	+row()
+		+semantic-transition-card("Drop","drop")
+		+semantic-transition-card("Fly Left","fly left")
+		+semantic-transition-card("Fly Right","fly right")
+		+semantic-transition-card("Fly Up","fly up")
+	+row()
+		+semantic-transition-card("Fly Down","fly down")
+		+semantic-transition-card("Swing Left","swing left")
+		+semantic-transition-card("Swing Right","swing right")
+		+semantic-transition-card("Swing Up","swing up")
+	+row()
+		+semantic-transition-card("Swing Down","swing down")
+		+semantic-transition-card("Browse","browse")
+		+semantic-transition-card("Browse Right","browse right")
+		+semantic-transition-card("Slide Left","slide left")
+	+row()
+		+semantic-transition-card("Slide Right","slide right")
+		+semantic-transition-card("Slide Up","slide up")
+		+semantic-transition-card("Slide Down","slide down")
+		+semantic-transition-card("Jiggle","jiggle")
+	+row()
+		+semantic-transition-card("Flash","flash")
+		+semantic-transition-card("Shake","shake")
+		+semantic-transition-card("Pulse","pulse")
+		+semantic-transition-card("Tada","tada")
+	+row()
+		+semantic-transition-card("Bounce","bounce")
+		+semantic-transition-card("Glow","glow")
+block scripts
+	script( src='js/pages/semantic-transitions.min.js')

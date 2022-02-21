@@ -1,0 +1,77 @@
+
+.timeline {
+    ul {
+        padding: 1em 0 0 2em;
+        margin: 0;
+        list-style: none;
+        position: relative;
+
+        &::before {
+            content: ' ';
+            height: 100%;
+            width: 1px;
+            background-color: green($color: #000000);
+            position: absolute;
+            top: 0;
+            left: 2.5em;
+            z-index: -1;
+        }
+    }
+
+    li div {
+        display: inline-block;
+        margin: 1em 0;
+        vertical-align: top;
+    }
+
+    .bullet {
+        width: 1em;
+        height: 1em;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: white;
+        z-index: 1;
+        margin-right: 1em;
+        
+        &.pink {
+            border: 2px solid pink;
+        }
+
+        &.green {
+            border: 2px solid green;
+        }
+
+        &.orange {
+            border: 2px solid orange;
+        }
+    }
+
+    .time {
+        width: 20%;
+        font-size: 0.75em;
+        padding-top: 0.25em;
+    }
+
+    .desc {
+        width: 50%;
+    }
+
+    h3 {
+        font-size: 0.9em;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 0.7em;
+        font-weight: 400;
+        color: #ddd;
+    }
+
+    .people img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,128 @@
+// EVENT DASHBOARD
+.nextbtn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    i {
+        color: white;
+    }
+}
+
+.event-list {
+    display: inline-block;
+    cursor: move;
+
+    div {
+        float: left;
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+}
+
+#forcecentered {
+    position: relative;
+
+    .event-list .event-dash-card.active {
+        background: -webkit-linear-gradient(45deg, $primary-color, $secondary-color);
+        background: -o-linear-gradient(45deg, $primary-color, $secondary-color);
+        background: -moz-linear-gradient(45deg, $primary-color, $secondary-color);
+        background: linear-gradient(45deg, $primary-color, $secondary-color);
+        box-shadow: 0 12px 20px -10px rgba(0, 153, 255, .28), 0 4px 20px 0 rgba(0, 0, 0, .12), 0 7px 8px -5px rgba(0, 153, 255, .2);
+        color: #fff;
+    }
+}
+
+.event-list .event-dash-card.active .card-title .day,
+.event-list .event-dash-card.active .card-title small,
+.event-list .event-dash-card.active .event-dash-card-icon {
+    color: #fff
+}
+
+.event-dash-card .card-footer {
+    padding: 10px 8px;
+}
+
+.event-dash-card {
+    border: none;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.event-dash-card-icon {
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.event-dash-card {
+    .card-title {
+        .day {
+            font-size: 5em;
+        }
+        small {
+            font-size: 2em;
+            text-align: left;
+            float: right;
+            margin-right: 45px;
+            margin-top: 15px;
+        }
+    }
+    .card-text {
+        padding: 0 5px 0 20px;
+    }
+    .card-footer {
+        border: none;
+        background: transparent;
+    }
+}
+
+.event-dash-special-card {
+    height: 795px;
+}
+
+.card.event-dash-ctr1-card {
+    .card-body {
+        min-height: 336px;
+    }
+}
+
+.guest-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        margin-right: 10px;
+
+        a img {
+            width: 32px;
+            border-radius: 100%;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 6px 30px rgba(0, 0, 0, .4);
+        }
+    }
+}
+
+.guest-list li:last-child a {
+    display: block;
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    background: #595b61;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 6px 30px rgba(0, 0, 0, .4);
+
+    span {
+        font-size: 14px;
+        color: white;
+        font-weight: 300;
+        margin-left: 3px;
+        margin-top: 5px;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}

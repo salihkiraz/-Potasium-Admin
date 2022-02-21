@@ -1,0 +1,251 @@
+extends layouts/base
+block  page-title
+	|	File Upload
+block breadcrumb-item-1
+	| 	Form
+block breadcrumb-item-2
+	| 	File Upload
+block page-content
+	+row()
+	+col("12","12","12","12","12")            
+		+basiccard("Basic File Upload" )
+			.container
+				h2.lead Basic version
+			   
+				// The fileinput-button span is used to style the file input field as button
+				span.btn.btn-primary.fileinput-button
+					i.glyphicon.glyphicon-plus
+					span Select files...
+					// The file input field used as target for the file upload widget
+					input#fileupload(type='file', name='files[]', multiple='')
+				br
+				br
+				// The global progress bar
+				#progress.progress
+					.progress-bar.progress-bar-success
+				// The container for the uploaded files
+				#files.files
+			   
+
+	+col("12","12","12","12","12")            
+		+basiccard("Basic Plus UI File Upload" )
+			.container          
+				// The file upload form used as target for the file upload widget
+				form#fileupload2( method='POST', enctype='multipart/form-data')
+					// The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload
+					.row.fileupload-buttonbar
+						.col-lg-7
+							// The fileinput-button span is used to style the file input field as button
+							span.btn.btn-info.fileinput-button
+								i.glyphicon.glyphicon-plus
+								span Add files...
+								input(type='file', name='files[]', multiple='')
+							button.btn.btn-primary.start(type='submit')
+								i.glyphicon.glyphicon-upload
+								span Start upload
+							button.btn.btn-warning.cancel(type='reset')
+								i.glyphicon.glyphicon-ban-circle
+								span Cancel upload
+							button.btn.btn-danger.delete(type='button')
+								i.glyphicon.glyphicon-trash
+								span Delete
+							input.toggle(type='checkbox')
+							// The global file processing state
+							span.fileupload-process
+						// The global progress state
+						.col-lg-5.fileupload-progress
+							// The global progress bar
+							.progress.progress-striped.active(role='progressbar', aria-valuemin='0', aria-valuemax='100')
+								.progress-bar.progress-bar-success(style='width:0%;')
+							// The extended global progress state
+							.progress-extended &nbsp;
+					// The table listing the files available for upload/download
+					table.table.table-striped(role='presentation')
+						tbody.files
+						 
+					
+					// The template to display files available for upload
+					script#template-upload(type='text/x-tmpl').
+						{% for (var i=0, file; file=o.files[i]; i++) { %}
+						<tr class="template-upload">
+						<td>
+						<span class="preview"></span>
+						</td>
+						<td>
+						<p class="name">{%=file.name%}</p>
+						<strong class="error text-danger"></strong>
+						</td>
+						<td>
+						<p class="size">Processing...</p>
+						<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+						</td>
+						<td>
+						{% if (!i && !o.options.autoUpload) { %}
+						<button class="btn btn-primary start" disabled>
+						<i class="glyphicon glyphicon-upload"></i>
+						<span>Start</span>
+						</button>
+						{% } %}
+						{% if (!i) { %}
+						<button class="btn btn-warning cancel">
+						<i class="glyphicon glyphicon-ban-circle"></i>
+						<span>Cancel</span>
+						</button>
+						{% } %}
+						</td>
+						</tr>
+						{% } %}
+					// The template to display files available for download
+					script#template-download(type='text/x-tmpl').
+						{% for (var i=0, file; file=o.files[i]; i++) { %}
+						<tr class="template-download ">
+						<td>
+						<span class="preview">
+						{% if (file.thumbnailUrl) { %}
+						<a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+						{% } %}
+						</span>
+						</td>
+						<td>
+						<p class="name">
+						{% if (file.url) { %}
+						<a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+						{% } else { %}
+						<span>{%=file.name%}</span>
+						{% } %}
+						</p>
+						{% if (file.error) { %}
+						<div><span class="label label-danger">Error</span> {%=file.error%}</div>
+						{% } %}
+						</td>
+						<td>
+						<span class="size">{%=o.formatFileSize(file.size)%}</span>
+						</td>
+						<td>
+						{% if (file.deleteUrl) { %}
+						<button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+						<i class="glyphicon glyphicon-trash"></i>
+						<span>Delete</span>
+						</button>
+						<input type="checkbox" name="delete" value="1" class="toggle">
+						{% } else { %}
+						<button class="btn btn-warning cancel">
+						<i class="glyphicon glyphicon-ban-circle"></i>
+						<span>Cancel</span>
+						</button>
+						{% } %}
+						</td>
+						</tr>
+						{% } %}
+
+
+ 
+		+basiccard("Fine Uploader" )
+					
+				
+					script#qq-template-gallery(type='text/template').
+						<div class="qq-uploader-selector qq-uploader qq-gallery" qq-drop-area-text="Drop files here">
+						<div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
+						<div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
+						</div>
+						<div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+						<span class="qq-upload-drop-area-text-selector"></span>
+						</div>
+						<div class="qq-upload-button-selector btn btn-primary">
+						<div>Upload a file</div>
+						</div>
+						<span class="qq-drop-processing-selector qq-drop-processing">
+						<span>Processing dropped files...</span>
+						<span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+						</span>
+						<ul class="qq-upload-list-selector qq-upload-list" role="region" aria-live="polite" aria-relevant="additions removals">
+						<li>
+						<span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+						<div class="qq-progress-bar-container-selector qq-progress-bar-container">
+						<div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+						</div>
+						<span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+						<div class="qq-thumbnail-wrapper">
+						<img class="qq-thumbnail-selector" qq-max-size="120" qq-server-scale>
+						</div>
+						<button type="button" class="qq-upload-cancel-selector qq-upload-cancel">X</button>
+						<button type="button" class="qq-upload-retry-selector qq-upload-retry">
+						<span class="qq-btn qq-retry-icon" aria-label="Retry"></span>
+						Retry
+						</button>
+						<div class="qq-file-info">
+						<div class="qq-file-name">
+						<span class="qq-upload-file-selector qq-upload-file"></span>
+						<span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Edit filename"></span>
+						</div>
+						<input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+						<span class="qq-upload-size-selector qq-upload-size"></span>
+						<button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">
+						<span class="qq-btn qq-delete-icon" aria-label="Delete"></span>
+						</button>
+						<button type="button" class="qq-btn qq-upload-pause-selector qq-upload-pause">
+						<span class="qq-btn qq-pause-icon" aria-label="Pause"></span>
+						</button>
+						<button type="button" class="qq-btn qq-upload-continue-selector qq-upload-continue">
+						<span class="qq-btn qq-continue-icon" aria-label="Continue"></span>
+						</button>
+						</div>
+						</li>
+						</ul>
+						<dialog class="qq-alert-dialog-selector">
+						<div class="qq-dialog-message-selector"></div>
+						<div class="qq-dialog-buttons">
+						<button type="button" class="qq-cancel-button-selector">Close</button>
+						</div>
+						</dialog>
+						<dialog class="qq-confirm-dialog-selector">
+						<div class="qq-dialog-message-selector"></div>
+						<div class="qq-dialog-buttons">
+						<button type="button" class="qq-cancel-button-selector">No</button>
+						<button type="button" class="qq-ok-button-selector">Yes</button>
+						</div>
+						</dialog>
+						<dialog class="qq-prompt-dialog-selector">
+						<div class="qq-dialog-message-selector"></div>
+						<input type="text">
+						<div class="qq-dialog-buttons">
+						<button type="button" class="qq-cancel-button-selector">Cancel</button>
+						<button type="button" class="qq-ok-button-selector">Ok</button>
+						</div>
+						</dialog>
+						</div>
+					#fine-uploader-gallery
+
+block scripts
+	script( src="libs/blueimp-file-upload/js/vendor/jquery.ui.widget.js")
+	script( src="libs/blueimp-file-upload/js/jquery.fileupload.js")
+	// The Load Image plugin is included for the preview images and image resizing functionality
+	script(src='libs/blueimp-load-image/js/load-image.all.min.js')
+	// The Canvas to Blob plugin is included for image resizing functionality
+	script(src='libs/blueimp-canvas-to-blob/js/canvas-to-blob.js')
+	// The Iframe Transport is required for browsers without support for XHR file uploads
+	script(src='libs/blueimp-file-upload/js/jquery.iframe-transport.js')
+	// The basic File Upload plugin
+	script(src='libs/blueimp-tmpl/js/tmpl.min.js')
+	// The File Upload processing plugin
+	script(src='libs/blueimp-file-upload/js/jquery.fileupload-process.js')
+	// The File Upload image preview & resize plugin
+	script(src='libs/blueimp-file-upload/js/jquery.fileupload-image.js')
+	// The File Upload audio preview plugin
+	script(src='libs/blueimp-file-upload/js/jquery.fileupload-audio.js')
+	// The File Upload video preview plugin
+	script(src='libs/blueimp-file-upload/js/jquery.fileupload-video.js')
+	// The File Upload validation plugin
+	script(src='libs/blueimp-file-upload/js/jquery.fileupload-validate.js')
+	// The File Upload user interface plugin
+	script(src='libs/blueimp-file-upload/js/jquery.fileupload-ui.js')
+	script( src="js/pages/file_upload.js")
+	//  Fine Uploader jQuery JS file
+	script(src='libs/fine-uploader/dist/jquery.fine-uploader.min.js')
+
+block styles
+	link(rel="stylesheet" href="libs/blueimp-file-upload/css/jquery.fileupload.css")
+	link(rel='stylesheet', href='libs/blueimp-file-upload/css/jquery.fileupload-ui.css')
+	link(rel='stylesheet', type='text/css', href='css/libs/glyhicons.css')
+	//  Fine Uploader Gallery CSS file
+	link(href='libs/fine-uploader/dist/fine-uploader-gallery.min.css', rel='stylesheet')

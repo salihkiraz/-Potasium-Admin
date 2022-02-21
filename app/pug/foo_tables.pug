@@ -1,0 +1,167 @@
+extends layouts/base
+block  page-title
+	|  Foo Tables
+block breadcrumb-item-1
+	| 	Tables
+block breadcrumb-item-2
+	|  Foo Tables
+block page-content
+	//Page Content
+	+row()
+		+col("12","12","12","12","12")     
+			+basiccard("Foo Data Table")  
+				.col-md-3
+					.form-group
+						input#search.form-control(type='text', placeholder='Search')   
+
+				table#editing-example.table.table-responsive-sm(data-paging='true',  data-sorting='true',data-filtering="true")
+					thead
+						tr
+							th(data-name='id', data-breakpoints='xs', data-type='number') ID
+							th(data-name='firstName') First Name
+							th(data-name='lastName') Last Name
+							th(data-name='jobTitle', data-breakpoints='xs') Job Title
+							th(data-name='startedOn', data-breakpoints='xs sm', data-type='date', data-format-string='MMMM Do YYYY') Started On
+							th(data-name='dob', data-breakpoints='xs sm md', data-type='date', data-format-string='MMMM Do YYYY') Date of Birth
+							th(data-name='status') Status
+					tbody
+						tr(data-expanded='true')
+							td 1
+							td Dennise
+							td Fuhrman
+							td High School History Teacher
+							td November 8th 2011
+							td July 25th 1960
+							td 
+								.ui.red.label Susp.
+						tr
+							td 2
+							td Elodia
+							td Weisz
+							td Wallpaperer Helper
+							td October 15th 2010
+							td March 30th 1982
+							td 
+								.ui.red.label Susp.
+						tr
+							td 3
+							td Raeann
+							td Haner
+							td Internal Medicine Nurse Practitioner
+							td November 28th 2013
+							td February 26th 1966
+							td 
+								.ui.blue.label Active
+						tr
+							td 4
+							td Junie
+							td Landa
+							td Offbearer
+							td October 31st 2010
+							td March 29th 1966
+							td 
+								.ui.red.label Susp.
+						tr
+							td 5
+							td Solomon
+							td Bittinger
+							td Roller Skater
+							td December 29th 2011
+							td September 22nd 1964
+							td 
+								.ui.blue.label Active
+						tr
+							td 6
+							td Bar
+							td Lewis
+							td Clown
+							td November 12th 2012
+							td August 4th 1991
+							td 
+								.ui.blue.label Active
+						tr
+							td 7
+							td Usha
+							td Leak
+							td Ships Electronic Warfare Officer
+							td August 14th 2012
+							td November 20th 1979
+							td 
+								.ui.yellow.label Normal
+						tr
+							td 8
+							td Lorriane
+							td Cooke
+							td Technical Services Librarian
+							td September 21st 2010
+							td April 7th 1969
+							td 
+								.ui.blue.label Active
+						tr
+							td 9
+							td Nelly
+							td Lusher
+							td Broadcast Maintenance Engineer
+							td October 21st 2013
+							td February 16th 1983 
+							td 
+								.ui.blue.label Active
+			
+				#editor-modal.modal(tabindex='-1', role='dialog', aria-labelledby='editor-title')
+					.modal-dialog(role='document')
+						form#editor.modal-content
+							.modal-header
+								h4#editor-title.modal-title Add Row
+								button.close(type='button', data-dismiss='modal', aria-label='Close')
+									span(aria-hidden='true') &times;
+								
+							.modal-body
+								input#id.d-none(type='number', name='id')
+								.form-group.required
+									label.col-sm-3.control-label(for='firstName') First Name
+									.col-sm-12
+										input#firstName.form-control(type='text', name='firstName', placeholder='First Name', required='')
+								.form-group.required
+									label.col-sm-3.control-label(for='lastName') Last Name
+									.col-sm-12
+										input#lastName.form-control(type='text', name='lastName', placeholder='Last Name', required='')
+								.form-group
+									label.col-sm-3.control-label(for='jobTitle') Job Title
+									.col-sm-12
+										input#jobTitle.form-control(type='text', name='jobTitle', placeholder='Job Title')
+								.form-group.required
+									label.col-sm-3.control-label(for='startedOn') Started On
+									.col-sm-12
+										input#startedOn.form-control(type='date', name='startedOn', placeholder='Started On', required='')
+								.form-group
+									label.col-sm-5.control-label(for='dob') Date of Birth
+									.col-sm-12
+										input#dob.form-control(type='date', name='dob', placeholder='Date of Birth')
+							.modal-footer
+								button.btn.btn-primary(type='submit') Save changes
+								button.btn.btn-default(type='button', data-dismiss='modal') Cancel
+
+			+basiccard("Foo Data Table (Ajax)")
+				button.btn-primary.mb-1(onClick="ajaxLoad()") Load Data
+				table#loadtable.table.table-responsive-sm(data-paging='true')
+block styles
+	link(rel='stylesheet', type='text/css', href='libs/footable/compiled/footable.bootstrap.min.css')
+	link(rel='stylesheet', type='text/css', href='libs/footable/compiled/footable.editing.min.css')
+	link(rel='stylesheet', type='text/css', href='css/libs/glyhicons.css')
+block scripts
+	script( src="libs/footable/compiled/footable.min.js")
+	script( src="js/pages/foo_table.js")
+	style.
+		 .footable-filtering {
+				display:none;
+		  }
+		  .footable-editing .btn-group{
+			  margin-left: -30px!important;
+		  }
+		  li.footable-page-nav {
+				padding: 5px;
+		   }
+
+		  li.footable-page {
+				padding: 5px;
+		  }

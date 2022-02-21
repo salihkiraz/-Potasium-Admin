@@ -1,0 +1,35 @@
+extends layouts/base
+block  page-title
+	|	Summornote Editor
+block breadcrumb-item-1
+	| 	Form
+block breadcrumb-item-2
+	| 	Summornote Editor
+block page-content
+	//Page Content
+	+row()
+		+col("12","12","12","12","12")     
+			+basiccard("Summornote Editor") 
+				.summernote
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			+basiccard("Summornote Air Mode","hidden-mobile")
+					.summernote_air     
+						| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+block styles
+	link(rel="stylesheet" href="libs/summernote/dist/summernote-bs4.css")
+	style.
+		/*summornte bs4 fix*/
+		.note-editable{
+			padding:5px!important;
+		}
+block scripts
+	script( src="libs/summernote/dist/summernote-bs4.min.js")
+	script.
+			$(document).ready(function() {
+				$('.summernote').summernote({
+					 height: 300,
+				});
+				$('.summernote_air').summernote({
+					airMode: true
+				});
+			});

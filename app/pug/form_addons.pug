@@ -1,0 +1,355 @@
+extends layouts/base
+block page-content
+	+row()
+		+col("12","12","12","12","6")            
+				+basiccard("Select Addons Forms" )
+					.form-group
+						label(for='select-1') Select 2
+						select.js-example-basic-single.form-control
+									option(value='none') select 1
+									option(value='select2') select 2
+									option(value='select3') select 3
+									option(value='select4') select 4
+									option(value='select5') select 5
+									option(value='select6') select 6  
+					.form-group
+						label(for='select-1') Select 2 Multiple
+						select.js-example-basic-single.form-control(multiple="multiple")
+								option
+								optgroup(label='Alaskan/Hawaiian Time Zone' )
+									option(value='AK' , selected='') Alaska
+									option(value='HI', disabled='disabled') Hawaii
+								optgroup(label='Pacific Time Zone')
+									option(value='CA') California
+									option(value='NV') Nevada
+									option(value='OR') Oregon
+									option(value='WA') Washington
+								optgroup(label='Mountain Time Zone')
+									option(value='AZ') Arizona
+									option(value='CO') Colorado
+									option(value='ID') Idaho
+									option(value='MT') Montana
+									option(value='NE') Nebraska
+									option(value='NM') New Mexico
+									option(value='ND') North Dakota
+									option(value='UT') Utah
+									option(value='WY') Wyoming
+								optgroup(label='Central Time Zone')
+									option(value='AL') Alabama
+									option(value='AR') Arkansas
+									option(value='IL') Illinois
+									option(value='IA') Iowa
+									option(value='KS') Kansas
+									option(value='KY') Kentucky
+									option(value='LA') Louisiana
+									option(value='MN') Minnesota
+									option(value='MS') Mississippi
+									option(value='MO') Missouri
+									option(value='OK') Oklahoma
+									option(value='SD') South Dakota
+									option(value='TX') Texas
+									option(value='TN') Tennessee
+									option(value='WI') Wisconsin
+								optgroup(label='Eastern Time Zone')
+									option(value='CT') Connecticut
+									option(value='DE') Delaware
+									option(value='FL') Florida
+									option(value='GA') Georgia
+									option(value='IN') Indiana
+									option(value='ME') Maine
+									option(value='MD') Maryland
+									option(value='MA') Massachusetts
+									option(value='MI') Michigan
+									option(value='NH') New Hampshire
+									option(value='NJ') New Jersey
+									option(value='NY') New York
+									option(value='NC') North Carolina
+									option(value='OH') Ohio
+									option(value='PA') Pennsylvania
+									option(value='RI') Rhode Island
+									option(value='SC') South Carolina
+									option(value='VT') Vermont
+									option(value='VA') Virginia
+									option(value='WV') West Virginia
+								option(value='TNOGZ', disabled='disabled') The No Optgroup Zone
+								option(value='TPZ') The Panic Zone
+								option(value='TTZ') The Twilight Zone    
+										
+					
+					
+					.form-group
+						label.control-label(for='select2-single-append') Select2 Ajax  width template                     
+						select#select2-button-addons-single-input-group-sm.js-example-basic-single.form-control.js-data-example-ajax
+							option(value='2126244', selected='selected') twbs/bootstrap 
+				+basiccard("Checkbox & Radio (Semantic UI)" )
+						.form-group               
+								.ui.toggle.checkbox
+									input(type='checkbox', name='public')
+									label Subscribe to weekly newsletter
+						.form-group                        
+							.ui.checkbox
+								input(type='checkbox')
+								label Indeterminate
+						.form-group                            
+							.ui.form
+								.grouped.fields
+									label How often do you use checkboxes?
+									.field
+										.ui.radio.checkbox
+											input(type='radio', name='example2', checked='checked')
+											label Once a week
+									.field
+										.ui.radio.checkbox
+											input(type='radio', name='example2')
+											label 2-3 times a week
+									.field
+										.ui.radio.checkbox
+											input(type='radio', name='example2')
+											label Once a day
+									.field
+										.ui.radio.checkbox
+											input(type='radio', name='example2')
+											label Twice a day
+
+						.form-group
+							.ui.form
+									.grouped.fields
+										label Outbound Throughput
+										.field
+											.ui.slider.checkbox
+												input(type='radio', name='throughput', checked='checked')
+												label 20 mbps max
+										.field
+											.ui.slider.checkbox
+												input(type='radio', name='throughput')
+												label 10mbps max
+										.field
+											.ui.slider.checkbox
+												input(type='radio', name='throughput')
+												label 5mbps max
+										.field
+											.ui.slider.checkbox.checked
+												input(type='radio', name='throughput')
+												label Unmetered
+				+basiccard("Checkbox & Radio (Icheck Line skin)" )
+							.row
+								.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.icheck.skin.skin-line 
+									.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12             
+										.colors
+											p Color schemes
+											ul.icheck-color-list
+												li.active(title='Black')
+												li.red(title='Red')
+												li.green(title='Green')
+												li.blue(title='Blue')
+												li.aero(title='Aero')
+												li.grey(title='Grey')
+												li.orange(title='Orange')
+												li.yellow(title='Yellow')
+												li.pink(title='Pink')
+												li.purple(title='Purple')
+									br
+									div.row       
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='checkbox',checked='') 
+											label Checkbox 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6   
+											input(type='checkbox', disabled='disabled',checked='')
+											label Checkbox  Disabled
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck33')
+											label Radio 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck22', checked='')
+											label Radio checked
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='checkbox',disabled='disabled',checked='')
+											label Checkbox Checked & Disabled  
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6   
+											input(type='checkbox')
+											label Checkbox 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck14')
+											label Radio 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck16', checked='',disabled='disabled')
+											label Radio  Checked & Disabled 
+ 
+		+col("12","12","12","12","6")            
+				+basiccard("Select Addons Form (semantic ui)" )
+					.col-md-12
+						.form-group
+							label(for='select-1') Select 
+													
+							select.ui.fluid.search.dropdown(name='skills')
+								option(value='') Skills
+								option(value='angular') Angular
+								option(value='css') CSS
+								option(value='design') Graphic Design
+								option(value='ember') Ember
+								option(value='html') HTML
+								option(value='ia') Information Architecture
+								option(value='javascript') Javascript
+								option(value='mech') Mechanical Engineering
+								option(value='meteor') Meteor
+								option(value='node') NodeJS
+								option(value='plumbing') Plumbing
+								option(value='python') Python
+								option(value='rails') Rails
+								option(value='react') React
+								option(value='repair') Kitchen Repair
+								option(value='ruby') Ruby
+								option(value='ui') UI Design
+								option(value='ux') User Experience
+						.form-group
+							label(for='select-1') Select  Multiple                    
+							select.ui.fluid.search.dropdown(multiple='')
+								option(value='') State
+								option(value='AL') Alabama
+								option(value='AK') Alaska
+								option(value='AZ') Arizona
+								option(value='AR') Arkansas
+								option(value='CA') California
+								option(value='CO') Colorado
+								option(value='CT') Connecticut
+								option(value='DE') Delaware
+								option(value='DC') District Of Columbia
+								option(value='FL') Florida
+								option(value='GA') Georgia
+								option(value='HI') Hawaii
+								option(value='ID') Idaho
+								option(value='IL') Illinois
+								option(value='IN') Indiana
+								option(value='IA') Iowa
+								option(value='KS') Kansas
+								option(value='KY') Kentucky
+								option(value='LA') Louisiana
+								option(value='ME') Maine
+								option(value='MD') Maryland
+								option(value='MA') Massachusetts
+								option(value='MI') Michigan
+								option(value='MN') Minnesota
+								option(value='MS') Mississippi
+								option(value='MO') Missouri
+								option(value='MT') Montana
+								option(value='NE') Nebraska
+								option(value='NV') Nevada
+								option(value='NH') New Hampshire
+								option(value='NJ') New Jersey
+								option(value='NM') New Mexico
+								option(value='NY') New York
+								option(value='NC') North Carolina
+								option(value='ND') North Dakota
+								option(value='OH') Ohio
+								option(value='OK') Oklahoma
+								option(value='OR') Oregon
+								option(value='PA') Pennsylvania
+								option(value='RI') Rhode Island
+								option(value='SC') South Carolina
+								option(value='SD') South Dakota
+								option(value='TN') Tennessee
+								option(value='TX') Texas
+								option(value='UT') Utah
+								option(value='VT') Vermont
+								option(value='VA') Virginia
+								option(value='WA') Washington
+								option(value='WV') West Virginia
+								option(value='WI') Wisconsin
+								option(value='WY') Wyoming
+				+basiccard("Checkbox & Radio (Icheck Minimal skin)" )
+							.row
+								.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.icheck.skin.skin-minimal
+									.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12             
+										.colors
+											p Color schemes
+											ul.icheck-color-list
+												li.active(title='Black')
+												li.red(title='Red')
+												li.green(title='Green')
+												li.blue(title='Blue')
+												li.aero(title='Aero')
+												li.grey(title='Grey')
+												li.orange(title='Orange')
+												li.yellow(title='Yellow')
+												li.pink(title='Pink')
+												li.purple(title='Purple')
+									br
+									.row        
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='checkbox',checked='') 
+											label Checkbox 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6   
+											
+											input(type='checkbox', disabled='disabled',checked='')
+											label Checkbox  Disabled
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck')
+											label Radio 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck', checked='')
+											label Radio checked
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='checkbox',disabled='disabled',checked='')
+											label Checkbox Checked & Disabled  
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6   
+											input(type='checkbox')
+											label Checkbox 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck1')
+											label Radio 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck1', checked='',disabled='disabled')
+											label Radio  Checked & Disabled 
+				+basiccard("Checkbox & Radio (Icheck Flat skin)" )
+							.row
+								.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.icheck.skin.skin-flat 
+									.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12             
+										.colors
+											p Color schemes
+											ul.icheck-color-list
+												li.active(title='Black')
+												li.red(title='Red')
+												li.green(title='Green')
+												li.blue(title='Blue')
+												li.aero(title='Aero')
+												li.grey(title='Grey')
+												li.orange(title='Orange')
+												li.yellow(title='Yellow')
+												li.pink(title='Pink')
+												li.purple(title='Purple')
+									br
+									.row       
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6.icheckbox
+											input(type='checkbox',checked='') 
+											label Checkbox 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6   
+											input(type='checkbox', disabled='disabled',checked='')
+											label Checkbox  Disabled
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck9')
+											label Radio 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iChec6k', checked='')
+											label Radio checked
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='checkbox',disabled='disabled',checked='')
+											label Checkbox Checked & Disabled  
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6   
+											input(type='checkbox')
+											label Checkbox 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck61')
+											label Radio 
+										.form-group.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-6
+											input(type='radio', name='iCheck166', checked='',disabled='disabled')
+											label Radio  Checked & Disabled 
+
+block scripts
+	script( src="libs/select2/dist/js/select2.full.min.js")
+	script( src="js/pages/form_addons.js")
+	script( src="libs/iCheck/icheck.min.js")
+
+block styles
+	link(rel="stylesheet" href="libs/iCheck/skins/all.css")
+	link(rel="stylesheet" href="libs/select2/dist/css/select2.min.css")
+	link(rel="stylesheet" href="libs/select2-bootstrap-theme/dist/select2-bootstrap.min.css")

@@ -1,0 +1,210 @@
+extends layouts/base
+block styles
+	link(rel='stylesheet', href='css/pages/tab.css')
+	link(rel='stylesheet', href='libs/colorfulTab/dist/css/colorfulTab.min.css')
+block page-content
+	+row()
+		+col("12","12","12","12","6")     
+			+basiccard("Basic Tab")
+				ul#myTab.nav.nav-tabs(role='tablist')
+					li.nav-item
+						a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') Home
+					li.nav-item
+						a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Profile
+					li.nav-item
+						a#contact-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false') Contact
+				#myTabContent.tab-content
+					#home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab') Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
+					#contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab') Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore 
+		+col("12","12","12","12","6")     
+			+basiccard("Basic Tab(Button Style)")
+				ul#pills-tab.nav.nav-pills.mb-3(role="tablist")
+					li.nav-item
+						a#pills-home-tab.nav-link.active(data-toggle="pill", href="#pills-home", role="tab", aria-controls="pills-home", aria-selected="true") Home
+					|   
+					li.nav-item
+						a#pills-profile-tab.nav-link(data-toggle="pill", href="#pills-profile", role="tab", aria-controls="pills-profile", aria-selected="false") Profile
+					|   
+					li.nav-item
+						a#pills-contact-tab.nav-link(data-toggle="pill", href="#pills-contact", role="tab", aria-controls="pills-contact", aria-selected="false") Contact
+				#pills-tabContent.tab-content
+					#pills-home.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-home-tab") It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+					#pills-profile.tab-pane.fade(role="tabpanel", aria-labelledby="pills-profile-tab") Content 2
+					|   
+					#pills-contact.tab-pane.fade(role="tabpanel", aria-labelledby="pills-contact-tab") But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+		+col("12","12","12","12","12")     
+			+basiccard("Vertical Tab")
+				#v-pills-tab.nav.flex-column.float-left.mb-8.mr-2.nav-pills(role='tablist', aria-orientation='vertical')
+					a#v-pills-home-tab.nav-link.active(data-toggle='pill', href='#v-pills-home', role='tab', aria-controls='v-pills-home', aria-selected='true') Home
+					a#v-pills-profile-tab.nav-link(data-toggle='pill', href='#v-pills-profile', role='tab', aria-controls='v-pills-profile', aria-selected='false') Profile
+					a#v-pills-messages-tab.nav-link(data-toggle='pill', href='#v-pills-messages', role='tab', aria-controls='v-pills-messages', aria-selected='false') Messages
+					a#v-pills-settings-tab.nav-link(data-toggle='pill', href='#v-pills-settings', role='tab', aria-controls='v-pills-settings', aria-selected='false') Settings
+					br
+				#v-pills-tabContent.tab-content
+					#v-pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='v-pills-home-tab') It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
+					#v-pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-profile-tab') but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
+					#v-pills-messages.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-messages-tab') It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
+					#v-pills-settings.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-settings-tab') but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
+
+		+col("12","12","12","12","6")     
+			+basiccard("Semantic Ui Tab")
+				.basic_tab
+					.ui.top.attached.tabular.menu
+						a.item.active(data-tab='first') First
+						a.item(data-tab='second') Second
+						a.item(data-tab='third') Third
+					.ui.bottom.attached.tab.segment.active(data-tab='first')
+						| It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
+					.ui.bottom.attached.tab.segment(data-tab='second')
+						| Has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
+					.ui.bottom.attached.tab.segment(data-tab='third')
+						| Not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
+		+col("12","12","12","12","6")     
+			+basiccard("Semantic Ui Multiple Tab Groups")
+				.multi_tabs_group
+					.ui.pointing.secondary.menu
+						a.item.active(data-tab='first') First
+						a.item(data-tab='second') Second
+						a.item(data-tab='third') Third
+					.ui.tab.segment.active(data-tab='first')
+						.ui.top.attached.tabular.menu
+							a.item.active(data-tab='first/a') 1A
+							a.item(data-tab='first/b') 1B
+							a.item(data-tab='first/c') 1C
+						.ui.bottom.attached.tab.segment.active(data-tab='first/a') 1A
+						.ui.bottom.attached.tab.segment(data-tab='first/b') 1B
+						.ui.bottom.attached.tab.segment(data-tab='first/c') 1C
+					.ui.tab.segment(data-tab='second')
+						.ui.top.attached.tabular.menu
+							a.item.active(data-tab='second/a') 2A
+							a.item(data-tab='second/b') 2B
+							a.item(data-tab='second/c') 2C
+						.ui.bottom.attached.tab.segment.active(data-tab='second/a') 2A
+						.ui.bottom.attached.tab.segment(data-tab='second/b') 2B
+						.ui.bottom.attached.tab.segment(data-tab='second/c') 2C
+					.ui.tab.segment(data-tab='third')
+						.ui.top.attached.tabular.menu
+							a.item.active(data-tab='third/a') 3A
+							a.item(data-tab='third/b') 3B
+							a.item(data-tab='third/c') 3C
+						.ui.bottom.attached.tab.segment.active(data-tab='third/a') 3A
+						.ui.bottom.attached.tab.segment(data-tab='third/b') 3B
+						.ui.bottom.attached.tab.segment(data-tab='third/c') 3C
+		+col("12","12","12","12","6")     
+			+basiccard("Fancy Tab")
+				.row.fancy_tab
+					.offset-md-.text-center(role='tabpanel')
+						// Nav tabs
+						ul#nav-tabs.nav.nav-justified(role='tablist')
+							li.nav-item(role='presentation')
+								a.nav-link.active(href='#dustin', aria-controls='dustin', role='tab', data-toggle='tab')
+									img.rounded-circle(src='assets/img/people/16.jpg')
+									span.quote
+										i.fa.fa-quote-left
+							li.nav-item(role='presentation')
+								a.nav-link(href='#daksh', aria-controls='daksh', role='tab', data-toggle='tab')
+									img.rounded-circle(src='assets/img/people/17.jpg')
+									span.quote
+										i.fa.fa-quote-left
+							li.nav-item(role='presentation')
+								a.nav-link(href='#anna', aria-controls='anna', role='tab', data-toggle='tab')
+									img.rounded-circle(src='assets/img/people/20.jpg')
+									span.quote
+										i.fa.fa-quote-left
+							li.nav-item(role='presentation')
+								a.nav-link(href='#wafer', aria-controls='wafer', role='tab', data-toggle='tab')
+									img.rounded-circle(src='assets/img/people/15.jpg')
+									span.quote
+										i.fa.fa-quote-left
+						// Tab panes
+						#tabs-collapse.tab-content
+							#dustin.tab-pane.fade.in.active.show(role='tabpanel')
+								.tab-inner
+									p.lead
+										|  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+									hr
+									p
+										strong.text-uppercase Dustin Lamont
+									p
+										em.text-capitalize  Senior web developer
+										|  at 
+										a(href='#') Apple
+							#daksh.tab-pane.fade(role='tabpanel')
+								.tab-inner
+									p.lead
+										| There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+									hr
+									p
+										strong.text-uppercase Daksh Bhagya
+									p
+										em.text-capitalize  UX designer
+										|  at 
+										a(href='#') Google
+							#anna.tab-pane.fade(role='tabpanel')
+								.tab-inner
+									p.lead
+										| It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+									hr
+									p
+										strong.text-uppercase Anna Pickard
+									p
+										em.text-capitalize  Master web developer
+										|  at 
+										a(href='#') Intel
+							#wafer.tab-pane.fade(role='tabpanel')
+								.tab-inner
+									p.lead
+										| There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+									hr
+									p
+										strong.text-uppercase Wafer Baby
+									p
+										em.text-capitalize  Web designer
+										|  at 
+										a(href='#') Microsoft
+		+col("12","12","12","12","6")     
+			+basiccard("Colorfull Tab")
+				// Default
+				#colorful.colorful-tab-wrapper
+					ul.colorful-tab-menu
+						li.colorful-tab-menu-item.active(tab-color='#000')
+							a(href='#clr-0') SCSS
+						li.colorful-tab-menu-item(tab-color='#8021D3')
+							a(href='#clr-1') Pug
+						li.colorful-tab-menu-item(tab-color='#C9003C')
+							a(href='#clr-2') Gulp
+						li.colorful-tab-menu-item(tab-color='#E54400')
+							a(href='#clr-3') HTML5
+						li.colorful-tab-menu-item(tab-color='#445370')
+							a(href='#clr-4') jQuery
+					.colorful-tab-container
+						#clr-0.colorful-tab-content.active
+							p
+								| Bitters cronut butcher, +1 dreamcatcher readymade fingerstache cray synth bespoke godard. Street art franzen polaroid gentrify. Lo-fi typewriter banh mi, lomo shabby chic asymmetrical street art craft beer narwhal heirloom. Gluten-free fixie readymade sartorial dreamcatcher godard DIY cold-pressed meggings distillery. Gochujang hoodie viral, yuccie taxidermy squid pork belly. Yr locavore pinterest pork belly thundercats heirloom, forage disrupt. Gochujang dreamcatcher kinfolk, kale chips pabst vegan green juice direct trade small batch vice lumbersexual farm-to-table art party chartreuse godard.
+						#clr-1.colorful-tab-content
+							p
+								| Hoodie four loko letterpress freegan skateboard sartorial, polaroid forage ramps 8-bit direct trade. Chia chicharrones humblebrag 8-bit. Intelligentsia semiotics 8-bit banjo poutine chillwave. +1 small batch vegan, truffaut crucifix taxidermy twee banjo meggings blog scenester ugh. Keffiyeh readymade art party cold-pressed. Heirloom pork belly photo booth scenester cold-pressed neutra. Vice actually shoreditch viral poutine, vinyl fanny pack retro etsy kickstarter.
+						#clr-2.colorful-tab-content
+							p
+								| Single-origin coffee tilde craft beer organic wolf. Plaid kickstarter vegan roof party vice, try-hard taxidermy truffaut small batch. PBR&B butcher helvetica, green juice craft beer kickstarter skateboard. +1 selvage VHS gastropub slow-carb, twee vegan helvetica farm-to-table marfa seitan letterpress narwhal squid cliche. Meggings fap leggings slow-carb kickstarter, health goth gastropub hashtag blue bottle photo booth literally PBR&B iPhone ugh. Organic scenester truffaut pug, pitchfork man bun artisan brooklyn photo booth. Biodiesel farm-to-table 8-bit direct trade humblebrag, man braid blue bottle.
+						#clr-3.colorful-tab-content
+							p
+								| Austin artisan cornhole, microdosing messenger bag neutra tilde ramps chambray knausgaard. Messenger bag helvetica dreamcatcher migas, pork belly cold-pressed actually schlitz viral green juice vegan. XOXO mustache butcher, artisan shoreditch beard seitan lo-fi locavore banh mi skateboard organic. Sriracha ennui synth, viral chartreuse gentrify umami. Beard pour-over single-origin coffee, direct trade post-ironic keytar roof party twee shoreditch. Godard heirloom wolf, pabst pickled offal shoreditch. Kogi gentrify truffaut, viral irony kickstarter tumblr pop-up kitsch jean shorts next level cold-pressed.
+						#clr-4.colorful-tab-content
+							p
+								| Keffiyeh tumblr street art cold-pressed jean shorts. Street art pug 3 wolf moon cronut. Bicycle rights XOXO fanny pack cliche, cardigan meh distillery art party viral fixie roof party shabby chic kinfolk ethical yr. Poutine typewriter flannel pickled, chartreuse listicle brunch portland synth godard. Selfies echo park lo-fi ramps bespoke ugh, crucifix heirloom waistcoat squid literally. Craft beer green juice yr vinyl, sriracha pork belly pop-up seitan etsy put a bird on it truffaut. Paleo chartreuse drinking vinegar, try-hard heirloom letterpress 90's hella godard fashion axe man bun VHS pour-over farm-to-table.
+block scripts
+	script( src='libs/colorfulTab/dist/js/colorfulTab.min.js')
+	script.
+		// basic tab
+		$('.basic_tab .menu .item').tab({
+			context: '.basic_tab'
+		});
+		// multi  tab
+		$('.multi_tabs_group  .menu .item').tab({
+			context: '.multi_tabs_group'
+		});
+
+		// Colroful tab 
+		$("#colorful").colorfulTab({theme:'flatline'});

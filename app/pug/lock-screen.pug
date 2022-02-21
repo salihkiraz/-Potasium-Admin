@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		link(rel='icon', href='assets/img/favicon/favicon.ico', type='image/x-icon')
+		title
+			block title
+				| Potasium Admin - Lock
+		// Iconfont.cn Icons Css
+		link(rel='stylesheet', href='assets/fonts/iconfont/iconfont.css')
+		link(rel='stylesheet', href='libs/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/pages/lock-screen.css')
+	body
+		.principal-container
+			.container.bootstrap.snippet
+				.page.page-lock
+					.lock-centered.clearfix
+						.lock-container.row
+							.lock-box.col-12
+								.lock-user Jane Doe
+								.lock-img
+									img(src='assets/img/avatar/1.jpg', alt='')
+								.lock-pwd
+									form
+										.form-group
+											input.form-control(type='password', placeholder='Password')
+											a.btn-submit(href='index.html')
+												i.icon.iconfont.icon-suoding
+

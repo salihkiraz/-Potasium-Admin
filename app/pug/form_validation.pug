@@ -1,0 +1,389 @@
+extends layouts/base
+block  page-title
+	|	Form Validation
+block breadcrumb-item-1
+	| 	Form
+block breadcrumb-item-2
+	| 	Form Validation
+block page-content
+	//Page Content
+	+row()
+
+		+col("12","12","12","12","12")            
+			+basiccard("Form Validation Bootstrap" )
+					form.needs-validation(novalidate='')
+						.form-row
+							.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4.mb-3
+								label(for='validationCustom01') First name
+								input#validationCustom01.form-control(type='text', placeholder='First name', value='Mark', required='')
+								.valid-feedback   Looks good!
+							.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4.mb-3
+								label(for='validationCustom02') Last name
+								input#validationCustom02.form-control(type='text', placeholder='Last name', value='Otto', required='')
+								.valid-feedback   Looks good!
+							.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4.mb-3
+								label(for='validationCustomUsername') Username
+								.input-group
+									.input-group-prepend
+										span#inputGroupPrepend.input-group-text @
+									input#validationCustomUsername.form-control(type='text', placeholder='Username', aria-describedby='inputGroupPrepend', required='')
+									.invalid-feedback  Please choose a username.
+						.form-row
+							.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.mb-3
+								label(for='validationCustom03') City
+								input#validationCustom03.form-control(type='text', placeholder='City', required='')
+								.invalid-feedback  Please provide a valid city.
+							.col-xs-12.col-sm-12.col-md-3.col-lg-3.col-xl-3.mb-3
+								label(for='validationCustom04') State
+								input#validationCustom04.form-control(type='text', placeholder='State', required='')
+								.invalid-feedback  Please provide a valid state.
+							.col-xs-12.col-sm-12.col-md-3.col-lg-3.col-xl-3.mb-3
+								label(for='validationCustom05') Zip
+								input#validationCustom05.form-control(type='text', placeholder='Zip', required='')
+								.invalid-feedback Please provide a valid zip.
+						.form-group
+							.form-check
+								input#invalidCheck.form-check-input(type='checkbox', value='', required='')
+								| Agree to terms and conditions
+								label.form-check-label(for='invalidCheck')
+								.invalid-feedback  You must agree before submitting.
+						button.btn.btn-primary(type='submit') Submit form
+					script.
+						// Example starter JavaScript for disabling form submissions if there are invalid fields
+						(function() {
+						'use strict';
+						window.addEventListener('load', function() {
+							// Fetch all the forms we want to apply custom Bootstrap validation styles to
+							var forms = document.getElementsByClassName('needs-validation');
+							// Loop over them and prevent submission
+							var validation = Array.prototype.filter.call(forms, function(form) {
+							form.addEventListener('submit', function(event) {
+								if (form.checkValidity() === false) {
+								event.preventDefault();
+								event.stopPropagation();
+								}
+								form.classList.add('was-validated');
+							}, false);
+							});
+						}, false);
+						})();
+		+col("12","12","12","12","12")            
+			+basiccard("Form Validation" )
+							
+				form.was-validated
+					.custom-control.custom-checkbox.mb-3
+						input#customControlValidation1.custom-control-input(type='checkbox', required='')
+						label.custom-control-label(for='customControlValidation1') Check this custom checkbox
+						.invalid-feedback Example invalid feedback text
+					.custom-control.custom-radio
+						input#customControlValidation2.custom-control-input(type='radio', name='radio-stacked', required='')
+						label.custom-control-label(for='customControlValidation2') Toggle this custom radio
+					.custom-control.custom-radio.mb-3
+						input#customControlValidation3.custom-control-input(type='radio', name='radio-stacked', required='')
+						label.custom-control-label(for='customControlValidation3') Or toggle this other custom radio
+						.invalid-feedback More example invalid feedback text
+					.form-group
+						select.custom-select(required='')
+							option(value='') Open this select menu
+							option(value='1') One
+							option(value='2') Two
+							option(value='3') Three
+						.invalid-feedback Example invalid custom select feedback
+					.custom-file
+						input#validatedCustomFile.custom-file-input(type='file', required='')
+						label.custom-file-label(for='validatedCustomFile') Choose file...
+						.invalid-feedback Example invalid custom file feedback
+		+col("12","12","12","12","12")            
+			+basiccard("Form Validation Tooltip" )
+				form.needs-validation(novalidate='')
+					.form-row
+						.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4.mb-3
+							label(for='validationTooltip01') First name
+							input#validationTooltip01.form-control(type='text', placeholder='First name', value='Mark', required='')
+							.valid-tooltip
+								| Looks good!
+						.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4.mb-3
+							label(for='validationTooltip02') Last name
+							input#validationTooltip02.form-control(type='text', placeholder='Last name', value='Otto', required='')
+							.valid-tooltip
+								| Looks good!
+						.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4.mb-3
+							label(for='validationTooltipUsername') Username
+							.input-group
+								.input-group-prepend
+									span#validationTooltipUsernamePrepend.input-group-text @
+								input#validationTooltipUsername.form-control(type='text', placeholder='Username', aria-describedby='validationTooltipUsernamePrepend', required='')
+								.invalid-tooltip
+									| Please choose a unique and valid username.
+					.form-row
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.mb-3
+							label(for='validationTooltip03') City
+							input#validationTooltip03.form-control(type='text', placeholder='City', required='')
+							.invalid-tooltip
+								| Please provide a valid city.
+						.col-xs-12.col-sm-12.col-md-3.col-lg-3.col-xl-3.mb-3
+							label(for='validationTooltip04') State
+							input#validationTooltip04.form-control(type='text', placeholder='State', required='')
+							.invalid-tooltip
+								| Please provide a valid state.
+						.col-xs-12.col-sm-12.col-md-3.col-lg-3.col-xl-3.mb-3
+							label(for='validationTooltip05') Zip
+							input#validationTooltip05.form-control(type='text', placeholder='Zip', required='')
+							.invalid-tooltip
+								| Please provide a valid zip.
+					button.btn.btn-primary(type='submit') Submit form
+
+		+col("12","12","12","12","12")            
+			+basiccard("Form Validation (Semantic UI)")
+				form.ui.form.example
+					.field
+						label Empty
+						input(name='empty', type='text')
+					.field
+						label Dropdown
+						select.ui.dropdown(name='dropdown')
+							option(value='') Select
+							option(value='male') Choice 1
+							option(value='female') Choice 2
+					.inline.field
+						.ui.checkbox
+							input(type='checkbox', name='checkbox')
+							label Checkbox
+					.ui.submit.button Submit
+					.ui.error.message
+		+col("12","12","12","12","12")            
+			+basiccard("Form Validation (Semantic UI)")
+				form.ui.form.error.example2
+					.two.fields
+						.field.error
+							label Integer
+							input(name='integer', type='text', value='101')
+						.field.error
+							label E-mail
+							input(name='email', type='text', value='jack')
+					.two.fields
+						.field.error
+							label Decimal
+							input(name='decimal', type='text', value='1.1.1')
+						.field.error
+							label Number
+							input(name='number', type='text', value='+200')
+					.two.fields
+						.field.error
+							label URL
+							input(name='url', type='text', value='ww.fakeurl.com')
+						.field.error
+							label RegEx
+							input(name='regex', type='text', value='joe')
+					.ui.submit.button Submit
+					.ui.error.message
+						ul.list
+							li Please enter a valid e-mail
+							li Please enter an integer value
+							li Please enter a valid decimal
+							li Please enter a valid number
+							li Please enter a url
+							li Please enter a 4-16 letter username
+
+		+col("12","12","12","12","12")            
+			+basiccard("Form Validator Plugin ")
+				form#contact_form.well.form-horizontal()       
+					fieldset
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label User Name
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-user
+									input.form-control(name='user_name', placeholder='User Name', type='text',data-validation="length alphanumeric" ,		 data-validation-length="3-12" ,	 data-validation-error-msg="User name has to be an alphanumeric value (3-12 chars)")
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Password
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-user
+									input.form-control(name='password_confirmation', type='password', data-validation="strength" ,	 data-validation-strength="2")
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Repeat  Password
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-user
+									input.form-control(name='password', type='password',data-validation="confirmation")
+
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label E-Mail
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+									i.fa.fa-envelope
+									input.form-control(name='email', placeholder='E-Mail Address', type='text',data-validation="email")
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Birth date
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+									i.fa.fa-envelope
+									input.form-control(name='birthdate', type='text',data-validation="birthdate" , data-validation-help="yyyy-mm-dd")
+
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Phone 
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-phone
+									input.form-control(name='phone', placeholder='8455551212', type='text',data-validation="custom",data-validation-regexp="^([0-9]{3}[0-9]{3}[0-9]{4})$")
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Image File
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend.hidden-mobile
+									.input-group-text
+										i.fa.fa-file                      
+									input(type='file', data-validation='mime size', data-validation-allowing='jpg, png, gif', data-validation-max-size='30k')  
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Audio File
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend.hidden-mobile
+									.input-group-text
+										i.fa.fa-file                      
+									input(type='file', data-validation='mime size', data-validation-allowing='mp3, mp4, wma', data-validation-max-size='1000k') 
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label City
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-home
+									input.form-control(name='city', placeholder='city', type='text')
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Web site
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-id-card
+									input.form-control(name='web_site', placeholder='Web Site', type='text',data-validation="url")
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Do you have hosting?
+							.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
+								.radio
+									label
+										input(type='radio', name='hosting', value='yes')
+										| Yes
+								.radio
+									label
+										input(type='radio', name='hosting', value='no')
+										| No
+
+				
+
+						.form-actions
+								button.btn.btn-primary.mr-1(type='submit') Validate 
+									i.fa.fa-floppy-o
+								button.btn.btn-grey(type='reset') Reset 
+									i.fa.fa-check-square-o    
+block scripts
+	script(src='libs/jquery-form-validator/form-validator/jquery.form-validator.min.js')
+	script.
+		$.validate({ modules : 'location, date, security, file'});
+		$('.example').form({
+				on: 'blur',
+				fields: {
+				empty: {
+					identifier  : 'empty',
+					rules: [
+					{
+						type   : 'empty',
+						prompt : 'Please enter a value'
+					}
+					]
+				},
+				dropdown: {
+					identifier  : 'dropdown',
+					rules: [
+					{
+						type   : 'empty',
+						prompt : 'Please select a dropdown value'
+					}
+					]
+				},
+				checkbox: {
+					identifier  : 'checkbox',
+					rules: [
+					{
+						type   : 'checked',
+						prompt : 'Please check the checkbox'
+					}
+					]
+				}
+				}
+			})
+			;
+		$('.example2').form({
+					on: 'blur',
+					fields: {
+					integer: {
+						identifier  : 'integer',
+						rules: [
+						{
+							type   : 'integer[1..100]',
+							prompt : 'Please enter an integer value'
+						}
+						]
+					},
+					decimal: {
+						identifier  : 'decimal',
+						rules: [
+						{
+							type   : 'decimal',
+							prompt : 'Please enter a valid decimal'
+						}
+						]
+					},
+					number: {
+						identifier  : 'number',
+						rules: [
+						{
+							type   : 'number',
+							prompt : 'Please enter a valid number'
+						}
+						]
+					},
+					email: {
+						identifier  : 'email',
+						rules: [
+						{
+							type   : 'email',
+							prompt : 'Please enter a valid e-mail'
+						}
+						]
+					},
+					url: {
+						identifier  : 'url',
+						rules: [
+						{
+							type   : 'url',
+							prompt : 'Please enter a url'
+						}
+						]
+					},
+					regex: {
+						identifier  : 'regex',
+						rules: [
+						{
+							type   : 'regExp[/^[a-z0-9_-]{4,16}$/]',
+							prompt : 'Please enter a 4-16 letter username'
+						}
+						]
+					}
+					}
+				})
+				;

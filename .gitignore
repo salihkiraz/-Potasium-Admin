@@ -1,0 +1,8 @@
+/node_modules
+/bower_components
+/app/libs/**
+/app/js/*.js
+/app/css/**
+/app/*.html
+/dist
+/.vscode

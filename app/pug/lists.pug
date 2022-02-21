@@ -1,0 +1,402 @@
+extends layouts/base
+block page-content
+    .row
+        .col-xl-6
+            .card
+                .card-header
+                    h5 Basic Lists
+                .card-body
+                    .ui.list
+                        .item Apples
+                        |   
+                        .item Pears
+                        |   
+                        .item Oranges
+            .card
+                .card-header
+                    h5 Iconed Lists
+                .card-body
+                    .ui.list
+                        .item
+                            i.users.icon
+                            |     
+                            .content
+                                | Semantic UI
+                        |   
+                        .item
+                            i.marker.icon
+                            |     
+                            .content
+                                | New York, NY
+                        |   
+                        .item
+                            i.mail.icon
+                            |     
+                            .content
+                                a(href="mailto:jack@semantic-ui.com") jack@semantic-ui.com
+                        |   
+                        .item
+                            i.linkify.icon
+                            |     
+                            .content
+                                a(href="http://www.semantic-ui.com") semantic-ui.com
+            .card
+                .card-header
+                    h5 Relaxed Lists
+                .card-body
+                    .ui.relaxed.divided.list
+                        .item
+                            i.large.github.middle.aligned.icon
+                            |     
+                            .content
+                                a.header Semantic-Org/Semantic-UI
+                                |       
+                                .description Updated 10 mins ago
+                        |   
+                        .item
+                            i.large.github.middle.aligned.icon
+                            |     
+                            .content
+                                a.header Semantic-Org/Semantic-UI-Docs
+                                |       
+                                .description Updated 22 mins ago
+                        |   
+                        .item
+                            i.large.github.middle.aligned.icon
+                            |     
+                            .content
+                                a.header Semantic-Org/Semantic-UI-Meteor
+                                |       
+                                .description Updated 34 mins ago
+            .card
+                .card-header
+                    h5 Tree Lists
+                .card-body
+                    .ui.list
+                        .item
+                            i.folder.icon
+                            |     
+                            .content
+                                .header src
+                                |       
+                                .description Source files for project
+                                |       
+                                .list
+                                    .item
+                                        i.folder.icon
+                                        |           
+                                        .content
+                                            .header site
+                                            |             
+                                            .description Your site's theme
+                                    |         
+                                    .item
+                                        i.folder.icon
+                                        |           
+                                        .content
+                                            .header themes
+                                            |             
+                                            .description Packaged theme files
+                                            |             
+                                            .list
+                                                .item
+                                                    i.folder.icon
+                                                    |                 
+                                                    .content
+                                                        .header default
+                                                        |                   
+                                                        .description Default packaged theme
+                                                |               
+                                                .item
+                                                    i.folder.icon
+                                                    |                 
+                                                    .content
+                                                        .header my_theme
+                                                        |                   
+                                                        .description Packaged themes are also available in this folder
+                                    |         
+                                    .item
+                                        i.file.icon
+                                        |           
+                                        .content
+                                            .header theme.config
+                                            |             
+                                            .description Config file for setting packaged themes
+                        |   
+                        .item
+                            i.folder.icon
+                            |     
+                            .content
+                                .header dist
+                                |       
+                                .description Compiled CSS and JS files
+                                |       
+                                .list
+                                    .item
+                                        i.folder.icon
+                                        |           
+                                        .content
+                                            .header components
+                                            |             
+                                            .description Individual component CSS and JS
+                        |   
+                        .item
+                            i.file.icon
+                            |     
+                            .content
+                                .header semantic.json
+                                |       
+                                .description Contains build settings for gulp
+            .card
+                .card-header
+                    h5 Bulleted Lists
+                .card-body
+                    .ui.bulleted.list
+                        .item Gaining Access
+                        |   
+                        .item Inviting Friends
+                        |   
+                        .item
+                            div Benefits
+                            |     
+                            .list
+                                a.item(href="#") Link to somewhere
+                                |       
+                                .item Rebates
+                                |       
+                                .item Discounts
+                        |   
+                        .item Warranty
+            .card
+                .card-header
+                    h5 Ordered Lists
+                .card-body
+                    .ui.ordered.list
+                        a.item Getting Started
+                        |   
+                        a.item Introduction
+                        |   
+                        .item
+                            a Languages
+                            |     
+                            .list
+                                a.item HTML
+                                |       
+                                a.item Javascript
+                                |       
+                                a.item CSS
+                        |   
+                        a.item Review
+            .card
+                .card-header
+                    h5 Data-Attr Content Lists
+                .card-body
+                    ol.ui.list
+                        li(value="*") Signing Up
+                        |   
+                        li(value="*") User Benefits
+                        |   
+                        li(value="*")
+                            | User Types
+                            ol
+                                li(value="-") Admin
+                                |       
+                                li(value="-") Power User
+                                |       
+                                li(value="-") Regular User
+                        |   
+                        li(value="*") Deleting Your Account
+            .card
+                .card-header
+                    h5 Selection Lists
+                .card-body
+                    .ui.middle.aligned.selection.list
+                        .item
+                            img.ui.avatar.image(src="assets/img/avatar/1.jpg")
+                            |     
+                            .content
+                                .header Helen
+                        |   
+                        .item
+                            img.ui.avatar.image(src="assets/img/avatar/2.jpg")
+                            |     
+                            .content
+                                .header Christian
+                        |   
+                        .item
+                            img.ui.avatar.image(src="assets/img/avatar/3.jpg")
+                            |     
+                            .content
+                                .header Daniel
+        .col-xl-6
+            .card
+                .card-header
+                    h5 Basic List Group
+                .card-body
+                    ul.list-group
+                        li.list-group-item Cras justo odio
+                        |   
+                        li.list-group-item Dapibus ac facilisis in
+                        |   
+                        li.list-group-item Morbi leo risus
+                        |   
+                        li.list-group-item Porta ac consectetur ac
+                        |   
+                        li.list-group-item Vestibulum at eros
+            .card
+                .card-header
+                    h5 Active Items
+                .card-body
+                    ul.list-group
+                        li.list-group-item.active Cras justo odio
+                        |   
+                        li.list-group-item Dapibus ac facilisis in
+                        |   
+                        li.list-group-item Morbi leo risus
+                        |   
+                        li.list-group-item Porta ac consectetur ac
+                        |   
+                        li.list-group-item Vestibulum at eros
+            .card
+                .card-header
+                    h5 Disabled Items
+                .card-body
+                    ul.list-group
+                        li.list-group-item.disabled Cras justo odio
+                        |   
+                        li.list-group-item Dapibus ac facilisis in
+                        |   
+                        li.list-group-item Morbi leo risus
+                        |   
+                        li.list-group-item Porta ac consectetur ac
+                        |   
+                        li.list-group-item Vestibulum at eros
+            .card
+                .card-header
+                    h5 Links and Buttons
+                .card-body
+                    .list-group
+                        a.list-group-item.list-group-item-action.active(href="#")
+                            | Cras justo odio
+                        |   
+                        a.list-group-item.list-group-item-action(href="#") Dapibus ac facilisis in
+                        |   
+                        a.list-group-item.list-group-item-action(href="#") Morbi leo risus
+                        |   
+                        a.list-group-item.list-group-item-action(href="#") Porta ac consectetur ac
+                        |   
+                        a.list-group-item.list-group-item-action.disabled(href="#") Vestibulum at eros
+            .card
+                .card-header
+                    h5 Links and Buttons
+                .card-body
+                    .list-group
+                        button.list-group-item.list-group-item-action.active(type="button")
+                            | Cras justo odio
+                        |   
+                        button.list-group-item.list-group-item-action(type="button") Dapibus ac facilisis in
+                        |   
+                        button.list-group-item.list-group-item-action(type="button") Morbi leo risus
+                        |   
+                        button.list-group-item.list-group-item-action(type="button") Porta ac consectetur ac
+                        |   
+                        button.list-group-item.list-group-item-action(type="button", disabled="") Vestibulum at eros
+            .card
+                .card-header
+                    h5 Contextual Classes
+                .card-body
+                    ul.list-group
+                        li.list-group-item Dapibus ac facilisis in
+                        |   
+                        |   
+                        li.list-group-item.list-group-item-primary This is a primary list group item
+                        |   
+                        li.list-group-item.list-group-item-secondary This is a secondary list group item
+                        |   
+                        li.list-group-item.list-group-item-success This is a success list group item
+                        |   
+                        li.list-group-item.list-group-item-danger This is a danger list group item
+                        |   
+                        li.list-group-item.list-group-item-warning This is a warning list group item
+                        |   
+                        li.list-group-item.list-group-item-info This is a info list group item
+                        |   
+                        li.list-group-item.list-group-item-light This is a light list group item
+                        |   
+                        li.list-group-item.list-group-item-dark This is a dark list group item
+            .card
+                .card-header
+                    h5 Contextual Classes
+                .card-body
+                    .list-group
+                        a.list-group-item.list-group-item-action(href="#") Dapibus ac facilisis in
+                        |   
+                        |   
+                        a.list-group-item.list-group-item-action.list-group-item-primary(href="#") This is a primary list group item
+                        |   
+                        a.list-group-item.list-group-item-action.list-group-item-secondary(href="#") This is a secondary list group item
+                        |   
+                        a.list-group-item.list-group-item-action.list-group-item-success(href="#") This is a success list group item
+                        |   
+                        a.list-group-item.list-group-item-action.list-group-item-danger(href="#") This is a danger list group item
+                        |   
+                        a.list-group-item.list-group-item-action.list-group-item-warning(href="#") This is a warning list group item
+                        |   
+                        a.list-group-item.list-group-item-action.list-group-item-info(href="#") This is a info list group item
+                        |   
+                        a.list-group-item.list-group-item-action.list-group-item-light(href="#") This is a light list group item
+                        |   
+                        a.list-group-item.list-group-item-action.list-group-item-dark(href="#") This is a dark list group item
+            .card
+                .card-header
+                    h5 With Badges
+                .card-body
+                    ul.list-group
+                        li.list-group-item.d-flex.justify-content-between.align-items-center
+                            | Cras justo odio
+                            span.badge.badge-primary.badge-pill 14
+                        |   
+                        li.list-group-item.d-flex.justify-content-between.align-items-center
+                            | Dapibus ac facilisis in
+                            span.badge.badge-primary.badge-pill 2
+                        |   
+                        li.list-group-item.d-flex.justify-content-between.align-items-center
+                            | Morbi leo risus
+                            span.badge.badge-primary.badge-pill 1
+            .card
+                .card-header
+                    h5 Custom Content
+                .card-body
+                    .list-group
+                        a.list-group-item.list-group-item-action.flex-column.align-items-start.active(href="#")
+                            .d-flex.w-100.justify-content-between
+                                h5.mb-1 List group item heading
+                                |       
+                                small 3 days ago
+                            |     
+                            p.mb-1
+                                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                            |     
+                            small Donec id elit non mi porta.
+                        |   
+                        a.list-group-item.list-group-item-action.flex-column.align-items-start(href="#")
+                            .d-flex.w-100.justify-content-between
+                                h5.mb-1 List group item heading
+                                |       
+                                small.text-muted 3 days ago
+                            |     
+                            p.mb-1
+                                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                            |     
+                            small.text-muted Donec id elit non mi porta.
+                        |   
+                        a.list-group-item.list-group-item-action.flex-column.align-items-start(href="#")
+                            .d-flex.w-100.justify-content-between
+                                h5.mb-1 List group item heading
+                                |       
+                                small.text-muted 3 days ago
+                            |     
+                            p.mb-1
+                                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                            |     
+                            small.text-muted Donec id elit non mi porta.

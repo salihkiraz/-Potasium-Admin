@@ -1,0 +1,377 @@
+extends layouts/base
+block page-content
+	+row()
+		+col("12","12","12","12","12")
+			+basiccard("Menu") 
+				p A menu
+				.ui.three.item.menu
+					a.item.active Editorials
+					a.item Reviews
+					a.item Events
+
+			+basiccard("Icon Menu") 
+				.ui.top.attached.menu.stackable
+					.ui.dropdown.icon.item
+						i.wrench.icon
+						.menu
+							.item
+								i.dropdown.icon
+								span.text New
+								.menu
+									.item Document
+									.item Image
+							.item
+								| Open...
+							.item
+								| Save...
+							.item Edit Permissions
+							.divider
+							.header
+								| Export
+							.item
+								| Share...
+					.right.menu
+						.ui.right.aligned.category.search.item
+							.ui.transparent.icon.input
+								input.prompt(type='text', placeholder='Search animals...')
+								i.search.link.icon
+							.results
+				.ui.bottom.attached.segment
+					p            
+
+			+basiccard("Secondary Menu") 
+				.ui.secondary.menu.stackable
+					a.item
+						| Home
+					a.item
+						| Messages
+					a.item.active
+						| Friends
+					.right.menu
+						.item
+							.ui.icon.input
+								input(type='text', placeholder='Search...')
+								i.search.link.icon
+						a.ui.item
+							| Logout
+
+			+basiccard("Vertical Menu")
+				+row()
+					+col("12","12","12","12","4")
+						.ui.vertical.menu
+							a.active.teal.item
+								| Inbox
+								.ui.teal.left.pointing.label 1
+							a.item
+								| Spam
+								.ui.label 51
+							a.item
+								| Updates
+								.ui.label 1
+							.item
+								.ui.transparent.icon.input
+									input(type='text', placeholder='Search mail...')
+									i.search.icon
+					+col("12","12","12","12","4")
+						.ui.secondary.vertical.menu.hidden-xs-menu
+							a.active.item
+								| Account
+							a.item
+								| Settings
+							.ui.dropdown.item
+								i.dropdown.icon
+								|     Display Options
+								.menu
+									.header Text Size
+									a.item Small
+									a.item Medium
+									a.item Large
+					+col("12","12","12","12","4")
+						.ui.vertical.pointing.menu
+							a.item.active
+								| Home
+							a.item
+								| Messages
+							a.item
+								| Friends
+
+			+basiccard("Pagination Menu") 
+				.ui.pagination.menu.stackable
+					a.item
+						| 1
+					.disabled.item
+						| ...
+					a.item
+						| 10
+					a.item.active
+						| 11
+					a.item
+						| 12
+			+basiccard("Header Menu") 
+				.ui.menu.stackable
+					.header.item
+						| Our Company
+					a.item
+						| About Us
+					a.item
+						| Jobs
+					a.item.active
+						| Locations
+			+basiccard("Header Menu") 
+				.ui.vertical.menu
+					.item
+						.header Products
+						.menu
+							a.item Enterprise
+							a.item Consumer
+					.item
+						.header CMS Solutions
+						.menu
+							a.item Rails
+							a.item Python
+							a.item PHP
+					.item
+						.header Hosting
+						.menu
+							a.item Shared
+							a.item Dedicated
+					.item
+						.header Support
+						.menu
+							a.item E-mail Support
+							a.item FAQs
+			+basiccard("Input Menu") 
+				.ui.menu.stackable
+					.item
+						.ui.icon.input
+							input(type='text', placeholder='Search...')
+							i.search.icon
+					.right.item
+						.ui.action.input.fluid
+							input(type='text', placeholder='Navigate to...')
+							.ui.button Go
+			+basiccard("Popup Menu") 
+				.ui.menu.stackable
+					a.browse.item
+						| Browse
+						i.dropdown.icon
+					|   
+					.ui.fluid.popup.bottom.left.transition.hidden(style="top: 554px; left: 1px; bottom: auto; right: auto; width: 761px;")
+						.ui.four.column.relaxed.divided.grid
+							.column
+								h4.ui.header Fabrics
+								|         
+								.ui.link.list
+									a.item Cashmere
+									|           
+									a.item Linen
+									|           
+									a.item Cotton
+									|           
+									a.item Viscose
+							.column
+								h4.ui.header Size
+								|         
+								.ui.link.list
+								a.item Small
+									|           
+									a.item Medium
+									|           
+									a.item Large
+									|           
+									a.item Plus Sizes
+							.column
+								h4.ui.header Colors
+								|         
+								.ui.link.list
+									a.item Neutrals
+									|           
+									a.item Brights
+									|           
+									a.item Pastels
+							.column
+								h4.ui.header Types
+								|         
+								.ui.link.list
+									a.item Knitwear
+									|           
+									a.item Outerwear
+									|           
+									a.item Pants
+									|           
+									a.item Shoes
+					a.item
+						i.cart.icon
+						|     Checkout
+
+			+basiccard("Sub Menu")
+				.ui.vertical.menu
+					.item
+						.ui.input
+							input(type='text', placeholder='Search...')
+					.item
+						| Home
+						.menu
+							a.active.item Search
+							a.item Add
+							a.item Remove
+					a.item
+						i.grid.layout.icon
+						|  Browse
+					a.item
+						| Messages
+					.ui.dropdown.item
+						| More
+						i.dropdown.icon
+						.menu
+							a.item
+								i.edit.icon
+								|  Edit Profile
+							a.item
+								i.globe.icon
+								|  Choose Language
+							a.item
+								i.settings.icon
+								|  Account Settings
+			+basiccard("Inverted  Menu")
+				.ui.inverted.menu.stackable
+					a.active.item
+						| Home
+					a.item
+						| Messages
+					a.item
+						| Friends
+			+basiccard("Colored  Menu")
+				.ui.menu.stackable
+					a.red.item Red
+					a.orange.item.active Orange
+					a.yellow.item Yellow
+					a.olive.item Olive
+					a.green.item Green
+					a.teal.item Teal
+				.ui.menu.stackable
+					a.blue.item Blue
+					a.violet.item Violet
+					a.purple.item Purple
+					a.pink.item Pink
+					a.brown.item.active Brown
+					a.grey.item Grey
+				br
+				.ui.inverted.menu.stackable
+					a.red.item Red
+					a.orange.item Orange
+					a.yellow.item Yellow
+					a.olive.item.active Olive
+					a.green.item Green
+					a.teal.item Teal
+				.ui.inverted.menu.stackable
+					a.blue.item Blue
+					a.violet.item Violet
+					a.purple.item Purple
+					a.pink.item Pink
+					a.brown.item.active Brown
+					a.grey.item Grey
+			+basiccard("Labeled  Menu")
+				.ui.labeled.small.icon.menu.stackable
+					a.item
+						i.gamepad.icon
+						|     Games
+					a.item
+						i.video.camera.icon
+						|     Channels
+					a.item
+						i.video.play.icon
+						|     Videos
+				.ui.vertical.small.labeled.icon.menu
+					a.item
+						i.gamepad.icon
+						|     Games
+					a.item
+						i.video.camera.icon
+						|     Channels
+					a.item
+						i.video.play.icon
+						|     Videos
+			+basiccard("Sized  Menu")
+				.ui.mini.menu.stackable
+					a.active.item
+						| Home
+					a.item
+						| Messages
+					.right.menu
+						.ui.dropdown.item
+							| Language 
+							i.dropdown.icon
+							.menu
+								a.item English
+								a.item Russian
+								a.item Spanish
+						.item
+							.ui.primary.button Sign Up
+				br
+				.ui.massive.menu.stackable
+					a.active.item
+						| Home
+					a.item
+						| Messages
+					.right.menu
+						.ui.dropdown.item
+							| Language 
+							i.dropdown.icon
+							.menu
+								a.item English
+								a.item Russian
+								a.item Spanish
+						.item
+							.ui.primary.button Sign Up
+				br
+				.ui.large.menu.stackable
+					a.active.item
+						| Home
+					a.item
+						| Messages
+					.right.menu
+						.ui.dropdown.item
+							| Language 
+							i.dropdown.icon
+							.menu
+								a.item English
+								a.item Russian
+								a.item Spanish
+						.item
+							.ui.primary.button Sign Up
+				br
+				.ui.mini.vertical.menu.stackable
+					a.active.item
+						.ui.teal.label 1
+						|     Inbox
+					a.item
+						.ui.label 51
+						|     Spam
+					a.item
+						.ui.label 1
+						|     Updates
+					.item
+						.ui.icon.input
+							input(type='text', placeholder='Search mail...')
+							i.search.icon
+
+
+			+basiccard("Tabular Menu") 
+				.ui.top.attached.segment
+					p.
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				.ui.bottom.attached.tabular.menu.stackable
+					a.item
+						| Active Project
+					a.item.active
+						| Project #2
+					a.item
+						| Project #3
+					.right.menu
+						a.item
+							i.add.icon
+							|  New Tab
+
+block scripts
+	script( src='js/pages/menu.js')

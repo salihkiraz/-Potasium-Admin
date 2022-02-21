@@ -1,0 +1,55 @@
+extends layouts/base
+block  page-title
+	|	POTASIUM ADMIN Change Logs
+block breadcrumb-item-1
+	| 	Change Logs
+block breadcrumb-item-2
+	|
+block page-content
+	+row()
+		+col("12","12","12","12","12")            
+			+basiccard("Potasium Admin Change Log " )
+				.timeline
+					ul
+						li
+							.bullet.pink
+							|         
+							.time 02.2018 
+							|         
+							.desc
+								h3 Release v1.0
+								|           
+								h4 Publish 
+						|       
+						li
+							.bullet.green
+							|         
+							.time 11.2017
+							|         
+							.desc
+								h3 Development Beta 2
+								|           
+								h4 wow
+								|           
+						|       
+						li
+							.bullet.orange
+							|         
+							.time 10.2017
+							|         
+							.desc
+								h3 Development Beta 1
+						li
+							.bullet.orange
+							|         
+							.time 07.2017
+							|         
+							.desc
+								h3 Development Alpha
+						li
+							.bullet.green
+							|         
+							.time 06.2017
+							|         
+							.desc
+								h3 Project Start

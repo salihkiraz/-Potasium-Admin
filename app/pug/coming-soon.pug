@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		link(rel='icon', href='assets/img/favicon/favicon.ico', type='image/x-icon')
+		link(rel='stylesheet', href='libs/bootstrap/dist/css/bootstrap.min.css')
+		// Iconfont.cn Icons Css
+		link(property="stylesheet" href="./assets/fonts/icons/black-icons-1/iconfont.css" rel="stylesheet")
+		title
+			block title
+				| Potasium Admin - Coming Soon
+		link(rel='stylesheet', href='css/pages/coming-soon.css')
+
+	body
+		a.home-button(href="index.html")
+			i.icon.iconfont.icon-home(aria-hidden="true")
+		.container
+			.row
+				.col-xs-12.col-sm-12.col-md-12.col-xl-12.col-lg-12
+					h1.template-title Potasium Admin Coming Soon
+			#countdown.row(data-date="15 Dec 2017 15:35:35")
+				.col-xs-12.col-sm-12.col-md-12.col-xl-3.col-lg-3
+					.count-card
+						span.days
+						p Days
+				.col-xs-12.col-sm-12.col-md-12.col-xl-3.col-lg-3
+					.count-card
+						span.hours
+						p Hours
+				.col-xs-12.col-sm-12.col-md-12.col-xl-3.col-lg-3
+					.count-card
+						span.minutes
+						p Minutes
+				.col-xs-12.col-sm-12.col-md-12.col-xl-3.col-lg-3
+					.count-card
+						span.seconds
+						p Seconds
+		script( src="libs/jquery/dist/jquery.min.js" )
+		script( src="js/pages/coming-soon.min.js" )

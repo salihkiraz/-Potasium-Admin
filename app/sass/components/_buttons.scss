@@ -1,0 +1,39 @@
+.gradient-button {
+    display: inline-block;
+    font-weight: 700;
+    border: 0;
+    border-radius: 2rem;
+    white-space: nowrap;
+    padding: 1rem 1.5rem;
+    line-height: 1.4;
+    position: relative;
+    text-align: center;
+    -webkit-transition: 70ms;
+    transition: 70ms;
+    position: relative;
+    cursor:pointer;
+    margin-top:10px;
+    margin-right:5px;
+    &.fluid{
+        width:100%;
+    }
+    &:hover {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px)
+    }
+    &.alchemist-lab {
+        background-image: -webkit-gradient(linear, right bottom, left top, from(rgb(108, 99, 255)), to(rgb(58, 210, 159)));
+        background-image: linear-gradient(to top left, rgb(108, 99, 255), rgb(58, 210, 159));
+        color: rgb(255, 255, 255) !important;
+    }
+    &.passionate-bed{
+        background-image: -webkit-gradient(linear, right bottom, left top, from(#ff758c), to(#ff7eb3));
+        background-image: linear-gradient(to top left, #ff758c, #ff7eb3);
+        color: rgb(255, 255, 255) !important;
+    }
+    &.true-sunset{
+        background-image: -webkit-gradient(linear,right bottom,left top,from(rgb(255, 138, 0)),to(rgb(218, 27, 96)));
+        background-image: linear-gradient(to top left,rgb(255, 138, 0),rgb(218, 27, 96));
+        color: rgb(255, 255, 255)!important;
+    }
+}

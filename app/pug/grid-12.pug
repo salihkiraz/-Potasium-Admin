@@ -1,0 +1,358 @@
+extends layouts/base
+block page-content
+	h3#grid-system
+		div
+			| 12 Grid System
+			a.anchorjs-link(href="#grid-system", aria-label="Anchor", data-anchorjs-icon="#", style="padding-left: 0.375em;")
+	+row()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+		+col(12,12,12,12,1)           
+			+grid-12()
+	+row()
+		+col(12,12,12,12,2)           
+			+grid-12()
+		+col(12,12,12,12,2)           
+			+grid-12()
+		+col(12,12,12,12,2)           
+			+grid-12()
+		+col(12,12,12,12,2)           
+			+grid-12()
+		+col(12,12,12,12,2)           
+			+grid-12()
+		+col(12,12,12,12,2)  
+			+grid-12()         
+	+row()
+		+col(12,12,12,12,3)           
+			+grid-12()
+		+col(12,12,12,12,3)           
+			+grid-12()
+		+col(12,12,12,12,3)           
+			+grid-12()
+		+col(12,12,12,12,3)           
+			+grid-12()
+	+row()
+		+col(12,12,12,12,4)           
+			+grid-12()
+		+col(12,12,12,12,4)           
+			+grid-12()
+		+col(12,12,12,12,4)           
+			+grid-12()
+	+row()
+		+col(12,12,12,12,6)           
+			+grid-12()
+		+col(12,12,12,12,6)      
+			+grid-12()     
+	+row()
+		+col(12,12,12,12,12)           
+			+grid-12()
+	h2#grid-options
+		div
+			| Grid options
+			a.anchorjs-link(href="#grid-options", aria-label="Anchor", data-anchorjs-icon="#", style="padding-left: 0.375em;")
+	+row()
+		+col(12,12,12,12,12)           
+			.card
+				table.table.table-bordered.table-striped.table-responsive.grid-12-table
+					thead
+						tr
+							th
+							|       
+							th.text-center
+								| Extra small
+								br
+								|         
+								small <576px
+							|       
+							th.text-center
+								| Small
+								br
+								|         
+								small ≥576px
+							|       
+							th.text-center
+								| Medium
+								br
+								|         
+								small ≥768px
+							|       
+							th.text-center
+								| Large
+								br
+								|         
+								small ≥992px
+							|       
+							th.text-center
+								| Extra large
+								br
+								|         
+								small ≥1200px
+					|   
+					tbody
+						tr
+							th.text-nowrap(scope="row") Max container width
+							|       
+							td None (auto)
+							|       
+							td 540px
+							|       
+							td 720px
+							|       
+							td 960px
+							|       
+							td 1140px
+						|     
+						tr
+							th.text-nowrap(scope="row") Class prefix
+							|       
+							td
+								code .col-
+							|       
+							td
+								code .col-sm-
+							|       
+							td
+								code .col-md-
+							|       
+							td
+								code .col-lg-
+							|       
+							td
+								code .col-xl-
+						|     
+						tr
+							th.text-nowrap(scope="row") # of columns
+							|       
+							td(colspan="5") 12
+						|     
+						tr
+							th.text-nowrap(scope="row") Gutter width
+							|       
+							td(colspan="5") 30px (15px on each side of a column)
+						|     
+						tr
+							th.text-nowrap(scope="row") Nestable
+							|       
+							td(colspan="5") Yes
+						|     
+						tr
+							th.text-nowrap(scope="row") Column ordering
+							|       
+							td(colspan="5") Yes
+	h3#equal-width
+		div
+			| Equal-width
+			a.anchorjs-link(href="#equal-width", aria-label="Anchor", data-anchorjs-icon="#", style="padding-left: 0.375em;")
+	.row
+		.col
+			.card.grid-card.z-depth-2
+				| 1 of 2
+		.col
+			.card.grid-card.z-depth-2
+				| 2 of 2
+	.row
+		.col
+			.card.grid-card.z-depth-2
+				| 1 of 3
+		.col
+			.card.grid-card.z-depth-2
+				| 2 of 3
+		.col
+			.card.grid-card.z-depth-2
+				| 3 of 3
+	h3#setting-one-column-width
+		div
+			| Setting one column width
+			a.anchorjs-link(href="#setting-one-column-width", aria-label="Anchor", data-anchorjs-icon="#", style="padding-left: 0.375em;")
+	.row
+		.col
+			.card.grid-card.z-depth-2
+				| 1 of 3
+		.col-6
+			.card.grid-card.z-depth-2
+				| 2 of 3 (wider)
+		.col
+			.card.grid-card.z-depth-2
+				| 3 of 3
+	.row
+		.col
+			.card.grid-card.z-depth-2
+				| 1 of 3
+		.col-5
+			.card.grid-card.z-depth-2
+				| 2 of 3 (wider)    
+		.col
+			.card.grid-card.z-depth-2
+				| 3 of 3
+	h3#variable-width-content
+		div
+			| Variable width content
+			a.anchorjs-link(href="#variable-width-content", aria-label="Anchor", data-anchorjs-icon="#", style="padding-left: 0.375em;")
+	.row.justify-content-md-center
+		.col.col-lg-2
+			.card.grid-card.z-depth-2
+				| 1 of 3
+		.col-md-auto
+			.card.grid-card.z-depth-2
+				| Variable width content
+		.col.col-lg-2
+			.card.grid-card.z-depth-2
+				| 3 of 3
+	.row
+		.col
+			.card.grid-card.z-depth-2
+				| 1 of 3
+		.col-md-auto
+			.card.grid-card.z-depth-2
+				| Variable width content
+		.col.col-lg-2
+			.card.grid-card.z-depth-2
+				| 3 of 3
+	h3#stacked-to-horizontal
+		div
+			| Stacked to horizontal
+			a.anchorjs-link(href="#stacked-to-horizontal", aria-label="Anchor", data-anchorjs-icon="#", style="padding-left: 0.375em;")
+	.row
+		.col-sm-8
+			.card.grid-card.z-depth-2
+				| col-sm-8
+		.col-sm-4
+			.card.grid-card.z-depth-2
+				| col-sm-4
+	.row
+		.col-sm
+			.card.grid-card.z-depth-2
+				| col-sm
+		.col-sm
+			.card.grid-card.z-depth-2
+				| col-sm 
+		.col-sm 
+			.card.grid-card.z-depth-2
+				| col-sm
+	h3#mix-and-match
+		div
+			| Mix and match
+			a.anchorjs-link(href="#mix-and-match", aria-label="Anchor", data-anchorjs-icon="#", style="padding-left: 0.375em;")
+	// Stack the columns on mobile by making one full-width and the other half-width
+	.row
+		.col-12.col-md-8 
+			.card.grid-card.z-depth-2
+				| .col-12 .col-md-8
+		.col-6.col-md-4
+			.card.grid-card.z-depth-2
+				|.col-6 .col-md-4
+	// Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
+	.row
+		.col-6.col-md-4
+			.card.grid-card.z-depth-2
+				|.col-6 .col-md-4
+		.col-6.col-md-4
+			.card.grid-card.z-depth-2
+				| .col-6 .col-md-4
+		.col-6.col-md-4 
+			.card.grid-card.z-depth-2
+				|.col-6 .col-md-4
+	// Columns are always 50% wide, on mobile and desktop
+	.row
+		.col-6 
+			.card.grid-card.z-depth-2
+				|.col-6
+		.col-6
+			.card.grid-card.z-depth-2
+				| .col-6
+	h3#vertical-alignment
+		div
+			| Vertical alignment
+			a.anchorjs-link(href="#vertical-alignment", aria-label="Anchor", data-anchorjs-icon="#", style="padding-left: 0.375em;")
+	.row.align-items-start.grid-row
+		.col
+			| One of three columns
+		|     
+		.col
+			| One of three columns
+		|     
+		.col
+			| One of three columns
+	|   
+	.row.align-items-center.grid-row
+		.col
+			| One of three columns
+		|     
+		.col
+			| One of three columns
+		|     
+		.col
+			| One of three columns
+	|   
+	.row.align-items-end.grid-row
+		.col
+			| One of three columns
+		|     
+		.col
+			| One of three columns
+		|     
+		.col
+			| One of three columns
+	.row.grid-row
+		.col.align-self-start
+			| One of three columns
+		|     
+		.col.align-self-center
+			| One of three columns
+		|     
+		.col.align-self-end
+			| One of three columns
+	.row.justify-content-start.grid-row
+		.col-4
+			| One of two columns
+		|     
+		.col-4
+			| One of two columns
+	|   
+	.row.justify-content-center.grid-row
+		.col-4
+			| One of two columns
+		|     
+		.col-4
+			| One of two columns
+	|   
+	.row.justify-content-end.grid-row
+		.col-4
+			| One of two columns
+		|     
+		.col-4
+			| One of two columns
+	|   
+	.row.justify-content-around.grid-row
+		.col-4
+			| One of two columns
+		|     
+		.col-4
+			| One of two columns
+	|   
+	.row.justify-content-between.grid-row
+		.col-4
+			| One of two columns
+		|     
+		.col-4
+			| One of two columns

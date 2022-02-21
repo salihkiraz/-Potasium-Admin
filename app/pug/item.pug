@@ -1,0 +1,206 @@
+extends layouts/base
+block page-content
+	+row()
+		+col("12","12","12","12","12")
+			+basiccard("Item") 
+				.ui.items
+					.item
+						.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.content
+							a.header Header
+							.meta
+								span Description
+							.description
+								p
+									img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')
+							.extra
+								| Additional Details
+					.item
+						.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.content
+							a.header Header
+							.meta
+								span Description
+							.description
+								p
+									img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')
+							.extra
+								| Additional Details
+			+basiccard("Image")
+				.ui.divided.items
+					.item
+						.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+					.item
+						.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+
+
+			+basiccard("Content") 
+				.ui.divided.items
+					.item
+						.ui.tiny.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.middle.aligned.content
+							| Content A
+					.item
+						.ui.tiny.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.middle.aligned.content
+							| Content B
+					.item
+						.ui.tiny.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.middle.aligned.content
+							| Content C
+
+
+			+basiccard("Metadata")
+				.ui.items
+					.item
+						.ui.small.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.content
+							.header Arrowhead Valley Camp
+							.meta
+								span.price $1200
+								span.stay 1 Month
+							.description
+								p
+									img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')
+					.item
+						.ui.small.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.content
+							.header Buck's Homebrew Stayaway
+							.meta
+								span.price $1000
+								span.stay 2 Weeks
+							.description
+								p
+									img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')
+					.item
+						.ui.small.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.content
+							.header Astrology Camp
+							.meta
+								span.price $1600
+								span.stay 6 Weeks
+							.description
+								p
+									img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')
+			+basiccard("Link")
+				.ui.items
+					.item
+						a.ui.tiny.image
+							img.ui.fluid.image(src='./assets/img/avatar/people/enid.png')
+						.content
+							a.header Stevie Feliciano
+							.description
+								p
+									| Stevie Feliciano is a 
+									a library scientist
+									|  living in New York City. She likes to spend her time reading, running, and writing.
+					.item
+						a.ui.tiny.image
+							img.ui.fluid.image(src='./assets/img/avatar/people/Hershell.png')
+						.content
+							a.header Veronika Ossi
+							.description
+								p
+									| Veronika Ossi is a set designer living in New York who 
+									a enjoys
+									|  kittens, music, and partying.
+					.item
+						a.ui.tiny.image
+							img.ui.fluid.image(src='./assets/img/avatar/people/carol.png')
+						.content
+							a.header Jenny Hess
+							.description
+								p
+									| Jenny is a student studying Media Management at 
+									a the New School
+									| .
+			+basiccard("Description")
+				.ui.items
+					.item
+						a.ui.small.image
+							img.ui.fluid.image(src='./assets/img/avatar/people/carol.png')
+						.content
+							a.header Cute Dog
+							.description
+								p
+									| Cute dogs come in a variety of shapes and sizes. Some cute dogs are cute for their adorable faces, others for their tiny stature, and even others for their massive size.
+								p Many people also have their own barometers for what makes a cute dog.
+			+basiccard("Divided")
+				.ui.divided.items
+					.item
+						.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.content
+							a.header 12 Years a Slave
+							.meta
+								span.cinema Union Square 14
+							.description
+								p
+							.extra
+								.ui.label IMAX
+								.ui.label
+									i.globe.icon
+									|  Additional Languages
+					.item
+						.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.content
+							a.header My Neighbor Totoro
+							.meta
+								span.cinema IFC Cinema
+							.description
+								p
+							.extra
+								.ui.right.floated.primary.button
+									| Buy tickets
+									i.right.chevron.icon
+								.ui.label Limited
+					.item
+						.image
+							img.ui.fluid.image(src='./assets/img/wireframe/image.png')
+						.content
+							a.header Watchmen
+							.meta
+								span.cinema IFC
+							.description
+								p
+							.extra
+								.ui.right.floated.primary.button
+									| Buy tickets
+									i.right.chevron.icon
+			+basiccard("Link Item")
+				.ui.link.items
+					.item
+						.ui.tiny.image
+							img.ui.fluid.image(src='./assets/img/avatar/people/enid.png')
+						.content
+							.header Stevie Feliciano
+							.description
+								p
+									img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')
+					.item
+						.ui.tiny.image
+							img.ui.fluid.image(src='./assets/img/avatar/people/Tara.png')
+						.content
+							.header Veronika Ossi
+							.description
+								p
+									img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')
+					.item
+						.ui.tiny.image
+							img.ui.fluid.image(src='./assets/img/avatar/people/Rick.png')
+						.content
+							.header Jenny Hess
+							.description
+								p
+									img.ui.fluid.image(src='./assets/img/wireframe/short-paragraph.png')

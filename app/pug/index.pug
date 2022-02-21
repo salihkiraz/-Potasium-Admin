@@ -1,0 +1,62 @@
+extends layouts/base
+block  page-title
+	|	Home Dashboard
+block breadcrumb-item-1
+	| 	Dashboards
+block breadcrumb-item-2
+	| 	Home Dashboard
+block styles
+	link(property="stylesheet" href="./assets/fonts/icons/black-home-icons/iconfont.css" rel="stylesheet")
+block page-content
+	+row()
+		+col("12","12","12","12","8")
+			.card
+				.card-body
+					h6.card-subtitle.mb-2.text-muted Weather Report
+					+row()
+						+home-dashboard-weather-card("Sun","shaoyun","24","tiny")
+						+home-dashboard-weather-card("Mon","baoyu","26","mini")
+						+home-dashboard-weather-card("Tue","dayuzhuanqing","19","mini")
+						+home-dashboard-weather-card("Wed","wu","16","mini")
+		+col("12","12","12","12","2")
+			+home-dashboard-color-icon-card("Trophies","jiangbei")
+			+home-dashboard-color-icon-card("Security","dunpai")
+		+col("12","12","12","12","2")
+			+home-dashboard-color-icon-card("Ideas","dengpao")
+			+home-dashboard-color-icon-card("Lights","jiangpai")
+	+row()
+		+col("12","12","12","12","8")
+			+row()
+				+col("12","12","12","12","12")
+					+row()
+						+col("12","12","12","12","4")
+							+home-dashboard-card("Gas Status","76","1","icon-hot")
+						+col("12","12","12","12","4")
+							+home-dashboard-card("Water Status","9.75","2","icon-chaping")
+						+col("12","12","12","12","4")
+							+home-dashboard-card("Gas Status","76","3","icon-hot")
+						+col("12","12","12","12","4")
+							+home-dashboard-control-card("Air Conditioner","yinxiang-","true")
+						+col("12","12","12","12","4")
+							+home-dashboard-control-card("Door Lock","microwave","false")
+						+col("12","12","12","12","4")
+							+home-dashboard-control-card("Television","dianfengshan-","true")
+						+col("12","12","12","12","4")
+							+home-dashboard-control-card("Ventilation","naozhong-","true")
+						+col("12","12","12","12","4")
+							+home-dashboard-control-card("Garage","shuilongtou-","false")
+						+col("12","12","12","12","4")
+							+home-dashboard-control-card("Ip Cameras","monitor","false")
+		+col("12","12","12","12","4")
+			+home-dashboard-city-card("Day Stats","icon-qita","5")
+			+home-dashboard-city-card("Remaining Assets","icon-dixiaofei","6")
+		+col("12","12","12","12","12")
+			div(id="home-chart4",style="height:500px;width:100%",class="dash-charts")
+block scripts
+	//Echarts
+	script( src='./libs/echarts/dist/echarts.min.js')
+	script( src='./libs/echarts/map/js/world.js')
+	script( src='./js/dashboards/home-dashboard.min.js')
+	//Color Icons
+	script( src="./assets/fonts/icons/colorfull/color-icons-10/iconfont.js")
+	script( src="./assets/fonts/icons/colorfull/color-weather-icons/iconfont.js")

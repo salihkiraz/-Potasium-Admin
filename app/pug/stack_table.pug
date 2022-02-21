@@ -1,0 +1,178 @@
+extends layouts/base
+block  page-title
+	|  Stack Table
+block breadcrumb-item-1
+	| Tables
+block breadcrumb-item-2
+	|  Stack Table
+block page-content
+	+row()
+		+col("12","12","12","12","12")     
+			+basiccard("Stack table ") 
+				p Resize your window to see the effect
+				table#simple-example-table(cellspacing='0')
+					tbody
+						tr(align='left')
+							th(width='30%') Stuff
+							th(width='12%') Rate
+							th(width='12%') Amount
+							th(width='12%') Points
+							th(width='12%') Number
+							th(width='18%') Type
+							th(width='12%') Name
+						tr
+							td Something
+							td 3.375%
+							td $123.12
+							td 1.125
+							td 4,000
+							td Potato
+							td Paul
+						tr
+							td Something Else
+							td 2.750%
+							td $345.23
+							th.table-warning 5
+							td 180
+							td Spaceship
+							td Skippy
+						tr.table-warning
+							th.sub(colspan='7') Subgroup Header
+						tr
+							td Another Thing
+							td 3.375%
+							td $563.12
+							th.table-warning 222
+							td 60
+							td Gym Shoe
+							td George
+						tr
+							td Thing w/Less Stuff
+							td
+							td
+							td
+							td
+							td Harmonica
+							td Helga
+						tr
+							td Last Thing
+							td
+							td
+							td
+							td 4
+							td Meaning of Life
+							td
+			+basiccard("Stack Card Table ") 
+				p Card table works similarly to stack table except it breaks each row into its own table. The row tables function like cards. Any content left in tfoot is also broken into its own card, this allows for things like view all links or pagination to be easily used.
+				table#card-table.table
+					thead
+						tr
+							th(width='30%') Name
+							th(width='30%') Phone
+							th(width='30%') Info
+							th(width='10%') Actions
+					tbody
+						tr
+							td
+								| Test
+							td
+								| 555-555-5555
+							td
+								| I am a test
+							td
+								a(href='#') Edit
+						tr
+							td
+								| Greg
+							td
+								| 555-555-5555
+							td
+								| This is an example
+							td
+								a(href='#') Edit
+						tr
+							td
+								| John
+							td
+								| 444-444-4444
+							td
+								| Tables are cool
+							td
+								a(href='#') Edit
+					tfoot
+						tr
+							td(colspan='4')
+								a(href='#') View all
+			+basiccard("StackColumns Table") 
+				p An alternative responsive design creates a copy of the table into a 2 column key/value format that preserves the columns of the original table. We call it stackcolumns to contrast with the default stacktables that preserves the lines of the original table.
+				table#agenda-example
+					//
+						thead not supported by stacktable yet; neither is <th> in <tbody>; but the later is working in stackcolumns.
+						<thead>
+						<tr>
+						<th>Time</th>
+						<th>Day 1</th>
+						<th>Day 2</th>
+						</tr>
+						</thead>
+						<tfoot>
+						<tr>
+						<td>night</td>
+						<td>rest</td>
+						<td>party</td>
+						</tr>
+						</tfoot>
+					tbody
+						tr
+							th Time
+							th Day 1
+							th Day 2
+							th Day 3
+							th Day 4
+						tr
+							td 8 AM
+							td(style='text-align:center; background:#DFD', colspan='2') breakfast
+							td(style='text-align:center; background:#FDD', colspan='2')  ------ 
+						tr
+							td 10 AM
+							td work
+							td work
+							td(style='text-align:center; background:#DDF', colspan='2') breakfast
+						tr
+						th 12AM
+							td(style='text-align:center; ', colspan='3') lunch
+							td run
+						tr
+							td 1 PM
+							// <td  rowspan="2" style="text-align:center; background:#DDF">work <br/>& read</td> <!-- not supported by tablestack yet
+							td
+								| work 
+								br
+							td
+								| work 
+								br
+							td beach
+							td.sub lunch
+						tr
+							td 4 PM
+							td
+								| work 
+								br
+							td beach
+							td beach
+							td bike
+						tr
+							td night
+							td rest
+							td rest
+							td party
+							td rest
+block styles
+	link(rel="stylesheet" href="libs/stacktable.js/stacktable.css")
+
+block scripts
+	script( src="libs/stacktable.js/stacktable.js")
+	script.
+		 $('#simple-example-table').stacktable();
+		 $('#card-table').cardtable();
+		 $('#agenda-example').stackcolumns();

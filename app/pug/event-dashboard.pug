@@ -1,0 +1,29 @@
+extends layouts/base
+block page-content
+	+row
+		+col(12,12,12,12,12)
+			#forcecentered
+				.event-list.bd-highlight
+					+eventcard-1()
+					+eventcard-1()
+					+eventcard-1()
+					+eventcard-1()
+					+eventcard-1()
+					+eventcard-1()
+					+eventcard-1()
+					+eventcard-1()
+					+eventcard-1()
+	+row()
+		+col("12","12","12","12","8")
+			+eventcard-2()
+			+eventcard-3()
+		+col("12","12","12","12","4")
+			+eventcard-4("Online Sales Ticket","Open Events impressions rate in social media. Special Festivals Tickets Sales","crt1-chart")
+			+eventcard-4("Pre Sales Tickets","Open Events impressions rate in social media. Special Festivals Tickets Sales","crt2-chart")
+
+block scripts
+	//Echarts
+	script( src='./libs/echarts/dist/echarts.min.js')
+	script( src='./js/sly-plugins.min.js')
+	script( src='./libs/sly/dist/sly.min.js')
+	script( src='./js/dashboards/event-dashboard.min.js')

@@ -1,0 +1,51 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		link(rel='icon', href='assets/img/favicon/favicon.ico', type='image/x-icon')
+		title
+			block title
+				| Potasium Admin - Register
+		// Iconfont.cn Icons Css
+		link(rel='stylesheet', href='assets/fonts/iconfont/iconfont.css')
+		link(rel='stylesheet', href='css/pages/register-page-2.css')
+	body
+		.limiter
+			.container-login100
+				.wrap-login100
+					a.home-button(href="index.html")
+						i.icon.iconfont.icon-lvyouquan(aria-hidden="true")
+					.login100-pic.js-tilt(data-tilt="")
+						img(src="assets/img/register2b.svg", alt="IMG")
+						div 
+							h4 POTASIUM
+					form.login100-form.validate-form
+						.wrap-input100.validate-input(data-validate="Valid email is required: ex@abc.xyz")
+							input.input100(type="text", name="email", placeholder="Email")
+							| 						
+							span.focus-input100
+							| 						
+							span.symbol-input100
+								i.icon.iconfont.icon-duanxin(aria-hidden="true")
+						| 					
+						.wrap-input100.validate-input(data-validate="Password is required")
+							input.input100(type="password", name="pass", placeholder="Password")
+							| 						
+							span.focus-input100
+							| 						
+							span.symbol-input100
+								i.icon.iconfont.icon-suoding(aria-hidden="true")
+						| 			
+						.wrap-input100.validate-input(data-validate="Password is required")
+							input.input100(type="password", name="pass", placeholder="Confirm Password")
+							| 						
+							span.focus-input100
+							| 						
+							span.symbol-input100
+								i.icon.iconfont.icon-suoding(aria-hidden="true")
+						| 				
+						.container-login100-form-btn
+							a.login100-form-btn
+								| Register

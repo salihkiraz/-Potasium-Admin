@@ -1,0 +1,21 @@
+/* ---------------------------------------------------
+    NAVBAR STYLE
+----------------------------------------------------- */
+
+.ui.menu {
+    &.nav-menu {
+        border: 0;
+        border-bottom: solid 1px rgba($navbar-icon-color,.1);
+        border-radius: 0;
+        box-shadow: none;
+        background: $bg-color;
+        transition: background-color 0.3s;
+        padding: 0;
+        .item {
+            border-radius: 0;
+            .icon {
+                color: $navbar-icon-color;
+            }
+        }
+    }
+}

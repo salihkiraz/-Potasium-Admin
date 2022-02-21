@@ -1,0 +1,32 @@
+extends layouts/base
+block  page-title
+	|	Clipboard.js
+block breadcrumb-item-1
+	| 	Scripts
+block breadcrumb-item-2
+	| 	Clipboard.js
+block styles
+	link(rel='stylesheet', href='libs/material-toast/mdtoast.min.css') 
+block page-content
+	+row()
+		+col()
+			+basiccardwithactions("Copy to Clipboard")
+				.ui.action.input.fluid
+					input(id="copy-input",type="text", value="http://ww.short.url/c0opq")
+					|   
+					button.ui.teal.right.labeled.icon.button.copied-btn(data-clipboard-target="#copy-input")
+						i.copy.icon
+						| Copy to Clipboard
+		+col()
+			+basiccardwithactions("Copy to Clipboard")
+				.ui.form
+					.field
+						textarea(id="copy-textarea",rows="3")
+							| Nulla porttitor accumsan tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuadas.
+						button.ui.compact.icon.button.copybutton.copied-btn(data-clipboard-target="#copy-textarea")
+							i.copy.icon
+block scripts
+	// Clipboard.js JavaScript
+	script(src="libs/clipboard/dist/clipboard.min.js")
+	script(src="libs/material-toast/mdtoast.min.js")
+	script(src="js/pages/clipboard-page.min.js")

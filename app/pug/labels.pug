@@ -1,0 +1,255 @@
+extends layouts/base
+block page-content
+    +row()
+      +col()           
+        +labels("Basic Label")
+          .ui.label
+            i.plane.icon
+            |  16:00
+          .ui.label
+            i.alarm.icon
+            |  23
+          .ui.label
+            i.trophy.icon
+            |  23
+          .ui.label
+            i.tag.icon
+            |  23
+          .ui.label
+            i.github.icon
+            |  Repositories
+          .ui.label
+            i.send.icon
+            |  23
+          .ui.label
+            i.star.icon.yellow
+            |  Favorite
+          .ui.label
+            i.heart.icon.red
+            |  Love
+      +col()           
+        +labels("Colored Label")
+          a.ui.red.label Red
+          a.ui.orange.label Orange
+          a.ui.yellow.label Yellow
+          a.ui.olive.label Olive
+          a.ui.green.label Green
+          a.ui.teal.label Teal
+          a.ui.blue.label Blue
+          a.ui.violet.label Violet
+          a.ui.purple.label Purple
+          a.ui.pink.label Pink
+          a.ui.brown.label Brown
+    +row()
+      +col()           
+        +labels("Tags Label Group")
+          .ui.tag.labels
+            a.ui.label
+              | $10.00
+            |   
+            a.ui.label
+              | $19.99
+            |   
+            a.ui.label
+              | $24.99
+            |   
+            a.ui.label
+              | $30.99
+            |   
+            a.ui.label
+              | $10.25
+      +col()           
+        +labels("Colored Label Group")
+          .ui.blue.labels
+            a.ui.label
+              | Fun 
+              i.icon.close
+            |   
+            a.ui.label
+              | Happy
+              .detail 22
+            |   
+            a.ui.label
+              | Smart
+            |   
+            a.ui.label
+              | Insane
+            |   
+            a.ui.label
+              | Exciting
+    +row()
+      +col()           
+        +labels("Huge Size Label Group")
+          .ui.huge.labels
+            .ui.label
+              | Fun
+            |   
+            .ui.label
+              | Happy
+            |   
+            .ui.label
+              | Smart
+            |   
+            .ui.label
+              | Witty
+      +col()           
+        +labels("Circular Labels")
+          a.ui.red.circular.label.huge 2
+          a.ui.orange.circular.label 2
+          a.ui.yellow.circular.label.huge 2
+          a.ui.olive.circular.label 2
+          a.ui.green.circular.label.huge 2
+          a.ui.teal.circular.label 2
+          a.ui.blue.circular.label.huge 2
+          a.ui.violet.circular.label 2
+          a.ui.purple.circular.label.huge 2
+          a.ui.pink.circular.label 2
+          a.ui.brown.circular.label.huge 2
+          a.ui.grey.circular.label 2
+          a.ui.black.circular.label.huge 2
+    +row()
+      +col()           
+        +labels("Label with Image")
+          a.ui.image.label
+            img(src="assets/img/avatar/1.jpg")
+            |   Joe
+          a.ui.image.label
+            img(src="assets/img/avatar/2.jpg")
+            |   Elliot
+          a.ui.image.label
+            img(src="assets/img/avatar/3.jpg")
+            |   Stevie
+          .ui.image.label
+            img(src="assets/img/avatar/4.jpg")
+            |   Adrienne
+            |   
+            i.delete.icon
+          .ui.image.label
+            img(src="assets/img/avatar/12.jpg")
+            |   Zoe
+            |   
+            i.delete.icon
+          .ui.image.label
+            img(src="assets/img/avatar/6.jpg")
+            |   Nan
+            |   
+            i.delete.icon
+      +col()           
+        +labels("Label with Image and Detail")
+          a.ui.blue.image.label
+            img(src="assets/img/avatar/1.jpg")
+            |   Veronika
+            |   
+            .detail Friend
+          a.ui.teal.image.label
+            img(src="assets/img/avatar/2.jpg")
+            |   Veronika
+            |   
+            .detail Student
+          a.ui.yellow.image.label
+            img(src="assets/img/avatar/3.jpg")
+            |   Helen
+            |   
+            .detail Co-worker
+    +row()
+      +col()           
+        +labels("Pointing Label")
+          .ui.fluid.form
+            .field
+              input(type="text", placeholder="First name")
+              |     
+              .ui.pointing.label
+                | Please enter a value
+            |   
+            .ui.divider
+            |   
+            .field(placeholder="Last Name")
+              .ui.pointing.below.label
+                | Please enter a value
+              |     
+              input(type="text")
+            |   
+            .ui.divider
+            |   
+            .inline.field
+              input(type="text", placeholder="Username")
+              |     
+              .ui.left.pointing.label
+                | That name is taken!
+            |   
+            .ui.divider
+            |   
+            .inline.field
+              .ui.right.pointing.label
+                | Your password must be 6 characters or more
+              |     
+              input(type="password")
+      +col()           
+        +labels("Styled Pointing Label")
+            .ui.fluid.form
+              .field
+                input(type="text", placeholder="First name")
+                |     
+                .ui.pointing.basic.label
+                  | Please enter a value
+              |   
+              .ui.divider
+              |   
+              .field(placeholder="Last Name")
+                .ui.pointing.below.basic.label
+                  | Please enter a value
+                |     
+                input(type="text")
+              |   
+              .ui.divider
+              |   
+              .inline.field
+                input(type="text", placeholder="Username")
+                |     
+                .ui.left.pointing.basic.label
+                  | That name is taken!
+              |   
+              .ui.divider
+              |   
+              .inline.field
+                .ui.right.pointing.basic.label
+                  | Your password must be 6 characters or more
+                |     
+                input(type="password")
+      +col()           
+        +labels("Tagged Label")
+          a.ui.tag.label New
+          a.ui.red.tag.label Upcoming
+          a.ui.teal.tag.label Featured
+      +col()           
+        +labels("Horizontal Label")
+          .ui.divided.selection.list
+            a.item
+              .ui.red.horizontal.label Fruit
+              |     Kumquats
+            |   
+            a.item
+              .ui.purple.horizontal.label Candy
+              |     Ice Cream
+            |   
+            a.item
+              .ui.red.horizontal.label Fruit
+              |     Orange
+            |   
+            a.item
+              .ui.horizontal.label Dog
+              |     Poodle
+      +col()           
+        +labels("Horizontal Label")
+          .ui.compact.menu
+            a.item
+              i.icon.mail
+              |  Messages
+              |     
+              .floating.ui.red.label 22
+            |   
+            a.item
+              i.icon.users
+              |  Friends
+              |     
+              .floating.ui.teal.label 22

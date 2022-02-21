@@ -1,0 +1,199 @@
+extends layouts/base
+block  page-title
+	|	Tooltips
+block breadcrumb-item-1
+	| 	Scripts
+block breadcrumb-item-2
+	| 	Tooltips
+block page-content
+	+row()
+		+col()     
+			+basiccardwithactions("Basic Tooltips")
+				button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='top', title='Tooltip on top')
+					| Tooltip on top
+				button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='right', title='Tooltip on right')
+					| Tooltip on right
+				button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='bottom', title='Tooltip on bottom')
+					| Tooltip on bottom
+				button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='left', title='Tooltip on left')
+					| Tooltip on left
+		+col()
+			+basiccardwithactions("Bootstrap Tooltips with HTML")
+				button.btn.btn-secondary(type='button', data-toggle='tooltip', data-html='true', title='<em>Tooltip</em> <u>with</u> <b>HTML</b>')
+					| Tooltip with HTML
+				button.btn.btn-secondary(type='button', data-toggle='tooltip', data-html='true', title='<b style="color:yellow">Tooltip</b>')
+					| Tooltip with Styled HTML
+				button.btn.btn-secondary(type='button', data-toggle='tooltip', data-html='true', title='<img style="width:50px" src="assets/img/avatar/1.jpg"/>')
+					| Tooltip with Image
+	+row()
+		+col()
+			+basiccardwithactions("Semantic-Ui Tooltips")
+				.ui.button(data-tooltip='Add users to your feed', data-position='top left')
+					| Top Left
+				.ui.button(data-tooltip='Add users to your feed', data-position='top center')
+					| Top Center
+				.ui.button(data-tooltip='Add users to your feed', data-position='top right')
+					| Top Right
+				.ui.divider
+				.ui.button(data-tooltip='Add users to your feed', data-position='bottom left')
+					| Bottom Left
+				.ui.button(data-tooltip='Add users to your feed', data-position='bottom center')
+					| Bottom Center
+				.ui.button(data-tooltip='Add users to your feed', data-position='bottom right')
+					| Bottom Right
+				.ui.divider
+				.ui.button(data-tooltip='Add users to your feed', data-position='right center')
+					| Right Center
+				.ui.button(data-tooltip='Add users to your feed', data-position='left center')
+					| Left Center
+		+col()
+			+basiccardwithactions("Semantic-Ui Inverted Tooltips")
+				.ui.button(data-inverted='', data-tooltip='Add users to your feed', data-position='top left')
+					| Top Left
+				.ui.button(data-inverted='', data-tooltip='Add users to your feed', data-position='top center')
+					| Top Center
+				.ui.button(data-inverted='', data-tooltip='Add users to your feed', data-position='top right')
+					| Top Right
+				.ui.divider
+				.ui.button(data-inverted='', data-tooltip='Add users to your feed', data-position='bottom left')
+					| Bottom Left
+				.ui.button(data-inverted='', data-tooltip='Add users to your feed', data-position='bottom center')
+					| Bottom Center
+				.ui.button(data-inverted='', data-tooltip='Add users to your feed', data-position='bottom right')
+					| Bottom Right
+				.ui.divider
+				.ui.button(data-inverted='', data-tooltip='Add users to your feed', data-position='right center')
+					| Right Center
+				.ui.button(data-inverted='', data-tooltip='Add users to your feed', data-position='left center')
+					| Left Center
+	+row()
+		+col()
+			+basiccardwithactions("Semantic-Ui Iconed Tooltips")
+				.example
+					h4.ui.header Popup
+					p An element can specify popup content to appear
+					.ui.icon.button(data-content='Add users to your feed',data-tooltip="Hi, I m a Tooltip",data-position='top center')
+						i.add.icon
+					.ui.icon.button(data-content='Add users to your feed',data-tooltip="Hi, I m a Tooltip",data-position='top center')
+						i.microphone.icon
+					.ui.icon.button(data-content='Add users to your feed',data-tooltip="Hi, I m a Tooltip",data-position='top center')
+						i.podcast.icon
+					.ui.icon.button(data-content='Add users to your feed',data-tooltip="Hi, I m a Tooltip",data-position='top center')
+						i.paperclip.icon
+					.ui.icon.button(data-content='Add users to your feed',data-tooltip="Hi, I m a Tooltip",data-position='top center')
+						i.tag.icon
+					.ui.icon.button(data-content='Add users to your feed',data-tooltip="Hi, I m a Tooltip",data-position='top center')
+						i.fire.extinguisher.icon
+					.ui.icon.button(data-content='Add users to your feed',data-tooltip="Hi, I m a Tooltip",data-position='top center')
+						i.bell.icon
+					.ui.icon.button(data-content='Add users to your feed',data-tooltip="Hi, I m a Tooltip",data-position='top center')
+						i.paper.plane.outline.icon
+					.ui.icon.button(data-content='Add users to your feed',data-tooltip="Hi, I m a Tooltip",data-position='top center')
+						i.save.icon
+		+col()
+			+basiccardwithactions("Semantic-Ui Fluid Tooltips")
+				.ui.button Show flowing popup
+				.ui.flowing.popup.top.left
+					.ui.three.column.divided.center.aligned.grid
+						.column
+							h4.ui.header Basic Plan
+							p
+								b 2
+								|  projects, $10 a month
+							.ui.button Choose
+						.column
+							h4.ui.header Business Plan
+							p
+								b 5
+								|  projects, $20 a month
+							.ui.button Choose
+						.column
+							h4.ui.header Premium Plan
+							p
+								b 8
+								|  projects, $25 a month
+							.ui.button Choose
+	+row()
+		+col(12,12,12,12,12)
+			+basiccardwithactions("")
+				.ui.four.cards
+					.ui.card(data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>")
+						.image
+							img(src='/assets/img/landscape/1.jpg')
+						.content
+							.header My Neighbor Totoro
+							.description
+								| Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by magical spirits.
+						.ui.two.bottom.attached.buttons
+							.ui.button
+								i.add.icon
+								|       Queue
+							.ui.primary.button
+								i.play.icon
+								|       Watch
+					.ui.card(data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>")
+						.image
+							img(src='/assets/img/landscape/2.jpg')
+						.content
+							.header My Neighbor Totoro
+							.description
+								| Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by magical spirits.
+						.ui.two.bottom.attached.buttons
+							.ui.button
+								i.add.icon
+								|       Queue
+							.ui.primary.button
+								i.play.icon
+								|       Watch
+					.ui.card(data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>")
+						.image
+							img(src='/assets/img/landscape/3.jpg')
+						.content
+							.header My Neighbor Totoro
+							.description
+								| Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by magical spirits.
+						.ui.two.bottom.attached.buttons
+							.ui.button
+								i.add.icon
+								|       Queue
+							.ui.primary.button
+								i.play.icon
+								|       Watch
+					.ui.card(data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>")
+						.image
+							img(src='/assets/img/landscape/4.jpg')
+						.content
+							.header My Neighbor Totoro
+							.description
+								| Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by magical spirits.
+						.ui.two.bottom.attached.buttons
+							.ui.button
+								i.add.icon
+								|       Queue
+							.ui.primary.button
+								i.play.icon
+								|       Watch
+block scripts
+	script(src='js/pages/tooltip-page.min.js')
+block extra-scripts
+	script.
+		//tooltip settings in tooltip page
+		'use strict'
+		$(document).ready(function () {
+			$(".demoeff1").popup({
+				transition: "horizontal flip"//transition effect
+			});
+			$(".demoeff2").popup({
+				transition: "vertical flip"//transition effect
+			});
+			$(".demoeff3").popup({
+				transition: "fade up"//transition effect
+			});
+			$(".demoeff4").popup({
+				transition: "fade"//transition effect
+			});
+			$(".demoeff5").popup({
+				transition: "scale"//transition effect
+			});
+			popupactions();//this function in app page
+		});

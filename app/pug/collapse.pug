@@ -1,0 +1,526 @@
+extends layouts/base
+block page-content
+    .row
+        .col-xl-6
+            .card
+                .card-body
+                    p
+                        a.btn.btn-secondary(data-toggle="collapse", href="#collapseExample", role="button", aria-expanded="false", aria-controls="collapseExample")
+                            | Link with href
+                        |   
+                        button.btn.btn-secondary(type="button", data-toggle="collapse", data-target="#collapseExample", aria-expanded="false", aria-controls="collapseExample")
+                            | Button with data-target
+                    #collapseExample.collapse
+                        .card.card-body
+                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            .card
+                .card-body
+                    p
+                        a.btn.btn-secondary(data-toggle="collapse", href="#multiCollapseExample1", role="button", aria-expanded="false", aria-controls="multiCollapseExample1") Toggle first element
+                        |   
+                        button.btn.btn-secondary(type="button", data-toggle="collapse", data-target="#multiCollapseExample2", aria-expanded="false", aria-controls="multiCollapseExample2") Toggle second element
+                        |   
+                        button.btn.btn-secondary(type="button", data-toggle="collapse", data-target=".multi-collapse", aria-expanded="false", aria-controls="multiCollapseExample1 multiCollapseExample2") Toggle both elements
+                    .row
+                        .col
+                            #multiCollapseExample1.collapse.multi-collapse
+                                .card.card-body
+                                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        |   
+                        .col
+                            #multiCollapseExample2.collapse.multi-collapse
+                                .card.card-body
+                                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            .card
+                .card-body
+                    #accordion(role="tablist")
+                        .card
+                            #headingOne.card-header(role="tab")
+                                h5.mb-0
+                                    a(data-toggle="collapse", href="#collapseOne", role="button", aria-expanded="true", aria-controls="collapseOne")
+                                        | Collapsible Group Item #1
+                            |     
+                            #collapseOne.collapse.show(role="tabpanel", aria-labelledby="headingOne", data-parent="#accordion")
+                                .card-body
+                                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.
+                        |   
+                        .card
+                            #headingTwo.card-header(role="tab")
+                                h5.mb-0
+                                    a.collapsed(data-toggle="collapse", href="#collapseTwo", role="button", aria-expanded="false", aria-controls="collapseTwo")
+                                        | Collapsible Group Item #2
+                            |     
+                            #collapseTwo.collapse(role="tabpanel", aria-labelledby="headingTwo", data-parent="#accordion")
+                                .card-body
+                                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        |   
+                        .card
+                            #headingThree.card-header(role="tab")
+                                h5.mb-0
+                                    a.collapsed(data-toggle="collapse", href="#collapseThree", role="button", aria-expanded="false", aria-controls="collapseThree")
+                                        | Collapsible Group Item #3
+                            |     
+                            #collapseThree.collapse(role="tabpanel", aria-labelledby="headingThree", data-parent="#accordion")
+                                .card-body
+                                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            .card
+                .card-body
+                    #exampleAccordion(data-children=".item")
+                        .item
+                            a(data-toggle="collapse", data-parent="#exampleAccordion", href="#exampleAccordion1", role="button", aria-expanded="true", aria-controls="exampleAccordion1")
+                                | Toggle item
+                            |     
+                            #exampleAccordion1.collapse.show(role="tabpanel")
+                                p.mb-3
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem non vestibulum scelerisque. Proin a vestibulum sem, eget tristique massa. Aliquam lacinia rhoncus nibh quis ornare.
+                        |   
+                        .item
+                            a(data-toggle="collapse", data-parent="#exampleAccordion", href="#exampleAccordion2", role="button", aria-expanded="false", aria-controls="exampleAccordion2")
+                                | Toggle item 2
+                            |     
+                            #exampleAccordion2.collapse(role="tabpanel")
+                                p.mb-3
+                                    | Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            .card
+                .ui.vertical.accordion.menu.fluid
+                    .item
+                        a.active.title
+                            i.dropdown.icon
+                            |       Size
+                        |     
+                        .active.content
+                            .ui.form
+                                .grouped.fields
+                                    .field
+                                        .ui.radio.checkbox
+                                            input(type="radio", name="size", value="small")
+                                            |               
+                                            label Small
+                                    |           
+                                    .field
+                                        .ui.radio.checkbox
+                                            input(type="radio", name="size", value="medium")
+                                            |               
+                                            label Medium
+                                    |           
+                                    .field
+                                        .ui.radio.checkbox
+                                            input(type="radio", name="size", value="large")
+                                            |               
+                                            label Large
+                                    |           
+                                    .field
+                                        .ui.radio.checkbox
+                                            input(type="radio", name="size", value="x-large")
+                                            |               
+                                            label X-Large
+                    |   
+                    .item
+                        a.title
+                            i.dropdown.icon
+                            |       Colors
+                        |     
+                        .content
+                            .ui.form
+                                .grouped.fields
+                                    .field
+                                        .ui.checkbox
+                                            input(type="checkbox", name="small")
+                                            |               
+                                            label Red
+                                    |           
+                                    .field
+                                        .ui.checkbox
+                                            input(type="checkbox", name="medium")
+                                            |               
+                                            label Orange
+                                    |           
+                                    .field
+                                        .ui.checkbox
+                                            input(type="checkbox", name="large")
+                                            |               
+                                            label Green
+                                    |           
+                                    .field
+                                        .ui.checkbox
+                                            input(type="checkbox", name="x-large")
+                                            |               
+                                            label Blue
+            .card
+                .ui.styled.accordion.fluid
+                    .active.title
+                        i.dropdown.icon
+                        |     Level 1
+                    |   
+                    .active.content
+                        | Welcome to level 1
+                        .accordion.fluid
+                            .active.title
+                                i.dropdown.icon
+                                |           Level 1A
+                            |       
+                            .active.content
+                                p Level 1A Contents
+                                |         
+                                .accordion.fluid
+                                    .title
+                                        i.dropdown.icon
+                                        |               Level 1A-A
+                                    |           
+                                    .content
+                                        | Level 1A-A Contents
+                                    |           
+                                    .title
+                                        i.dropdown.icon
+                                        |               Level 1A-B
+                                    |           
+                                    .content
+                                        | Level 1A-B Contents
+                            |       
+                            .title
+                                i.dropdown.icon
+                                |           Level 1B
+                            |       
+                            .content
+                                | Level 1B Contents
+                            |       
+                            .title
+                                i.dropdown.icon
+                                |           Level 1C
+                            |       
+                            .content
+                                | Level 1C Contents
+                    |   
+                    .title
+                        i.dropdown.icon
+                        |     Level 2
+                    |   
+                    .content
+                        p Welcome to level 2
+                        |     
+                        .accordion.fluid
+                            .active.title
+                                i.dropdown.icon
+                                |         Level 2A
+                            |       
+                            .active.content
+                                p Level 2A Contents
+                                |         
+                                .accordion.fluid
+                                    .title
+                                        i.dropdown.icon
+                                        |               Level 2A-A
+                                    |           
+                                    .content
+                                        | Level 2A-A Contents
+                                    |           
+                                    .title
+                                        i.dropdown.icon
+                                        |               Level 2A-B
+                                    |           
+                                    .content
+                                        | Level 2A-B Contents
+                            |       
+                            .title
+                                i.dropdown.icon
+                                |           Level 2B
+                            |       
+                            .content
+                                | Level 2B Contents
+                            |       
+                            .title
+                                i.dropdown.icon
+                                |           Level 2C
+                            |       
+                            .content
+                                | Level 2C Contents
+        .col-xl-6
+            .card
+                .card-body
+                    .ui.accordion.fluid
+                        .active.title
+                            i.dropdown.icon
+                            |     What is a dog?
+                        |   
+                        .active.content
+                            p
+                                | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                        |   
+                        .title
+                            i.dropdown.icon
+                            |     What kinds of dogs are there?
+                        |   
+                        .content
+                            p
+                                | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                        |   
+                        .title
+                            i.dropdown.icon
+                            |     How do you acquire a dog?
+                        |   
+                        .content
+                            p
+                                | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                            |     
+                            p
+                                | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            .card
+                .ui.styled.accordion.fluid
+                    .active.title
+                        i.dropdown.icon
+                        |     What is a dog?
+                    |   
+                    .active.content
+                        p
+                            | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                    |   
+                    .title
+                        i.dropdown.icon
+                        |     What kinds of dogs are there?
+                    |   
+                    .content
+                        p
+                            | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                    |   
+                    .title
+                        i.dropdown.icon
+                        |     How do you acquire a dog?
+                    |   
+                    .content
+                        p
+                            | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                        |     
+                        p
+                            | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            .card
+                .ui.inverted.segment
+                    .ui.inverted.accordion.fluid
+                        .title
+                            i.dropdown.icon
+                            |       What is a dog?
+                        |     
+                        .content
+                            p
+                                | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       What kinds of dogs are there?
+                        |     
+                        .content
+                            p
+                                | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       How do you acquire a dog?
+                        |     
+                        .content
+                            p
+                                | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                            |       
+                            p
+                                | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            .card
+                .ui.inverted.blue.segment
+                    .ui.inverted.accordion.fluid
+                        .title
+                            i.dropdown.icon
+                            |       What is a dog?
+                        |     
+                        .content
+                            p
+                                | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       What kinds of dogs are there?
+                        |     
+                        .content
+                            p
+                                | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       How do you acquire a dog?
+                        |     
+                        .content
+                            p
+                                | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                            |       
+                            p
+                                | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            .card
+                .ui.inverted.red.segment
+                    .ui.inverted.accordion.fluid
+                        .title
+                            i.dropdown.icon
+                            |       What is a dog?
+                        |     
+                        .content
+                            p
+                                | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       What kinds of dogs are there?
+                        |     
+                        .content
+                            p
+                                | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       How do you acquire a dog?
+                        |     
+                        .content
+                            p
+                                | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                            |       
+                            p
+                                | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            .card
+                .ui.inverted.purple.segment
+                    .ui.inverted.accordion.fluid
+                        .title
+                            i.dropdown.icon
+                            |       What is a dog?
+                        |     
+                        .content
+                            p
+                                | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       What kinds of dogs are there?
+                        |     
+                        .content
+                            p
+                                | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       How do you acquire a dog?
+                        |     
+                        .content
+                            p
+                                | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                            |       
+                            p
+                                | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            .card
+                .ui.inverted.orange.segment
+                    .ui.inverted.accordion.fluid
+                        .title
+                            i.dropdown.icon
+                            |       What is a dog?
+                        |     
+                        .content
+                            p
+                                | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       What kinds of dogs are there?
+                        |     
+                        .content
+                            p
+                                | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       How do you acquire a dog?
+                        |     
+                        .content
+                            p
+                                | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                            |       
+                            p
+                                | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            .card
+                .ui.inverted.green.segment
+                    .ui.inverted.accordion.fluid
+                        .title
+                            i.dropdown.icon
+                            |       What is a dog?
+                        |     
+                        .content
+                            p
+                                | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       What kinds of dogs are there?
+                        |     
+                        .content
+                            p
+                                | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       How do you acquire a dog?
+                        |     
+                        .content
+                            p
+                                | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                            |       
+                            p
+                                | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            .card
+                .ui.inverted.pink.segment
+                    .ui.inverted.accordion.fluid
+                        .title
+                            i.dropdown.icon
+                            |       What is a dog?
+                        |     
+                        .content
+                            p
+                                | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       What kinds of dogs are there?
+                        |     
+                        .content
+                            p
+                                | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       How do you acquire a dog?
+                        |     
+                        .content
+                            p
+                                | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                            |       
+                            p
+                                | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            .card
+                .ui.inverted.teal.segment
+                    .ui.inverted.accordion.fluid
+                        .title
+                            i.dropdown.icon
+                            |       What is a dog?
+                        |     
+                        .content
+                            p
+                                | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       What kinds of dogs are there?
+                        |     
+                        .content
+                            p
+                                | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+                        |     
+                        .title
+                            i.dropdown.icon
+                            |       How do you acquire a dog?
+                        |     
+                        .content
+                            p
+                                | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+                            |       
+                            p
+                                | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.

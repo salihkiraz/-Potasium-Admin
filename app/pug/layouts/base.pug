@@ -1,0 +1,30 @@
+doctype html
+
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+	include ../parts/head
+	include ../mixin/card.pug
+	body
+		.preloader
+			#preloader_3
+		include ../parts/header
+		.wrapper
+			include ../parts/rightSidebar.pug
+			include ../components/sidebarCalendar.pug
+			// Sidebar
+			nav#sidebar
+				.header
+					i.icon.iconfont.icon-jelly-fish.brand-icon
+					h3 Potasium.
+				include ../parts/sidebar.pug
+			// Page Content
+			#content.pusher
+				include ../parts/navbar.pug
+				include ../parts/breadcrumb.pug
+				.page-content
+					block page-content
+		include ../parts/footer
+		include ../parts/scripts

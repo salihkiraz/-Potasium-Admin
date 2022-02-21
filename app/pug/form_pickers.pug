@@ -1,0 +1,99 @@
+extends layouts/base
+block  page-title
+	|	Form Pickers
+block breadcrumb-item-1
+	| 	Form
+block breadcrumb-item-2
+	| 	Form Pickers
+block  page-content
+	+row()
+			+col("12","12","12","12","6")            
+				+basiccard("Date Picker" )
+					.form-group
+						label Date Input
+						input.form-control.form_date(type='text', value='2018-05-15')
+					.form-group    
+						label Date Range                     
+						#datepicker.input-daterange.input-group
+							input.form-control(type='text', name='start')
+							input.form-control(type='text', name='end')
+			+col("12","12","12","12","6")
+				+basiccard("Date Picker Custom" )
+					.form-group
+						label Date Input Format : dd/mm/yyyy
+						input.form-control.form_date_format(type='text', value='13/05/2018')
+					.form-group    
+						label Date Year                        
+						input.form-control.form_date_year(type='text')
+			+col("12","12","12","12","6")            
+				+basiccard("Date Picker (datedropper)" )
+					.form-group
+						label Date Input
+						input.form-control.form_date_format_2(type='text', value='13/05/2018',data-large-mode="true",data-large-default="true")
+					.form-group    
+						label Date Input Mini                     
+						input.form-control.form_date_format_2(type='text', value='13/05/2018',data-large-mode="true")
+			+col("12","12","12","12","6")            
+				+basiccard("Date Picker (datedropper)" )
+					.form-group
+						label Date  Modal
+						input.form-control.form_date_format_2(type='text', value='13/05/2018',data-large-mode="true",data-large-default="true",data-modal="true")
+					.form-group    
+						label Date Input Multi lang                      
+						input.form-control.form_date_format_2(type='text', value='13/05/2018',data-large-mode="true",data-lang="ar") 
+			+col("12","12","12","12","6")            
+				+basiccard("Time Picker (timedropper)" )
+					.form-group
+						label Time
+						input.form-control.form_time(type='text', value='12:30 pm')
+					.form-group    
+						label Time format                     
+						input.form-control.form_time(type='text', value='17:30',format="h:mm") 
+			+col("12","12","12","12","6")            
+				+basiccard("Time Picker (ClockPicker)" )
+					.form-group
+						label Time
+						input.form-control.form_time_clock(type='text', value='12:30')
+					.form-group    
+						label Time Place at left, align the arrow to top, auto close:                     
+						input.form-control.form_time_clock_auto(type='text', value='17:30',data-placement="left" data-align="top" data-autoclose="true") 
+			+col("12","12","12","12","6")            
+				+basiccard("Color Picker " )
+					.form-group
+						label Color
+						input.form-control.color(type='text', value='#BC5279')
+					.form-group    
+						label Color                       
+						input.form-control.color2(type='text', value='#BC5279') 
+block styles
+	link(rel="stylesheet" href="libs/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css")
+	link(rel="stylesheet" href="libs/datedropper3/datedropper.min.css")
+	link(rel="stylesheet" href="libs/timedropper/timedropper.min.css")
+	link(rel="stylesheet" href="libs/clockpicker/dist/bootstrap-clockpicker.min.css")
+	link(rel="stylesheet" href="libs/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css")
+block scripts
+	script( src="libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js")
+	script( src="libs/datedropper3/datedropper.min.js")
+	script( src="libs/timedropper/timedropper.min.js")
+	script( src="libs/clockpicker/dist/bootstrap-clockpicker.min.js")
+	script( src="libs/tinyColorPicker/colors.js")
+	script( src="libs/tinyColorPicker/jqColorPicker.min.js")
+	script( src="libs/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js")
+	script(type='text/javascript').
+					$(".form_date").datepicker({});
+					$('.input-daterange').datepicker({});
+					$(".form_date_format").datepicker({ format: "dd/mm/yyyy"});
+					$('.form_date_year').datepicker({
+						startView: 2,
+						todayBtn: true
+					});
+					//date picker
+					$('.form_date_format_2').dateDropper();
+					//time picker
+					$( ".form_time" ).timeDropper();
+					$('.form_time_clock').clockpicker({donetext:"Done",placement:"top"});
+					$('.form_time_clock_auto').clockpicker({donetext:"Done",placement:"top"});
+					//color picker
+					$('.color').colorPicker();
+					$('.color2').colorpicker();
+

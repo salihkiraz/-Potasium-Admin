@@ -1,0 +1,30 @@
+.my-gallery {
+    -moz-column-width: 13em;
+    -webkit-column-width: 13em;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    position: relative;
+    z-index: 999;
+    figure {
+        display: inline-block;
+        margin: 0.25rem;
+        padding: 0;
+        width: 100%;
+        background: #efefef;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    figcaption {
+        display: none;
+    }
+}
+
+.pswp__caption__center {
+    text-align: center !important;
+    font-size: 1.4em !important;
+    margin-bottom: 5px !important
+}

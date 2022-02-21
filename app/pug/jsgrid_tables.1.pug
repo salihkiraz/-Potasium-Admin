@@ -1,0 +1,50 @@
+extends layouts/base
+block  page-title
+	|  Jsgrid Tables
+block breadcrumb-item-1
+	| Tables
+block breadcrumb-item-2
+	|  Jsgrid Tables
+block page-content
+	+row()
+		+col("12","12","12","12","12")     
+				+basiccard("Jsgrid Basic Table") 
+					#jsGrid
+				+basiccard("Jsgrid Customize Table")      
+					.config-panel
+						label
+							input#heading(type='checkbox', checked='')
+							|  Heading
+						label
+							input#filtering(type='checkbox', checked='')
+							|  Filtering
+						label
+							input#inserting(type='checkbox')
+							|  Inserting
+						label
+							input#editing(type='checkbox', checked='')
+							|  Editing
+						label
+							input#paging(type='checkbox', checked='')
+							|  Paging
+						label
+							input#sorting(type='checkbox', checked='')
+							|  Sorting
+						label
+							input#selecting(type='checkbox', checked='')
+							|  Selecting
+
+					#jsGrid1 
+				+basiccard("Jsgrid Custom Field Edit") 
+					#jsGrid2 
+block styles
+	link(rel='stylesheet', type='text/css', href='libs/js-grid/dist/jsgrid.css')
+	link(rel='stylesheet', type='text/css', href='libs/js-grid/dist/jsgrid-theme.css')
+block scripts
+
+	script( src="libs/js-grid/dist/jsgrid.js")
+	script( src="assets/data/js-grid/data/sample_data.js")
+
+	script(src='libs/jquery-validation/dist/jquery.validate.js')
+
+	script(src='js/pages/jsgrid_tables.js')

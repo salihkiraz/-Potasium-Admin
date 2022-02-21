@@ -1,0 +1,234 @@
+extends layouts/base
+block  page-title
+	|	Basic Tables
+block breadcrumb-item-1
+	| 	Tables
+block breadcrumb-item-2
+	| 	Basic Tables
+block page-content
+	+row()
+		+col("12","12","12","12","6")
+			+basiccard("Basic Table")          
+					table.table.table-responsive-sm
+						thead
+							tr
+								th #
+								th First Name
+								th Last Name
+								th Username
+						tbody
+							tr
+								th(scope='row') 1
+								td Mark
+								td Otto
+								td @mdo
+							tr
+								th(scope='row') 2
+								td Jacob
+								td Thornton
+								td @fat
+							tr
+								th(scope='row') 3
+								td Larry
+								td the Bird
+								td @twitter
+					
+			+basiccard("Basic Dark Table")             
+				table.table.table-dark.table-responsive-sm
+					thead
+						tr
+							th(scope='col') #
+							th(scope='col') First Name
+							th(scope='col') Last Name
+							th(scope='col') Username
+					tbody
+						tr
+							th(scope='row') 1
+							td Mark
+							td Otto
+							td @mdo
+						tr
+							th(scope='row') 2
+							td Jacob
+							td Thornton
+							td @fat
+						tr
+							th(scope='row') 3
+							td Larry
+							td the Bird
+							td @twitter
+					
+			+basiccard("Basic Table head options")            
+				table.table.table-responsive-sm
+					thead.thead-dark
+						tr
+							th(scope='col') #
+							th(scope='col') First Name
+							th(scope='col') Last Name
+							th(scope='col') Username
+					tbody
+						tr
+							th(scope='row') 1
+							td Mark
+							td Otto
+							td @mdo
+						tr
+							th(scope='row') 2
+							td Jacob
+							td Thornton
+							td @fat
+						tr
+							th(scope='row') 3
+							td Larry
+							td the Bird
+							td @twitter
+				table.table.table-responsive-sm
+					thead.thead-light
+						tr
+							th(scope='col') #
+							th(scope='col') First Name
+							th(scope='col') Last Name
+							th(scope='col') Username
+					tbody
+						tr
+							th(scope='row') 1
+							td Mark
+							td Otto
+							td @mdo
+						tr
+							th(scope='row') 2
+							td Jacob
+							td Thornton
+							td @fat
+						tr
+							th(scope='row') 3
+							td Larry
+							td the Bird
+							td @twitter
+			+basiccard("Basic Small Table")          
+				
+				table.table.table-responsive-sm
+					thead
+						tr
+							th(scope='col') #
+							th(scope='col') First Name
+							th(scope='col') Last Name
+							th(scope='col') Username
+					tbody
+						tr
+							th(scope='row') 1
+							td Mark
+							td Otto
+							td @mdo
+						tr
+							th(scope='row') 2
+							td Jacob
+							td Thornton
+							td @fat
+						tr
+							th(scope='row') 3
+							td(colspan='2') Larry the Bird
+							td @twitter
+		+col("12","12","12","12","6")
+			+basiccard("Table striped ")                                 
+					table.table.table-striped.table-responsive-sm
+						thead
+							tr
+								th(scope='col') #
+								th(scope='col') First Name
+								th(scope='col') Last Name
+								th(scope='col') Username
+						tbody
+							tr
+								th(scope='row') 1
+								td Mark
+								td Otto
+								td @mdo
+							tr
+								th(scope='row') 2
+								td Jacob
+								td Thornton
+								td @fat
+							tr
+								th(scope='row') 3
+								td Larry
+								td the Bird
+								td @twitter
+					
+			+basiccard("Table Striped Dark ")   
+					
+				table.table.table-striped.table-dark.table-responsive-sm
+					thead
+						tr
+							th(scope='col') #
+							th(scope='col') First Name
+							th(scope='col') Last Name
+							th(scope='col') Username
+					tbody
+						tr
+							th(scope='row') 1
+							td Mark
+							td Otto
+							td @mdo
+						tr
+							th(scope='row') 2
+							td Jacob
+							td Thornton
+							td @fat
+						tr
+							th(scope='row') 3
+							td Larry
+							td the Bird
+							td @twitter     
+			+basiccard("Table Bordered ")       
+					table.table.table-bordered.table-responsive-sm
+						thead
+							tr
+								th(scope='col') #
+								th(scope='col') First Name
+								th(scope='col') Last Name
+								th(scope='col') Username
+						tbody
+							tr
+								th(scope='row') 1
+								td Mark
+								td Otto
+								td @mdo
+							tr
+								th(scope='row') 2
+								td Mark
+								td Otto
+								td @TwBootstrap
+							tr
+								th(scope='row') 3
+								td Jacob
+								td Thornton
+								td @fat
+							tr
+								th(scope='row') 4
+								td(colspan='2') Larry the Bird
+								td @twitter
+						
+			+basiccard("Table Row Hovered ")                         
+				table.table.table-hover.table-responsive-sm
+					thead
+						tr
+							th(scope='col') #
+							th(scope='col') First Name
+							th(scope='col') Last Name
+							th(scope='col') Username
+					tbody
+						tr
+							th(scope='row') 1
+							td Mark
+							td Otto
+							td @mdo
+						tr
+							th(scope='row') 2
+							td Jacob
+							td Thornton
+							td @fat
+						tr
+							th(scope='row') 3
+							td(colspan='2') Larry the Bird
+							td @twitter

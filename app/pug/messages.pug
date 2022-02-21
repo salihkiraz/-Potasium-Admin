@@ -1,0 +1,250 @@
+extends layouts/base
+block page-content
+    +row()
+        +col(12,12,12,12,6)
+            +messages
+                .ui.message
+                    .header
+                        | Changes in Service
+                    |   
+                    p
+                        | We just updated our privacy policy here to better service our customers. We recommend reviewing the changes.
+        +col(12,12,12,12,6)
+            +messages
+                .ui.message
+                    .header
+                        | New Site Features
+                    |   
+                    ul.list
+                        li You can now have cover images on blog pages
+                        |     
+                        li Drafts will now auto-save while writing
+    +row()
+        +col(12,12,12,12,6)
+            +messages
+                .ui.icon.message
+                    i.inbox.icon
+                    |   
+                    .content
+                        .header
+                            | Have you heard about our mailing list?
+                        |     
+                        p Get the best news in your e-mail every day.
+        +col(12,12,12,12,6)
+            +messages
+                .ui.icon.message
+                    i.notched.circle.loading.icon
+                    |   
+                    .content
+                        .header
+                            | Just one second
+                        |     
+                        p We're fetching that content for you.
+    +row()
+        +col(12,12,12,12,6)
+            +messages
+                .ui.message
+                    i.close.icon
+                    |   
+                    .header
+                        | Welcome back!
+                    |   
+                    p This is a special notification which you can dismiss if you're bored with it.
+        +col(12,12,12,12,6)
+            +messages
+                .ui.warning.message
+                    i.close.icon
+                    |   
+                    .header
+                        | You must register before you can do that!
+                    |   Visit our registration page, then try again
+    +row()
+        +col(12,12,12,12,6)
+            +messages
+                .ui.info.message
+                    i.close.icon
+                    |   
+                    .header
+                        | Was this what you wanted?
+                    |   
+                    ul.list
+                        li It's good to see you again.
+                        |     
+                        li Did you know it's been a while?
+        +col(12,12,12,12,6)
+            +messages
+                .ui.negative.message
+                    i.close.icon
+                    |   
+                    .header
+                        | Oooops, you must fill this input?
+                    |   
+                    ul.list
+                        li Username
+                        |     
+                        li Birthday
+    +row()
+        +col(12,12,12,12,6)
+            +messages
+                .ui.positive.message
+                    i.close.icon
+                    |   
+                    .header
+                        | You are eligible for a reward
+                    |   
+                    p
+                        | Go to your 
+                        b special offers
+                        |  page to see now.
+        +col(12,12,12,12,6)
+            +messages
+                .ui.success.message
+                    i.close.icon
+                    |   
+                    .header
+                        | Your user registration was successful.
+                    |   
+                    p You may now log-in with the username you have chosen
+    +row()
+        +col(12,12,12,12,6)
+            +messages
+                .ui.negative.message
+                    i.close.icon
+                    |   
+                    .header
+                        | We're sorry we can't apply that discount
+                    |   
+                    p
+                        | That offer has expired
+        +col(12,12,12,12,6)
+            +messages
+                .ui.error.message
+                    i.close.icon
+                    |   
+                    .header
+                        | There were some errors with your submission
+                    |   
+                    ul.list
+                        li You must include both a upper and lower case letters in your password.
+                        |     
+                        li You need to select your home country.
+    +row()
+        +col(12,12,12,12,6)
+            +messages
+                .ui.red.message Red
+            +messages
+                .ui.orange.message Orange
+            +messages
+                .ui.yellow.message Yellow
+            +messages
+                .ui.green.message Green
+            +messages
+                .ui.teal.message Teal
+            +messages
+                .ui.blue.message Blue
+            +messages
+                .ui.brown.message Brown
+            +messages
+                .ui.black.message Black
+        +col(12,12,12,12,6)
+            +messages
+                .ui.mini.message
+                    | This is a mini message.
+            +messages
+                .ui.tiny.message
+                    | This is a tiny message.
+            +messages
+                .ui.small.message
+                    | This is a small message.
+            +messages
+                .ui.large.message
+                    | This is large
+            +messages
+                .ui.big.message
+                    | This is big
+            +messages
+                .ui.huge.message
+                    | This is huge
+            +messages
+                .ui.massive.message
+                    | This is massive
+    +row()
+        +col(12,12,12,12,6)
+            +messages
+                .alert.alert-primary(role="alert")
+                    | This is a primary alert—check it out!
+            +messages
+                .alert.alert-secondary(role="alert")
+                    | This is a secondary alert—check it out!
+            +messages
+                .alert.alert-success(role="alert")
+                    | This is a success alert—check it out!
+            +messages
+                .alert.alert-danger(role="alert")
+                    | This is a danger alert—check it out!
+            +messages
+                .alert.alert-warning(role="alert")
+                    | This is a warning alert—check it out!
+            +messages
+                .alert.alert-info(role="alert")
+                    | This is a info alert—check it out!
+            +messages
+                .alert.alert-light(role="alert")
+                    | This is a light alert—check it out!
+            +messages
+                .alert.alert-dark(role="alert")
+                    | This is a dark alert—check it out!
+        +col(12,12,12,12,6)
+            +messages
+                .alert.alert-primary(role="alert")
+                    | This is a primary alert with 
+                    a.alert-link(href="#") an example link
+                    | . Give it a click if you like.
+            +messages
+                .alert.alert-secondary(role="alert")
+                    | This is a secondary alert with 
+                    a.alert-link(href="#") an example link
+                    | . Give it a click if you like.
+            +messages
+                .alert.alert-success(role="alert")
+                    | This is a success alert with 
+                    a.alert-link(href="#") an example link
+                    | . Give it a click if you like.
+            +messages
+                .alert.alert-danger(role="alert")
+                    | This is a danger alert with 
+                    a.alert-link(href="#") an example link
+                    | . Give it a click if you like.
+            +messages
+                .alert.alert-warning(role="alert")
+                    | This is a warning alert with 
+                    a.alert-link(href="#") an example link
+                    | . Give it a click if you like.
+            +messages
+                .alert.alert-info(role="alert")
+                    | This is a info alert with 
+                    a.alert-link(href="#") an example link
+                    | . Give it a click if you like.
+            +messages
+                .alert.alert-light(role="alert")
+                    | This is a light alert with 
+                    a.alert-link(href="#") an example link
+                    | . Give it a click if you like.
+            +messages
+                .alert.alert-dark(role="alert")
+                    | This is a dark alert with 
+                    a.alert-link(href="#") an example link
+                    | . Give it a click if you like.
+    +row()
+        +col()
+            +messages
+                .alert.alert-success(role="alert")
+                    h4.alert-heading Well done!
+                    |   
+                    p
+                        | Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+                    |   
+                    hr
+                    |   
+                    p.mb-0
+                        | Whenever you need to, be sure to use margin utilities to keep things nice and tidy.

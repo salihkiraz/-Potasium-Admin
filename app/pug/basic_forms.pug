@@ -1,0 +1,465 @@
+extends layouts/base
+block  page-title
+	|	Basic Form
+block breadcrumb-item-1
+	| 	Form
+block breadcrumb-item-2
+	| 	Basic Form
+block page-content
+	+row()
+		+col()
+			+basiccard("Form Elements")
+				.col-md-12
+					.form-group
+						label(for='input-text-1') Text Input
+						input#input-id-1.form-control(type='email', placeholder='Enter email')
+					.form-group
+						label(for='input-password-1') Password
+						input#input-password-1.form-control(type='password', placeholder='Password')
+					.form-group
+						label(for='select-1') Select
+						select#select-1.form-control
+							option(value='none', selected='', disabled='') select 1
+							option(value='select2') select 2
+							option(value='select3') select 3
+							option(value='select4') select 4
+							option(value='select5') select 5
+							option(value='select6') select 6  
+
+					.form-group
+						label(for='exampleFormControlSelect2') Example multiple select
+						select#exampleFormControlSelect2.form-control(multiple='')
+							option 1
+							option 2
+							option 3
+							option 4
+							option 5      
+
+
+					fieldset.form-group
+						.form-check
+							label.form-check-label 
+								input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='option1', checked='') 
+								|  Option one is this and that—be sure to include why it's great
+						.form-check
+							label.form-check-label 
+								input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
+								|  Option two can be something else and selecting it will deselect option one
+						.form-check.disabled
+							label.form-check-label
+								input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')  
+								|  Option three is disabled
+					.form-group
+						label(for='select-1') Checkbox
+						.form-check
+							label.form-check-label
+								input.form-check-input(type='checkbox', value='')
+								|  Option one is this and that—be sure to include why it's great
+					.form-group
+						.form-check.disabled
+							label.form-check-label
+								input.form-check-input(type='checkbox', value='', disabled='')
+								|  Option two is disabled
+					.form-group
+						label(for='disabledTextInput') Disabled input
+						input#disabledTextInput.form-control(type='text',disabled="disabled", placeholder='Disabled input')
+
+					.form-group
+						label(for='inputDate') Schedule Preview Date
+							input.form-control(type='date', class='id=', name='inputDate', placeholder='Enter date')
+
+					.form-group
+						label(for='inputDate') Price
+							.input-group.mb-3
+								.input-group-prepend
+									span.input-group-text $
+								input.form-control(type='text', aria-label='Amount (to the nearest dollar)')
+								.input-group-append
+									span.input-group-text .00
+					.form-actions
+
+						button.btn.btn-gray(type='submit') Reset 
+
+						button.btn.btn-primary.mr-1(type='button') Save 
+							i.fa.fa-floppy-o
+			+basiccard("Personal form")
+				form#contact_form.well.form-horizontal(action=' ', method='post')       
+					fieldset                   
+
+						// Text input
+						.form-group
+							label.col-md-12.control-label First Name
+							.col-md-12.inputGroupContainer
+								.input-group
+									.input-group-prepend
+										.input-group-text 
+											i.fa.fa-user
+									input.form-control(name='first_name', placeholder='First Name', type='text')
+						// Text input
+						.form-group
+							label.col-md-12.control-label Last Name
+							.col-md-12.inputGroupContainer
+								.input-group
+									.input-group-prepend
+										.input-group-text 
+											i.fa.fa-user
+									input.form-control(name='last_name', placeholder='Last Name', type='text')
+						// Text input
+						.form-group
+							label.col-md-12.control-label E-mail
+							.col-md-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+										.input-group-text
+											i.fa.fa-envelope
+									input.form-control(type='text', placeholder="Recipient's username", aria-label="Recipient's username", aria-describedby='basic-addon2')
+									.input-group-append
+										span#basic-addon2.input-group-text @example.com
+						// Text input
+						.form-group
+							label.col-md-12.control-label Phone 
+							.col-md-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+										.input-group-text
+											i.fa.fa-phone
+									input.form-control(name='phone', placeholder='(845)555-1212', type='text')
+						// Text input
+						.form-group
+							label.col-md-12.control-label Address
+							.col-md-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+										.input-group-text
+											i.fa.fa-home
+									input.form-control(name='address', placeholder='Address', type='text')
+						// Text input
+						.form-group
+							label.col-md-12.control-label City
+							.col-md-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+										.input-group-text
+											i.fa.fa-home
+									input.form-control(name='city', placeholder='city', type='text')
+						// Select Basic
+						.form-group
+							label.col-md-12.control-label State
+							.col-md-12.selectContainer
+								.input-group
+									span.input-group-prepend
+										.input-group-text
+											i.fa.fa-map
+									select.form-control.selectpicker(name='state')
+										option(value=' ') Please select your state
+										option Alabama
+										option Alaska
+										option Arizona
+										option Arkansas
+										option California
+										option Colorado
+										option Connecticut
+										option Delaware
+										option District of Columbia
+										option  Florida
+										option Georgia
+										option Hawaii
+										option daho
+										option Illinois
+										option Indiana
+										option Iowa
+										option  Kansas
+										option Kentucky
+										option Louisiana
+										option Maine
+										option Maryland
+										option  Mass
+										option Michigan
+										option Minnesota
+										option Mississippi
+										option Missouri
+										option Montana
+										option Nebraska
+										option Nevada
+										option New Hampshire
+										option New Jersey
+										option New Mexico
+										option New York
+										option North Carolina
+										option North Dakota
+										option Ohio
+										option Oklahoma
+										option Oregon
+										option Pennsylvania
+										option Rhode Island
+										option South Carolina
+										option South Dakota
+										option Tennessee
+										option Texas
+										option  Uttah
+										option Vermont
+										option Virginia
+										option Washington
+										option West Virginia
+										option Wisconsin
+										option Wyoming
+						// Text input
+						.form-group
+							label.col-md-12.control-label Zip Code
+							.col-md-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+										.input-group-text
+											i.fa.fa-id-card
+									input.form-control(name='zip', placeholder='Zip Code', type='text')
+						// Text input
+						.form-group
+							label.col-md-12.control-label Website or domain name
+							.col-md-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+										.input-group-text
+											i.fa.fa-globe
+									input.form-control(name='website', placeholder='Website or domain name', type='text')
+						// radio checks
+						.form-group
+							label.col-md-12.control-label Do you have hosting?
+							.col-md-4
+								.radio
+									label
+										input(type='radio', name='hosting', value='yes')
+										| Yes
+								.radio
+									label
+										input(type='radio', name='hosting', value='no')
+										| No
+						// Text area
+						.form-group
+							label.col-md-12.control-label Project Description
+							.col-md-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+										.input-group-text
+											i.fa.fa-comment
+									textarea.form-control(name='comment', placeholder='Project Description')
+						// Success message
+						#info_message.alert.alert-info(role='info')  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+						.form-actions.mt-3
+							button.btn.btn-gray(type='submit') Reset 
+
+							button.btn.btn-primary.mr-1(type='button') Save 
+								i.fa.fa-floppy-o
+			+basiccard("Grid system form")   
+				form
+					.form-row
+						.form-group.col-md-6
+							label(for='inputEmail4') Email
+							input#inputEmail4.form-control(type='email', placeholder='Email')
+						.form-group.col-md-6
+							label(for='inputPassword4') Password
+							input#inputPassword4.form-control(type='password', placeholder='Password')
+					.form-group
+						label(for='inputAddress') Address
+						input#inputAddress.form-control(type='text', placeholder='1234 Main St')
+					.form-group
+						label(for='inputAddress2') Address 2
+						input#inputAddress2.form-control(type='text', placeholder='Apartment, studio, or floor')
+					.form-row
+						.form-group.col-md-6
+							label(for='inputCity') City
+							input#inputCity.form-control(type='text')
+						.form-group.col-md-4
+							label(for='inputState') State
+							select#inputState.form-control
+								option(selected='') Choose...
+								option ...
+						.form-group.col-md-2
+							label(for='inputZip') Zip
+							input#inputZip.form-control(type='text')
+					.form-group
+						.form-check
+							label.form-check-label
+								input.form-check-input(type='checkbox') 
+								|  Check me out
+					button.btn.btn-primary(type='submit') Save
+
+		+col()
+			+basiccard("Basic Form")
+				form.form
+					.form-body
+						h4.form-section Basic
+							i.fa.fa-user
+						.row
+							.col-md-6
+								.form-group
+									label(for='projectinput1') First Name
+									input#projectinput1.form-control(type='text', placeholder='First Name', name='fname')
+							.col-md-6
+								.form-group
+									label(for='projectinput2') Last Name
+									input#projectinput2.form-control(type='text', placeholder='Last Name', name='lname')
+						.row
+							.col-md-6
+								.form-group
+									label(for='projectinput3') E-mail
+									input#projectinput3.form-control(type='text', placeholder='E-mail', name='email')
+							.col-md-6
+								.form-group
+									label(for='projectinput4') Contact Number
+									input#projectinput4.form-control(type='text', placeholder='Phone', name='phone')
+						h4.form-section Detail
+							i.fa.fa-info
+						.form-group
+							label(for='companyName') Detail text
+							input#companyName.form-control(type='text', placeholder='File Name', name='company')
+						.row
+							.col-md-6
+								.form-group
+									label(for='projectinput5') Select 1
+									select#projectinput5.form-control(name='interested')
+										option(value='none', selected='', disabled='') select 1
+										option(value='select2') select 2
+										option(value='select3') select 3
+										option(value='select4') select 4
+										option(value='select5') select 5
+										option(value='select6') select 6
+							.col-md-6
+								.form-group
+									label(for='projectinput6') Select 2
+									select#projectinput6.form-control(name='budget')
+										option(value='none', selected='', disabled='') select 1
+										option(value='select2') select 2
+										option(value='select3') select 3
+										option(value='select4') select 4
+										option(value='select5') select 5
+										option(value='select6') select 6
+						.form-group
+							label(for='') File 
+								.custom-file
+									input#customFile.custom-file-input.custom-form-control(type='file')
+									label.custom-file-label.custom-form-control(for='customFile') Choose file
+						.form-group
+							label(for='projectinput8') title
+								input.form-control(name='title',type='text', placeholder='Title ')
+						.form-group
+							label(for='projectinput8') cv
+							textarea#projectinput8.form-control(rows='5', name='comment', placeholder='About ')
+						.form-group
+							label(for='select-1') Checkbox
+							.form-check
+								label.form-check-label
+									input.form-check-input(type='checkbox', value='')
+									|  Option one is this and that—be sure to include why it's great
+					.form-actions
+						button.btn.btn-gray(type='submit') Reset 
+
+						button.btn.btn-primary.mr-1(type='button') Save 
+							i.fa.fa-floppy-o
+			+basiccard("Credit card form")
+				form.credit-card-div(action='#')
+					.panel.panel-default
+						.panel-heading
+							.row.pb-3
+								.col-md-12
+									span.help-block.text-muted.small-font Card Number
+									input.form-control(type='text', placeholder='Enter Card Number')
+							.row
+								.col-md-3.col-sm-3.col-xs-3
+									span.help-block.text-muted.small-font  Expiry Month
+									input.form-control(type='text', placeholder='MM')
+								.col-md-3.col-sm-3.col-xs-3
+									span.help-block.text-muted.small-font   Expiry Year
+									input.form-control(type='text', placeholder='YY')
+								.col-md-3.col-sm-3.col-xs-3
+									span.help-block.text-muted.small-font   CCV
+									input.form-control(type='text', placeholder='CCV')
+								.col-md-3.col-sm-3.col-xs-3
+									i.fa.fa-credit-card(style="font-size:35px;padding:25px")
+							.row.pb-3
+								.col-md-12.pad-adjust
+									span.help-block.text-muted.small-font Name On The Card
+									input.form-control(type='text', placeholder='Name On The Card')
+							.row.pb-3
+								.col-md-12.pad-adjust
+									.checkbox
+										label
+											input.text-muted(type='checkbox', checked='')
+											a(href='#')  learn how ?
+							.row
+								.col-md-6.col-sm-6.col-xs-6.pad-adjust
+									input.btn.btn-primary(type='submit', value='CANCEL')
+								.col-md-6.col-sm-6.col-xs-6.pad-adjust
+									input.btn.btn-warning.btn-block(type='submit', value='PAY NOW')
+
+			+basiccard("Basic Form 2")
+
+				form(role='form')
+					.form-group
+						label(for='inputName') Name*
+						.input-group.Name
+							span.input-group-prepend
+								.input-group-text
+									i.fa.fa-user
+							input#inputName.form-control(type='text', name='inputName', placeholder='Enter Name')
+					.form-group
+						label(for='inputPhone') Phone Number*
+						.input-group.phone
+							span.input-group-prepend
+								.input-group-text
+									i.fa.fa-phone
+							input#inputPhone.form-control(type='phone', name='inputPhone', placeholder='Enter Phone')
+					.form-group
+						label(for='inputEmail') Email address
+						.input-group.email
+							span.input-group-prepend
+								.input-group-text
+									i.fa.fa-envelope
+							input#inputEmail.form-control(type='email', name='inputEmail', placeholder='Enter email')
+					.form-group
+						label(for='inputDate') Schedule Preview Date
+						.input-group.date
+							span.input-group-prepend
+								.input-group-text
+									i.fa.fa-calendar
+							input.form-control(type='date', class='id=', name='inputDate', placeholder='Enter date')
+					.form-group
+						label(for='inputTime') When you are available
+						.input-group.clock
+							span.input-group-prepend
+								.input-group-text
+									span.fa.fa-clock-o
+							input.form-control(type='text', value='Enter Time')
+					button.btn.btn-primary(type='submit') Submit
+
+
+			+basiccard("Form Input size")
+
+				form
+					.form-group.row
+						label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Email
+						.col-sm-10
+							input#colFormLabelSm.form-control.form-control-sm(type='email', placeholder='col-form-label-sm')
+					.form-group.row
+						label.col-sm-2.col-form-label(for='colFormLabel') Email
+						.col-sm-10
+							input#colFormLabel.form-control(type='email', placeholder='col-form-label')
+					.form-group.row
+						label.col-sm-2.col-form-label.col-form-label-lg(for='colFormLabelLg') Email
+						.col-sm-10
+							input#colFormLabelLg.form-control.form-control-lg(type='email', placeholder='col-form-label-lg')
+
+			+basiccard("Login Form")
+
+				form
+					.form-group
+						label(for='exampleInputEmail1') Email address
+						input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
+						small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+					.form-group
+						label(for='exampleInputPassword1') Password
+						input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+					.form-check
+						label.form-check-label 
+							input.form-check-input(type='checkbox') 
+							| Check
+					button.btn.btn-primary(type='submit') Submit

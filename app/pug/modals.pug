@@ -1,0 +1,511 @@
+extends layouts/base
+block page-content
+	+row()
+		+col("12","12","12","12","12")            
+			+basiccardwithactions("Bootstrap Modal" )
+
+				// Button trigger modal
+				button.btn.btn-secondary(type='button', data-toggle='modal', data-target='#exampleModal')  Basic  modal
+				// Modal
+				#exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+					.modal-dialog(role='document')
+						.modal-content
+							.modal-header
+								h5#exampleModalLabel.modal-title Modal title
+								button.close(type='button', data-dismiss='modal', aria-label='Close')
+									span(aria-hidden='true') &times;
+							.modal-body Basic  modal
+							.modal-footer
+								button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+								button.btn.btn-primary(type='button') Save changes
+
+				// Button trigger modal
+				button.btn.btn-secondary(type='button', data-toggle='modal', data-target='#exampleModalLong') Scrolling long content
+				// Modal
+				#exampleModalLong.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLongTitle', aria-hidden='true')
+					.modal-dialog(role='document')
+						.modal-content
+							.modal-header
+								h5#exampleModalLongTitle.modal-title Modal title
+								button.close(type='button', data-dismiss='modal', aria-label='Close')
+									span(aria-hidden='true') &times;
+							.modal-body. 
+								Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+									Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+									Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+									Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+									Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+									Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+									Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+									Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+									Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+									Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+									Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+									Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+									Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+									Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+									Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+									Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+									Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+									Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+							.modal-footer
+								button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+								button.btn.btn-primary(type='button') Save changes
+				// Button trigger modal
+				button.btn.btn-secondary(type='button', data-toggle='modal', data-target='#exampleModalTooltips')  Tooltips and popovers
+				// Modal
+				#exampleModalTooltips.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+					.modal-dialog(role='document')
+						.modal-content
+							.modal-header
+								h5#exampleModalLabel.modal-title Modal title
+								button.close(type='button', data-dismiss='modal', aria-label='Close')
+									span(aria-hidden='true') &times;
+							.modal-body
+								h5 Popover in a modal
+								p
+									a.btn.btn-secondary.popover-test(href='#', role='button',data-toggle="popover", title='Popover title', data-content='Popover body content is set in this attribute.') button
+								hr
+								h5 Tooltips in a modal
+								p
+									a.tooltip-test(href='#', title='Tooltip',data-toggle="tooltip") This link 
+									a.tooltip-test(href='#', title='Tooltip',data-toggle="tooltip") that link 
+							.modal-footer
+								button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+								button.btn.btn-primary(type='button') Save changes
+								// Button trigger modal
+				button.btn.btn-secondary(type='button', data-toggle='modal', data-target='#exampleModalgrid')  Using the grid
+				// Modal
+				#exampleModalgrid.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+					.modal-dialog(role='document')
+						.modal-content
+							.modal-header
+								h5#exampleModalLabel.modal-title Modal title
+								button.close(type='button', data-dismiss='modal', aria-label='Close')
+									span(aria-hidden='true') &times;
+							.modal-body
+								.container-fluid
+									.row
+										.col-md-4 .col-md-4
+										.col-md-4.ml-auto .col-md-4 .ml-auto
+									.row
+										.col-md-3.ml-auto .col-md-3 .ml-auto
+										.col-md-2.ml-auto .col-md-2 .ml-auto
+									.row
+										.col-md-6.ml-auto .col-md-6 .ml-auto
+									.row
+										.col-sm-9
+											.row
+												.col-8.col-sm-6
+												.col-4.col-sm-6
+									a.tooltip-test(href='#', title='Tooltip',data-toggle="tooltip") This link 
+									a.tooltip-test(href='#', title='Tooltip',data-toggle="tooltip") that link 
+							.modal-footer
+								button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+								button.btn.btn-primary(type='button') Save changes
+
+				// Button trigger modal
+				button.btn.btn-secondary(type='button', data-toggle='modal', data-target='#exampleModalSmall')  Small  modal
+				// Modal
+				#exampleModalSmall.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+					.modal-dialog.modal-sm(role='document')
+						.modal-content
+							.modal-header
+								h5#exampleModalLabel.modal-title Modal title
+								button.close(type='button', data-dismiss='modal', aria-label='Close')
+									span(aria-hidden='true') &times;
+							.modal-body Basic  modal
+							.modal-footer
+								button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+								button.btn.btn-primary(type='button') Save changes
+				// Button trigger modal
+				button.btn.btn-secondary(type='button', data-toggle='modal', data-target='#exampleModalLarge')  Small  modal
+				// Modal
+				#exampleModalLarge.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+					.modal-dialog.modal-lg(role='document')
+						.modal-content
+							.modal-header
+								h5#exampleModalLabel.modal-title Modal title
+								button.close(type='button', data-dismiss='modal', aria-label='Close')
+									span(aria-hidden='true') &times;
+							.modal-body Basic  modal
+							.modal-footer
+								button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+								button.btn.btn-primary(type='button') Save changes
+				br
+				br
+				h6 Modal Js Methods
+				button.btn.btn-secondary(type='button',onClick="showModal()")  Show Modal 
+				pre.small  code: $('#exampleModal').BsModal('show') 
+		+col("12","12","12","12","12")            
+			+basiccardwithactions("Semantic UI Modal")
+				h6 Basic Modal 
+				button.btn.btn-secondary.modalone Standart Modal
+				button.btn.btn-secondary.modaltwo Basic Modal
+				button.btn.btn-secondary.modalthree FullScreen Modal
+				button.btn.btn-secondary.modalfour Small Modal
+				button.btn.btn-secondary.modalfive Large Modal
+				button.btn.btn-secondary.modalsix Long Modal
+				h6.mt-3 Modal with Effects
+
+				button.btn.btn-secondary.modaleffect(data-value='horizontal flip') Horizontal Flip Effect
+				button.btn.btn-secondary.modaleffect(data-value='vertical flip') Vertical Flip Effect
+				button.btn.btn-secondary.modaleffect(data-value='fade up') Fade Up Effect
+				button.btn.btn-secondary.modaleffect(data-value='fade') Fade Effect
+				button.btn.btn-secondary.modaleffect(data-value='scale') Scale Effect
+
+				h6.mt-3 Modal Overlays
+
+				button.btn.btn-secondary.modalinverted Overlay Inverted
+				button.btn.btn-secondary.modalblur Overlay Blur
+				button.btn.btn-secondary.modalactionone Approve / Deny Modal
+
+				.ui.standard.test.suimodal
+					.header
+						| Best Footballer
+					.scrolling.content
+
+
+						.description
+							.ui.header Wesley Sneijder
+							p
+								b Wesley Sneijder
+								|  (
+								small Dutch pronunciation:
+								span.IPA(title='Representation in the International Phonetic Alphabet (IPA)')
+									a(href='/wiki/Help:IPA_for_Dutch', title='Help:IPA for Dutch') [ˈʋɛsli ˈsnɛi̯dər]
+
+								sup#cite_ref-3.reference
+									a(href='#cite_note-3')
+										span [
+										| 3
+										span ]
+								|  is a Dutch professional 
+								a(href='/wiki/Association_football', title='Association football') footballer
+								|  who plays for Turkish club 
+								a(href='/wiki/Galatasaray_S.K._(football)', title='Galatasaray S.K. (football)') Galatasaray
+								|  and the 
+								a(href='/wiki/Netherlands_national_football_team', title='Netherlands national football team') Netherlands national team
+								| . He was named 
+								a(href='/wiki/UEFA_Club_Football_Awards', title='UEFA Club Football Awards') UEFA midfielder of the season
+								|  and one of the three best midfielders in the world for 
+								a(href='/wiki/FIFPro#FIFA_FIFPro_World_XI', title='FIFPro') 2010
+								|  by 
+								a(href='/wiki/FIFA', title='FIFA') FIFA
+								| . A product of the 
+								a(href='/wiki/Jong_Ajax', title='Jong Ajax') AFC Ajax Academy
+								| , he previously played for 
+								a(href='/wiki/AFC_Ajax', title='AFC Ajax') Ajax
+								| , with whom he won seven trophies and was awarded the 
+								a(href='/wiki/Dutch_Footballer_of_the_Year#Dutch_Football_Talent_of_the_Year_.28Young_player.29', title='Dutch Footballer of the Year') Johan Cruyff Trophy
+								|  in 2004. He was sold to 
+								a(href='/wiki/Real_Madrid_C.F.', title='Real Madrid C.F.') Real Madrid
+								|  for €27 million in 2007, winning 
+								a(href='/wiki/La_Liga', title='La Liga') La Liga
+								|  in his first season with the club and later being sold to 
+								a(href='/wiki/Inter_Milan', title='Inter Milan') Internazionale
+								|  for €15 million. At Inter, he won 
+								a(href='/wiki/Serie_A', title='Serie A') Serie A
+								| , the 
+								a(href='/wiki/UEFA_Champions_League', title='UEFA Champions League') UEFA Champions League
+								| , the 
+								a(href='/wiki/FIFA_Club_World_Cup', title='FIFA Club World Cup') FIFA Club World Cup
+								| , and two 
+								a(href='/wiki/Coppa_Italia', title='Coppa Italia') Coppa Italia
+								| . After being sold to Galatasaray for €7.5 million in 2013, he helped the club win the 
+								a(href='/wiki/2012%E2%80%9313_S%C3%BCper_Lig', title='2012–13 Süper Lig') Süper Lig
+								|  in his first season, following with the capture of the 
+								a(href='/wiki/Turkish_Super_Cup', title='Turkish Super Cup') Turkish Super Cup
+								| , after a 1–0 win against rivals 
+								a(href='/wiki/Fenerbah%C3%A7e_S.K._(football)', title='Fenerbahçe S.K. (football)') Fenerbahçe
+								| .
+					.actions
+						.ui.black.deny.button
+							| Close
+						.ui.positive.right.labeled.icon.button
+							| Yes I Know
+							i.checkmark.icon
+				.ui.basic.test.suimodal
+					i.close.icon
+					.header
+						| Archive Old Messages
+					.image.content
+						.image
+							i.archive.icon
+						.description
+							p
+								| Your inbox is getting full, would you like us to enable automatic archiving of old messages?
+					.actions
+						.two.fluid.ui.inverted.buttons
+							.ui.red.basic.inverted.deny.button
+								i.remove.icon
+								|                     No
+							.ui.green.basic.inverted.deny.button
+								i.checkmark.icon
+								|                     Yes
+				.ui.fullscreen.suimodal
+					i.close.icon
+					.header
+						| Update Your Settings
+					.content
+						.ui.form
+							h4.ui.dividing.header Give us your feedback
+							.field
+								label Feedback
+								textarea
+							.field
+								.ui.checkbox
+									input(type='checkbox', checked='checked', name='contact-me')
+									label It's okay to contact me.
+					.actions
+						.ui.button.deny Cancel
+						.ui.green.button.deny Send
+				.ui.small.test.suimodal
+					.header
+						| Delete Your Account
+					.content
+						p Are you sure you want to delete your account
+					.actions
+						.ui.negative.button
+							| No
+						.ui.positive.right.labeled.icon.button
+							| Yes
+							i.checkmark.icon
+				.ui.large.test.suimodal
+					.header
+						| Changing Your Thing
+					.content
+						p Do you want to change that thing to something else?
+					.actions
+						.ui.negative.button
+							| No
+						.ui.positive.right.labeled.icon.button
+							| Yes
+							i.checkmark.icon
+				.ui.long.test.suimodal
+					.header Hi, I am long modal
+					|   
+					.scrolling.content
+						img()
+						p HEDONIST ROOTS
+							| Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”
+
+							| As Cicero would put it, “Um, not so fast.”
+
+							| The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.
+
+							| Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text. In seeing a sample of lorem ipsum, his interest was piqued by consectetur—a genuine, albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from De Finibus Bonorum et Malorum (“On the Extremes of Good and Evil”), a first-century B.C. text from the Roman philosopher Cicero.
+
+							| In particular, the garbled words of lorem ipsum bear an unmistakable resemblance to sections 1.10.32–33 of Cicero's work, with the most notable passage excerpted below:
+
+							| Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.”
+							| A 1914 English translation by Harris Rackham reads:
+
+							| Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure.”
+							| McClintock's eye for detail certainly helped narrow the whereabouts of lorem ipsum's origin, however, the “how and when” still remain something of a mystery, with competing theories and timelines.
+						p HEDONIST ROOTS
+							| Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”
+
+							| As Cicero would put it, “Um, not so fast.”
+
+							| The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.
+
+							| Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text. In seeing a sample of lorem ipsum, his interest was piqued by consectetur—a genuine, albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from De Finibus Bonorum et Malorum (“On the Extremes of Good and Evil”), a first-century B.C. text from the Roman philosopher Cicero.
+
+							| In particular, the garbled words of lorem ipsum bear an unmistakable resemblance to sections 1.10.32–33 of Cicero's work, with the most notable passage excerpted below:
+
+							| Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.”
+							| A 1914 English translation by Harris Rackham reads:
+
+							| Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure.”
+							| McClintock's eye for detail certainly helped narrow the whereabouts of lorem ipsum's origin, however, the “how and when” still remain something of a mystery, with competing theories and timelines.                            
+				.ui.inverted.test.suimodal.transition.hidden
+					.header
+						| Best Footballer
+					.scrolling.content
+
+
+						.description
+							.ui.header Wesley Sneijder
+							p
+								b Wesley Sneijder
+								|  (
+								small Dutch pronunciation:
+								span.IPA(title='Representation in the International Phonetic Alphabet (IPA)')
+									a(href='/wiki/Help:IPA_for_Dutch', title='Help:IPA for Dutch') [ˈʋɛsli ˈsnɛi̯dər]
+
+								sup#cite_ref-3.reference
+									a(href='#cite_note-3')
+										span [
+										| 3
+										span ]
+								|  is a Dutch professional 
+								a(href='/wiki/Association_football', title='Association football') footballer
+								|  who plays for Turkish club 
+								a(href='/wiki/Galatasaray_S.K._(football)', title='Galatasaray S.K. (football)') Galatasaray
+								|  and the 
+								a(href='/wiki/Netherlands_national_football_team', title='Netherlands national football team') Netherlands national team
+								| . He was named 
+								a(href='/wiki/UEFA_Club_Football_Awards', title='UEFA Club Football Awards') UEFA midfielder of the season
+								|  and one of the three best midfielders in the world for 
+								a(href='/wiki/FIFPro#FIFA_FIFPro_World_XI', title='FIFPro') 2010
+								|  by 
+								a(href='/wiki/FIFA', title='FIFA') FIFA
+								| . A product of the 
+								a(href='/wiki/Jong_Ajax', title='Jong Ajax') AFC Ajax Academy
+								| , he previously played for 
+								a(href='/wiki/AFC_Ajax', title='AFC Ajax') Ajax
+								| , with whom he won seven trophies and was awarded the 
+								a(href='/wiki/Dutch_Footballer_of_the_Year#Dutch_Football_Talent_of_the_Year_.28Young_player.29', title='Dutch Footballer of the Year') Johan Cruyff Trophy
+								|  in 2004. He was sold to 
+								a(href='/wiki/Real_Madrid_C.F.', title='Real Madrid C.F.') Real Madrid
+								|  for €27 million in 2007, winning 
+								a(href='/wiki/La_Liga', title='La Liga') La Liga
+								|  in his first season with the club and later being sold to 
+								a(href='/wiki/Inter_Milan', title='Inter Milan') Internazionale
+								|  for €15 million. At Inter, he won 
+								a(href='/wiki/Serie_A', title='Serie A') Serie A
+								| , the 
+								a(href='/wiki/UEFA_Champions_League', title='UEFA Champions League') UEFA Champions League
+								| , the 
+								a(href='/wiki/FIFA_Club_World_Cup', title='FIFA Club World Cup') FIFA Club World Cup
+								| , and two 
+								a(href='/wiki/Coppa_Italia', title='Coppa Italia') Coppa Italia
+								| . After being sold to Galatasaray for €7.5 million in 2013, he helped the club win the 
+								a(href='/wiki/2012%E2%80%9313_S%C3%BCper_Lig', title='2012–13 Süper Lig') Süper Lig
+								|  in his first season, following with the capture of the 
+								a(href='/wiki/Turkish_Super_Cup', title='Turkish Super Cup') Turkish Super Cup
+								| , after a 1–0 win against rivals 
+								a(href='/wiki/Fenerbah%C3%A7e_S.K._(football)', title='Fenerbahçe S.K. (football)') Fenerbahçe
+								| .
+					.actions
+						.ui.black.deny.button
+							| Close
+						.ui.positive.right.labeled.icon.button
+							| Yes I Know
+							i.checkmark.icon
+				.ui.suimodal.actionmodal
+					.header
+						| Best Footballer
+					.scrolling.content
+
+
+						.description
+							.ui.header Wesley Sneijder
+							p
+								b Wesley Sneijder
+								|  (
+								small Dutch pronunciation:
+								span.IPA(title='Representation in the International Phonetic Alphabet (IPA)')
+									a(href='/wiki/Help:IPA_for_Dutch', title='Help:IPA for Dutch') [ˈʋɛsli ˈsnɛi̯dər]
+								sup#cite_ref-3.reference
+									a(href='#cite_note-3')
+										span [
+										| 3
+										span ]
+								|  is a Dutch professional 
+								a(href='/wiki/Association_football', title='Association football') footballer
+								|  who plays for Turkish club 
+								a(href='/wiki/Galatasaray_S.K._(football)', title='Galatasaray S.K. (football)') Galatasaray
+								|  and the 
+								a(href='/wiki/Netherlands_national_football_team', title='Netherlands national football team') Netherlands national team
+								| . He was named 
+								a(href='/wiki/UEFA_Club_Football_Awards', title='UEFA Club Football Awards') UEFA midfielder of the season
+								|  and one of the three best midfielders in the world for 
+								a(href='/wiki/FIFPro#FIFA_FIFPro_World_XI', title='FIFPro') 2010
+								|  by 
+								a(href='/wiki/FIFA', title='FIFA') FIFA
+								| . A product of the 
+								a(href='/wiki/Jong_Ajax', title='Jong Ajax') AFC Ajax Academy
+								| , he previously played for 
+								a(href='/wiki/AFC_Ajax', title='AFC Ajax') Ajax
+								| , with whom he won seven trophies and was awarded the 
+								a(href='/wiki/Dutch_Footballer_of_the_Year#Dutch_Football_Talent_of_the_Year_.28Young_player.29', title='Dutch Footballer of the Year') Johan Cruyff Trophy
+								|  in 2004. He was sold to 
+								a(href='/wiki/Real_Madrid_C.F.', title='Real Madrid C.F.') Real Madrid
+								|  for €27 million in 2007, winning 
+								a(href='/wiki/La_Liga', title='La Liga') La Liga
+								|  in his first season with the club and later being sold to 
+								a(href='/wiki/Inter_Milan', title='Inter Milan') Internazionale
+								|  for €15 million. At Inter, he won 
+								a(href='/wiki/Serie_A', title='Serie A') Serie A
+								| , the 
+								a(href='/wiki/UEFA_Champions_League', title='UEFA Champions League') UEFA Champions League
+								| , the 
+								a(href='/wiki/FIFA_Club_World_Cup', title='FIFA Club World Cup') FIFA Club World Cup
+								| , and two 
+								a(href='/wiki/Coppa_Italia', title='Coppa Italia') Coppa Italia
+								| . After being sold to Galatasaray for €7.5 million in 2013, he helped the club win the 
+								a(href='/wiki/2012%E2%80%9313_S%C3%BCper_Lig', title='2012–13 Süper Lig') Süper Lig
+								|  in his first season, following with the capture of the 
+								a(href='/wiki/Turkish_Super_Cup', title='Turkish Super Cup') Turkish Super Cup
+								| , after a 1–0 win against rivals 
+								a(href='/wiki/Fenerbah%C3%A7e_S.K._(football)', title='Fenerbahçe S.K. (football)') Fenerbahçe
+								| .
+					.actions
+						.ui.positive.right.labeled.icon.button
+							| Yes I Know
+							i.checkmark.icon
+						.ui.black.deny.button
+							| Close
+block scripts
+	script.
+		
+		$('[data-toggle="popover"]').popover();
+		$('[data-toggle="tooltip"]').tooltip();
+		function showModal(){
+			$('#exampleModal').BsModal('show')
+		}
+		//Semantic UI Modal
+		//modal page modals trigger settings
+
+			$(".ui.suimodal.standard").modal("attach events", ".modalone", "show");
+			$(".ui.suimodal.basic").modal("attach events", ".modaltwo", "show");
+			$(".ui.suimodal.fullscreen").modal("attach events", ".modalthree", "show");
+			$(".ui.suimodal.small").modal("attach events", ".modalfour", "show");
+			$(".ui.suimodal.large").modal("attach events", ".modalfive", "show");
+			$(".ui.suimodal.long").modal("attach events", ".modalsix", "show");
+			$(".modaleffect").on("click", function () {
+				var a = $(this).attr("data-value");
+				$(".ui.suimodal.standard").modal("setting", "transition", a).modal("show");
+			});
+			$(".modalinverted").on("click", function () {
+				$(".ui.suimodal.inverted").modal({
+					inverted: true,
+					blurring: false
+				}).modal("show");
+			});
+			$(".modalblur").on("click", function () {
+				$(".ui.suimodal.standard").modal({
+					blurring: true,
+					inverted: false
+				}).modal("show");
+			});
+			$(".modalactionone").on("click", function () {
+				$(".ui.actionmodal").modal({
+					closable: false,
+					onDeny: function () {
+						window.alert("OOooopps! You must read this..");
+						return false;
+					},
+					onApprove: function () {
+						window.alert("Yess He is a Best Footballer in Holland now!");
+					}
+				}).modal("show");
+			});

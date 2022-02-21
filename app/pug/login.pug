@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		link(rel='icon', href='assets/img/favicon/favicon.ico', type='image/x-icon')
+		title
+			block title
+				| Potasium Admin - Register
+		// Iconfont.cn Icons Css
+		link(rel='stylesheet', href='css/utils.css')
+		link(rel='stylesheet', href='css/pages/login-page-1.css')
+	body
+		.container-login100(style="background-image: url('assets/img/login-page-bg.jpeg');")
+			.wrap-login100.p-l-55.p-r-55.p-t-80.p-b-30
+				form.login100-form.validate-form
+					span.login100-form-title.p-b-75
+						| POTASIUM ADMIN
+					| 				
+					.wrap-input100.validate-input.m-b-20(data-validate="Enter username or email")
+						input.input100(type="text", name="username", placeholder="username or email")
+						| 					
+						span.focus-input100
+					| 				
+					.wrap-input100.validate-input.m-b-25(data-validate="Enter password")
+						input.input100(type="password", name="pass", placeholder="password")
+						| 					
+						span.focus-input100
+					| 				
+					.container-login100-form-btn
+						a.login100-form-btn(href="index.html")
+							| Sign In		

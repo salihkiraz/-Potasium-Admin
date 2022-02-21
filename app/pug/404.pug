@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		link(rel='icon', href='assets/img/favicon/favicon.ico', type='image/x-icon')
+		title
+			block title
+				| Potasium Admin - 404
+		link(rel='stylesheet', href='libs/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/pages/error-pages.css')
+
+	body
+		.container
+			.row
+				.col-12
+					.text-wrapper
+						.title(data-content="404")
+							| 404
+						|     
+						.subtitle
+							| Oops, the page you're looking for doesn't exist.
+						|     
+						.buttons
+							a.button(href="index.html") Go to homepage
+
+

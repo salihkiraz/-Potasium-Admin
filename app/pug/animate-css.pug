@@ -1,0 +1,32 @@
+extends layouts/base
+block  page-title
+	|	Animate.css
+block breadcrumb-item-1
+	| 	Animations
+block breadcrumb-item-2
+	| 	Animate.css Transitions
+block styles
+	link(rel='stylesheet', href='libs/animate.css/animate.min.css')    
+block page-content
+	+row()
+		+animate-css-card("Bounce","bounce")
+		+animate-css-card("Flash","flash")
+		+animate-css-card("Pulse","pulse")
+		+animate-css-card("Rubber Band","rubberBand")
+	+row()
+		+animate-css-card("Shake","shake")
+		+animate-css-card("Head Shake","headShake")
+		+animate-css-card("Swing","swing")
+		+animate-css-card("Tada","tada")
+	+row()
+		+animate-css-card("Hinge","hinge")
+		+animate-css-card("Jack In the Box","jackInTheBox")
+		+animate-css-card("Roll In","rollIn")
+		+animate-css-card("Roll Up","rollOut")
+	+row()
+		+animate-css-card("Wobble","wobble")
+		+animate-css-card("Jello","Jello")
+		+animate-css-card("Zoom In","zoomIn")
+		+animate-css-card("Fade Out Up","fadeOutUp")
+block scripts
+	script( src="js/pages/custom-animate-css.min.js")

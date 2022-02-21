@@ -1,0 +1,117 @@
+extends layouts/base
+block page-content
+	+row()
+		+col("12","12","12","12","3")
+			+basiccard("Statistic","","text-center")
+				.ui.statistic
+					.value
+						| 4,865
+					.label
+						| Downloads
+		+col("12","12","12","12","3")
+			+basiccard("Statistic","","text-center")
+				.ui.statistic
+					.value
+						| 2,354
+					.label
+						| Clicks
+		+col("12","12","12","12","3")
+			+basiccard("Statistic","","text-center")
+				.ui.statistic
+					.value
+						| 9,247
+					.label
+						| Views
+		+col("12","12","12","12","3")
+			+basiccard("Statistic","","text-center")
+				.ui.statistic
+					.value
+						| 3,229
+					.label
+						| Sales
+	+row()
+		+col("12","12","12","12","4")
+			+basiccard("Colored Statistic","","text-center")
+				.ui.statistic.red
+					.label
+						| Downloads
+					.value
+						| 4,865
+		+col("12","12","12","12","4")
+			+basiccard("Colored Statistic","","text-center")
+				.ui.statistic.blue
+					.label
+						| Clicks
+					.value
+						| 2,354
+		+col("12","12","12","12","4")
+			+basiccard("Colored Statistic","","text-center")
+				.ui.statistic.green
+					.label
+						| Views
+					.value
+						| 9,247
+	+row()
+		+col("12","12","12","12","6")
+			+basiccard("Grouped Statistic","","text-center")
+				.ui.statistics
+					.statistic
+						.value
+							| 335
+						|     
+						.label
+							| Favorites
+					|   
+					.statistic
+						.value
+							| 3,200
+						|     
+						.label
+							| Views
+					|   
+					.statistic
+						.value
+							| 966
+						|     
+						.label
+							| Retweets
+					.statistic
+						.value
+							| 1,112
+						|     
+						.label
+							| Likes
+		+col("12","12","12","12","6")
+			+basiccard("Contentable Statistic","","text-center")
+				.ui.statistics
+					.statistic
+						.value
+							| 16
+						|     
+						.label
+							| Saves
+					|   
+					.statistic
+						.text.value
+							| Three
+							br
+							|       Thousand
+						|     
+						.label
+							| Signups
+					|   
+					.statistic
+						.value
+							i.icon.iconfont.icon-canyin
+							|  12
+						|     
+						.label
+							| Order
+					|   
+					.statistic
+						.value
+							img.ui.circular.tiny.inline.image(src="assets/img/gallery/32.jpeg")
+							|       34
+						|     
+						.label
+							| Members

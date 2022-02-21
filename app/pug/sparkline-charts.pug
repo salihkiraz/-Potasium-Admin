@@ -1,0 +1,180 @@
+extends layouts/base
+block page-content
+	.row
+		.col-lg-3.col-md-6
+			.card
+				.card-body.analytics-info
+					h4.card-title Total Visit
+					|                                 
+					ul.list-inline.two-part
+						li
+							#sparklinedash
+						|                                     
+						li.text-right
+							i.ti-arrow-up.text-success
+							|  
+							span.counter.text-success 1659
+		|                     
+		.col-lg-3.col-md-6
+			.card
+				.card-body.analytics-info
+					h4.card-title Total Page Views
+					|                                 
+					ul.list-inline.two-part
+						li
+							#sparklinedash2
+						|                                     
+						li.text-right
+							i.ti-arrow-up.text-purple
+							|  
+							span.counter.text-purple 7469
+		|                     
+		.col-lg-3.col-md-6
+			.card
+				.card-body.analytics-info
+					h4.card-title Unique Visitor
+					|                                 
+					ul.list-inline.two-part
+						li
+							#sparklinedash3
+						|                                     
+						li.text-right
+							i.ti-arrow-up.text-info
+							|  
+							span.counter.text-info 6011
+		|                     
+		.col-lg-3.col-md-6
+			.card
+				.card-body.analytics-info
+					h4.card-title Bounce Rate
+					|                                 
+					ul.list-inline.two-part
+						li
+							#sparklinedash4
+						|                                     
+						li.text-right
+							i.ti-arrow-down.text-danger
+							|  
+							span.text-danger 18%
+	|                 
+	.row
+		.col-lg-4
+			.card
+				.card-body.analytics-info
+					h4.card-title
+						| Total Visit 
+						small.pull-right.text-success
+							i.fa.fa-sort-asc
+							|  18% High then last month
+					|                                 
+					.stats-row
+						.stat-item
+							h6 Overall Growth
+							|                                         
+							b 80.40%
+						|                                     
+						.stat-item
+							h6 Montly
+							|                                         
+							b 15.40%
+						|                                     
+						.stat-item
+							h6 Day
+							|                                         
+							b 5.50%
+					|                                 
+					#sparkline8
+		|                     
+		.col-lg-4
+			.card
+				.card-body.analytics-info
+					h4.card-title Site Traffic
+					|                                 
+					.stats-row
+						.stat-item
+							h6 Overall Growth
+							|                                         
+							b 80.40%
+						|                                     
+						.stat-item
+							h6 Montly
+							|                                         
+							b 15.40%
+						|                                     
+						.stat-item
+							h6 Day
+							|                                         
+							b 5.50%
+					|                                 
+					#sparkline9
+		|                     
+		.col-lg-4
+			.card
+				.card-body.analytics-info
+					h4.card-title Site Visit
+					|                                 
+					.stats-row
+						.stat-item
+							h6 Overall Growth
+							|                                         
+							b 80.40%
+						|                                     
+						.stat-item
+							h6 Montly
+							|                                         
+							b 15.40%
+						|                                     
+						.stat-item
+							h6 Day
+							|                                         
+							b 5.50%
+					|                                 
+					#sparkline10
+	|                 
+	.row
+		.col-lg-4
+			.card
+				.card-body.analytics-info
+					h4.card-title Bar Chart
+					|                                 
+					#sparkline12.text-center
+		|                     
+		.col-lg-4
+			.card
+				.card-body.analytics-info
+					h4.card-title Pie Chart
+					|                                 
+					#sparkline11.text-center
+		|                     
+		.col-lg-4
+			.card
+				.card-body.analytics-info
+					h4.card-title Composite Bar Chart
+					|                                 
+					#sparkline13.text-center
+	|                 
+	.row
+		.col-lg-4
+			.card.cherry
+				.card-body.analytics-info
+					h4.card-title Line Chart
+					|                                 
+					#sparkline14
+		|                     
+		.col-lg-4
+			.card
+				.card-body.analytics-info
+					h4.card-title Bar with different color Chart
+					|                                 
+					#sparkline15.text-center
+		|                     
+		.col-lg-4
+			.card
+				.card-body.analytics-info
+					h4.card-title Line Chart
+					|                                 
+					#sparkline16.text-center
+block scripts
+	// Sparkline Charts JavaScript
+	script(src="libs/jquery-sparkline/dist/jquery.sparkline.min.js")
+	script( src="js/pages/sparklinecharts-data.min.js")

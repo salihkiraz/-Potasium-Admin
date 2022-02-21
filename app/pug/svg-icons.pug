@@ -1,0 +1,23 @@
+extends layouts/base
+block styles
+	link(rel='stylesheet', href='./libs/lobibox/dist/css/lobibox.min.css')
+block page-content
+	.row
+		.col-lg-12.col-md-12
+			.card
+				.card-body
+					.ui.fluid.big.icon.input
+						input#search.prompt(type='text', placeholder='Search ')
+						i.search.icon
+	div#container_sui_icon.row
+block scripts
+	script(src="./libs/clipboard/dist/clipboard.min.js")
+	script(src="./libs/lobibox/dist/js/lobibox.min.js")
+	// SVG Icons
+	script( src="./assets/fonts/icons/colorfull/color-weather-icons/iconfont.js")
+	script( src="./assets/fonts/icons/colorfull/color-city-icons/iconfont.js")
+	script( src="./assets/fonts/icons/colorfull/color-animal-icons/iconfont.js")
+	script( src="./assets/fonts/icons/colorfull/color-sea-icons/iconfont.js")
+	script( src="./assets/fonts/icons/colorfull/color-travel-icons/iconfont.js")
+	script(src="./js/pages/svg-icons.js")
+

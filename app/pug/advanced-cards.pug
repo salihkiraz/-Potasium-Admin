@@ -1,0 +1,36 @@
+extends layouts/base
+block page-content
+	+row()
+		+advanced-cards-1("aubergine-g",1.845,"Downloads","card-chart1")
+		+advanced-cards-1("sea-weed-g",3.245,"Total Points","card-chart2")
+		+advanced-cards-1("nimvelo-g",6.158,"Highlights","card-chart3")
+		+advanced-cards-1("cherry-g",4.419,"Sales","card-chart4")
+	+row()
+		+advanced-cards-2(5.799,"Steps","card-chart5","1")
+		+advanced-cards-2(350,"Calories","card-chart7","3")
+		+advanced-cards-2(143,"Minutes","card-chart6","2")   
+		+advanced-cards-2(8.3+ "km","Distance","card-chart8","4")
+	+row()
+		+advanced-cards-3("Paris","#icon-duoyun-copy","paris",10,"Heavy Rain")
+		+advanced-cards-3("Rome","#icon-leizhenyu-copy","italy",24,"Snowy")
+		+advanced-cards-3("London","#icon-qing1","london",8,"Rainy")
+		+advanced-cards-3("Istanbul","#icon-baoyu","istanbul",16,"Storm")
+	+row()
+		+advanced-cards-4("1")
+		+advanced-cards-4("2")
+	+row()
+		+advanced-cards-5("MEDITATION","1")
+		+advanced-cards-5("RUNNING","2")
+		+advanced-cards-5("JOGGING","3")
+		+advanced-cards-5("PAINTING","4")
+	+row()
+		+advanced-cards-6("EXCLUSIVE","Afro","Baseball hair","Shadow your real allegiance to New York's Pirate radio with this cool cap featuring the Graphic Know Wave logo.","$115","5")
+		+advanced-cards-6("EXCLUSIVE","Afro","Baseball hair","Shadow your real allegiance to New York's Pirate radio with this cool cap featuring the Graphic Know Wave logo.","$115","6")
+		+advanced-cards-6("EXCLUSIVE","Afro","Baseball hair","Shadow your real allegiance to New York's Pirate radio with this cool cap featuring the Graphic Know Wave logo.","$115","7")
+
+block scripts
+	//Echarts
+	script( src='./libs/echarts/dist/echarts.min.js')
+	script( src='./js/pages/advanced-cards.min.js')
+	//Color Icons
+	script( src="./assets/fonts/icons/colorfull/color-weather-icons/iconfont.js")

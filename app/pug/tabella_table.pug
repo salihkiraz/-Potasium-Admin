@@ -1,0 +1,121 @@
+extends layouts/base
+block  page-title
+	|  Tabella Table
+block breadcrumb-item-1
+	| Tables
+block breadcrumb-item-2
+	|  Tabella Table
+block page-content
+	+row()
+		+col("12","12","12","12","6")     
+			+basiccard("Tabella table ") 
+				p Click on the arrows or swipe the blue rows.
+				#tabella.tabella-ctr
+		+col("12","12","12","12","6")
+			+basiccard("Tabella table resposive ") 
+				p Please screen resize
+				#tabella-rooms.tabella-ctr
+block styles
+	link(rel="stylesheet" href="libs/tabellajs/dist/assets/css/tabella.css")
+
+block scripts
+	script( src="libs/tabellajs/dist/tabella.min.js")
+
+	script.
+			!(function() {
+
+					var tabellaCtr = document.getElementById('tabella');
+
+					var data = {};
+
+					data.tableHeader = [
+						['2014-12-14', '2014-12-20'],
+						['2014-12-21', '2015-1-10'],
+						['2015-2-1', '2015-3-7'],
+						['2015-3-8', '2015-3-21'],
+						['2015-3-22', '2015-4-7'],
+						['2015-4-7', '2015-4-23']
+					];
+
+					data.rows = [{
+						rowHeader: '<h2 class="table-h"><a href="#">Single bed room</a></h2>',
+						rowVal: [
+							[190, 210, 210, 204, 180, 160]
+						],
+						rowDesc: ['1 person B&B']
+					}, {
+						rowHeader: '<h2 class="table-h"><a href="#">Double bed room</a></h2>',
+						rowVal: [
+							[190, 210, 210, 204, 180, 160],
+							[190, 210, 210, 204, 180, 140]
+						],
+						rowDesc: ['1 person half board', '2 people half board']
+					}, {
+						rowHeader: '<h2 class="table-h"><a href="#">Suite</a></h2>',
+						rowVal: [
+							[250, 280, 280, 260, 230, 210]
+						],
+						rowDesc: ['2 people all inclusive']
+					}];
+
+
+					var hotelrowVal = new Tabella(
+						tabellaCtr, data);
+
+					/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/
+					/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/
+					/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/
+
+
+					var discountData = {};
+
+					discountData.from = "";
+
+					discountData.tableHeader = [
+						["Adults"],
+						["Kids 0-4 year-old"],
+						["Kids 5-10 years-old"]
+					];
+
+					discountData.rows = [{
+						"rowDesc": ["Discount per night in May"],
+						"rowVal": [
+							["10%", "14%", "12%"]
+						]
+					}, {
+						"rowDesc": ["Discount per night in June"],
+						"rowVal": [
+							["8%", "12%", "10%"]
+						]
+					}];
+
+					discountData.cellBreakpoints = {
+						default: [0, 1],
+						small: [460, 2],
+						medium: [640, 3],
+						large: [820, 4],
+						xlarge: [1080, 5]
+					};
+
+					discountData.descBreakpoints = {
+						default: [0, 0],
+						medium: [700, 220],
+						large: [900, 360]
+					};
+
+					var pricelist = new Tabella(document.getElementById('tabella-rooms'), discountData);
+
+				   
+
+				})();
+	style.
+			/* Fix */
+			.t-arr-right svg {
+				top: 0px!important;
+			}
+			.t-arr-left svg {
+				top: 0%!important;
+			}
+			.t-arrow, .t-arr-right, .t-arr-left {
+				 background-color: #504e51;
+			}

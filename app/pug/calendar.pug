@@ -1,0 +1,25 @@
+extends layouts/base
+block styles
+	link(rel='stylesheet', href='./libs/fullcalendar/dist/fullcalendar.min.css')
+block page-content
+	+row()
+		+col("12","12","12","12","3")
+			.card.calendar-card
+				.card-header  Draggable Events
+				.card-body
+					.ui.middle.aligned.selection.list
+						+calendarcard-item("Meet Helen","1")
+						+calendarcard-item("Meet Cheryl","5")
+						+calendarcard-item("Party Danny","11")
+						+calendarcard-item("Call Becky","2")
+						+calendarcard-item("Email Emily","4")
+						+calendarcard-item("Turn back Remy","13")
+		+col("12","12","12","12","9")
+			.card.plum-plate-g.calendar-card
+				.card-body
+					#calendarapp
+					div(style="clear:both")
+block scripts
+	script( src="./libs/moment/min/moment.min.js")
+	script( src="./libs/fullcalendar/dist/fullcalendar.min.js")
+	script( src="./js/pages/calendar-page.js")

@@ -1,0 +1,107 @@
+extends layouts/base
+block  page-title
+	|	Form Mask 
+block breadcrumb-item-1
+	| 	Form
+block breadcrumb-item-2
+	| 	Form Mask
+block page-content
+	//Page Content
+	+row()
+		+col("12","12","12","12","12")            
+			+basiccard("Form mask" )
+				form#contact_form.well.form-horizontal(action=' ', method='post')       
+					fieldset
+						// Text input
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Date
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+									i.fa.fa-calendar
+									input.form-control.date(name='date', placeholder='mm/dd/yyyy', type='text')
+						// Text input
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label E-Mail
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+									i.fa.fa-envelope
+									input.form-control.e-mail(name='email', placeholder='E-Mail Address', type='text')
+						// Text input
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Phone 
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-phone
+									input.form-control.phone(name='phone', placeholder='(845) 555-1212', type='text')
+						// Text input
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Tax ID
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-home
+									input.form-control.taxt-id(name='taxt',placeholder='99-9999999' ,type='text')
+						// Text input
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Product Key
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-home
+									input.form-control.product_key(name='city', placeholder='a*-999-a999', type='text')
+						// Text input
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Decimal
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-id-card
+									input.form-control.decimal(name='decimal', placeholder='25', type='text')
+						// Text input
+						.form-group
+							label.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.control-label Currency
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.inputGroupContainer
+								.input-group
+									span.input-group-prepend
+									.input-group-text
+										i.fa.fa-globe
+									input.form-control.currency(name='Currency', placeholder='Currency', type='text')
+
+
+block scripts
+	script(src='libs/inputmask/dist/min/inputmask/inputmask.min.js')
+	script(src='libs/inputmask/dist/min/inputmask/inputmask.extensions.min.js')
+	script(src='libs/inputmask/dist/min/inputmask/inputmask.date.extensions.min.js')
+	script(src='libs/inputmask/dist/min/inputmask/jquery.inputmask.min.js')
+	script.
+		 $(".date").inputmask("99/99/9999",{placeholder:"mm/dd/yyyy"});
+		 $(".phone").inputmask("(999) 999-9999",{placeholder:"(845) 555-1212"});
+		 $(".taxt-id").inputmask("99-9999999",{placeholder:"99-9999999"});
+		 $(".product_key").inputmask("a*-999-a999",{placeholder:"a*-999-a999"});
+		 $(".decimal").inputmask("decimal");
+		  $(".currency").inputmask("currency");
+		 //email mask
+		 $(".e-mail").inputmask({
+				mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+				greedy: false,
+				onBeforePaste: function (pastedValue, opts) {
+				pastedValue = pastedValue.toLowerCase();
+				return pastedValue.replace("mailto:", "");
+				},
+				definitions: {
+				'*': {
+					validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+					cardinality: 1,
+					casing: "lower"
+				}
+				}
+		 });

@@ -1,0 +1,87 @@
+/*
+Name: Potasium Admin Template
+Theme URI: http://potasium-admin.info
+Author: YellowRed
+Author URI: http://yellowred.info
+Description: Semantic-Ui and Bootstrap based Admin Template
+Version: 1.0
+License: Envato Licence
+License URI: https://elements.envato.com/license-terms
+*/
+
+/* -----------------------------------------
+	Table of Contents
+--------------------------------------------
+
+.. 01. General
+.. 02. Header
+.. 03. Modules
+.. 04. Footer
+.. 05. Comments
+.. 06. Widgets Styling
+.. 07. WordPress defaults
+.. 08. Utilities
+*/
+
+@charset "UTF-8";
+// Mixins
+@import 'mixin/font-face';
+
+//Font Face
+@include font-face(Quicksand, '../../assets/fonts/quicksand/quicksand-v8-latin-regular');
+
+@include font-face(OpenSans, '../../assets/fonts/open-sans/open-sans-v15-latin-regular');
+
+@include font-face(Raleway, '../../assets/fonts/raleway/raleway-v12-latin-regular');
+
+@include font-face(Roboto, '../../assets/fonts/roboto/roboto-v18-latin-regular');
+
+// Colors
+@import "components/colors";
+@import "default-colors";
+
+// Page Styles
+body{
+	background: $bg-color;
+}
+@import './style';
+
+// Fix Some Plugin Styles
+@import 'fixes/fix';
+
+// Partials
+
+@import 'components/utils';
+@import 'components/gradients';
+//@import 'components/font-face';
+@import 'components/right-sidebar';
+@import 'components/left-sidebar';
+@import 'components/calendar-sidebar';
+@import 'components/navbar';
+@import 'components/page-content';
+@import 'components/cards';
+@import 'components/buttons';
+@import 'components/preloader';
+@import 'components/icons';
+@import 'components/breadcrumb';
+@import 'components/timeline';
+
+
+
+// Components
+
+//Pages
+@import 'pages/event-dashboard';
+@import 'pages/calendar-page';
+@import 'pages/chat-app';
+@import 'pages/support-ticket-page';
+@import 'pages/form';
+@import 'pages/profile';
+@import 'pages/ecommerce';
+@import 'pages/invoice';
+@import 'pages/gallery';
+@import 'pages/pricing';
+@import 'pages/timeline';
+
+
+

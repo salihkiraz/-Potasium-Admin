@@ -1,0 +1,7 @@
+- var todoList = [{header: "Cleaning", content: "My Room",color:"#3BB273"},{header: "Meeting", content: "Meet Clients",color:"#E1BC29"},{header: "Check", content: "Check Reviews",color:"#E15554"},{header: "Research", content: "Research for Google",color:"#4D9DE0"}];
+mixin todo-list()
+    each value, index in todoList
+        .todo-list.z-depth-3
+            .todo-start(style={background: value.color})
+            .todo-header=value.header
+            .todo-content=value.content

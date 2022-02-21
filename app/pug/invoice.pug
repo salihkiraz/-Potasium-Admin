@@ -1,0 +1,75 @@
+extends layouts/base
+block styles
+	link(rel='stylesheet', href='css/pages/invoice.css')
+block page-content
+	.print-container.clearfix
+		.header
+			.content
+				table(style='width:100%')
+					tr.heading(style='width:100%')
+						td(colspan='3')
+							img.invoice-logo(src='assets/img/logo.png', alt='')
+						td.text-right
+							.invoice-from(style='max-width:400px')
+								h3.mega INVOICE
+								h6.grey Yellow Red Tech Pvt Limited
+								p.
+									Yellow Red Tech Labs Pvt. Ltd T1, Royal Space Istanbul / Turkey
+								p
+									strong  help@yellowred.info
+									br
+									strong +123-233-2222
+		.body
+			h4 Summary
+			.summary-info
+				table.table.summary-table
+					thead
+						tr
+							th Vendor Name
+							th Invoice #
+							th Amount
+					tbody
+						tr.simple
+							th(scope='row') ABC Corporation
+							td 12341123
+							td $124
+						tr.simple
+							th(scope='row') Reckonsys Tech Private Limited
+							td 45277344
+							td $12
+						tr.simple
+							th(scope='row') Main VMS deksghtred
+							td 34567455
+							td $123
+				.row
+					.col-md-12
+						.other-rates.clearfix
+							dl.dl-horizontal.clearfix
+								dt MSP Fees
+								dd $123
+							dl.dl-horizontal.clearfix
+								dt VMS Fees
+								dd $124
+							dl.dl-horizontal.clearfix
+								dt Taxes
+								dd $24
+							dl.dl-horizontal.total.clearfix
+								dt.blue Total
+								dd $424
+				.row
+					.col-md-12
+						strong Note:
+						p.
+							It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'
+				.row
+					.col-md-12
+						button.btn.btn-secondary.print_btn Print
+block scripts
+	script(src="libs/printThis/printThis.js")
+	script.
+		$(document).ready(function() {
+			$(".print_btn").click(function() {
+				$(".print_btn").hide();
+				$(".print-container").printThis();
+			});
+		});

@@ -1,0 +1,27 @@
+extends layouts/base
+block page-content
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card2("Basic Line Chart","chart1")
+		+col(12,12,12,12,6)           
+			+chart-card2("Styled Line Chart","chart2")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card2("Basic Bar Chart","chart3")
+		+col(12,12,12,12,6)           
+			+chart-card2("Stacked Bar Chart","chart4")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card2("Stacked Area Chart","chart5")
+		+col(12,12,12,12,6)           
+			+chart-card2("Combo Bar / Line Chart","chart6")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card2("Pie Chart","chart7")
+		+col(12,12,12,12,6)           
+			+chart-card2("Doughnut Chart","chart8")
+block scripts
+	// ChartJs JavaScript
+	script(src="libs/chart.js/dist/Chart.min.js")
+	script( src="js/pages/chartjs-utils.min.js")    
+	script( src="js/pages/chartjs-data.min.js")

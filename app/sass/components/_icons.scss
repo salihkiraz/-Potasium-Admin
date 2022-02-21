@@ -1,0 +1,73 @@
+.icon-list {
+    list-style: none;
+    &:before{
+        content: ''!important;
+    }
+    .card{
+        i{
+            color:$navbar-icon-color;
+        }
+    }
+}
+
+.change-icon-color {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+
+    ul.color-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            float: left;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            margin-right: 11px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        li.color-one {
+            background: #E15554
+        }
+
+        li.color-two {
+            background: #E1BC29
+        }
+
+        li.color-three {
+            background: #3BB273
+        }
+
+        li.color-four {
+            background: #7768AE
+        }
+
+        li.color-five {
+            background: #4D9DE0
+        }
+
+        li.color-six {
+            background: #297045
+        }
+
+        li.color-seven {
+            background: #3185FC
+        }
+
+        li.color-eight {
+            background: #403F4C
+        }
+
+        li.color-nine {
+            background: #F46036
+        }
+
+        li.color-ten {
+            background: #EFBCD5
+        }
+    }
+}

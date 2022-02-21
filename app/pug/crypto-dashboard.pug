@@ -1,0 +1,43 @@
+extends layouts/base
+block  page-title
+	|	Potasium Admin Crypto Dashboard
+block breadcrumb-item-1
+	| 	Dashboards
+block breadcrumb-item-2
+	| 	Crypto Dashboard
+block page-content
+	+row()
+		+col("12","12","12","12","3")
+			+cryptoCard("cf-btc","BTC","Bitcoin","#F7931A","crypto-chart1","$832","%24","fa-arrow-up","text-success")
+		+col("12","12","12","12","3")
+			+cryptoCard("cf-ppc","PPC","Peercoin","#3FA30C","crypto-chart2","$149","%16","fa-arrow-down","text-danger")
+		+col("12","12","12","12","3")
+			+cryptoCard("cf-xmr","XMR","Monero","#3FA30C","crypto-chart3","$654","%9","fa-arrow-up","text-success")
+		+col("12","12","12","12","3")
+			+cryptoCard("cf-amp","AMP","Synereo","#048DD2","crypto-chart12","$311","%2","fa-arrow-down","text-danger")
+	+row()
+		+col("12","12","12","12","8")
+			.card
+				.card-body
+					div(id="crypto-chart4",style="height:458px;width:100%",class="dash-charts")
+		+col("12","12","12","12","4")
+			.card
+				.card-body
+					+cryptoCard-1("BTC","Bitcoin","5")
+					+cryptoCard-1("PPC","Peercoin","6")
+					+cryptoCard-1("AMP","Synero","7")
+					+cryptoCard-1("ETC","Etherium","8")
+					+cryptoCard-1("XMR","Monero","9")
+					+cryptoCard-1("Dash","Dashcoin","10")
+					+cryptoCard-1("LTC","Litecoin","11")
+	+row()
+		+cryptoCard-2("Market Cap: $2.556.189.434 USD")
+		+cryptoCard-2("Price: $320,40 USD (4,24%)")
+		+cryptoCard-2("Volume(24h): $70.594.100 USD")
+		+col("12","12","12","12","12")
+			+cryptoTable()
+block scripts
+	//Echarts
+	script( src='./libs/echarts/dist/echarts.min.js')
+	script( src='./js/dashboards/crypto-dashboard.min.js')
+

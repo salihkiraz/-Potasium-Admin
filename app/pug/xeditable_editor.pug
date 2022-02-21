@@ -1,0 +1,72 @@
+extends layouts/base
+block  page-title
+	|	X-Editable Editor
+block breadcrumb-item-1
+	| 	Form
+block breadcrumb-item-2
+	|  X-Editable Editor
+block page-content
+	+row()
+		+col("12","12","12","12","12")     
+			+basiccard("X-Editable Editor") 
+				table#user.table.table-bordered.table-striped(style="clear: both")
+					tbody
+						tr
+							td(width="35%") Simple text field
+							|                                 
+							td(width="65%")
+								a#username(href="#", data-type="text", data-pk="1", data-title="Enter username") superuser
+						|                             
+						tr
+							td Empty text field, required
+							|                                 
+							td
+								a#firstname(href="#", data-type="text", data-pk="1", data-placement="right", data-placeholder="Required", data-title="Enter your firstname")
+						|   
+						|                             
+						tr
+							td Select, local array, custom display
+							|                                 
+							td
+								a#sex(href="#", data-type="select", data-pk="1", data-value="", data-title="Select sex")
+						|                                                        
+						tr
+							td Select, error while loading
+							|                                 
+							td
+								a#status(href="#", data-type="select", data-pk="1", data-value="0", data-source="/status", data-title="Select status") Active
+						tr
+							td Combodate (date)
+							|                                 
+							td
+								a#dob(href="#", data-type="combodate", data-value="1984-05-15", data-format="YYYY-MM-DD", data-viewformat="DD/MM/YYYY", data-template="D/MMM/YYYY", data-pk="1", data-title="Select Date of birth")
+						|  
+						|                             
+						tr
+							td Combodate (datetime)
+							|                                 
+							td
+								a#event(href="#", data-type="combodate", data-template="D MMM YYYY  HH:mm", data-format="YYYY-MM-DD HH:mm", data-viewformat="MMM D, YYYY, HH:mm", data-pk="1", data-title="Setup event date and time")
+										
+						tr
+							td
+								| Textarea, buttons below. Submit by 
+								i ctrl+enter
+							|                                 
+							td
+								a#comments(href="#", data-type="textarea", data-pk="1", data-placeholder="Your comments here...", data-title="Enter comments")
+								| <br/> awesome <br/>user
+
+block styles
+	link(rel="stylesheet" href="libs/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css")
+	link(rel="stylesheet" href="libs/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css")
+
+block scripts
+	script( src="libs/moment/min/moment.min.js")
+	script( src="libs/jquery-mockjax/dist/jquery.mockjax.min.js")
+
+	script( src="libs/smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js")
+
+
+	script( src="js/libs-fix/x-editable/x-editable-bs4.js")
+	script( src="js/pages/xeditable_editor.js")

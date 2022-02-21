@@ -1,0 +1,24 @@
+extends layouts/base
+block page-content
+	+row()
+		+col()
+			.card.chart-card
+				.card-body
+					h5.card-title Easy Pie Chart
+					+row()
+						+col(12,12,12,12,2)
+							+chart-card1("chart1","75")
+						+col(12,12,12,12,2)
+							+chart-card1("chart2","75")
+						+col(12,12,12,12,2)
+							+chart-card1("chart3","75")
+						+col(12,12,12,12,2)
+							+chart-card1("chart4","75")
+						+col(12,12,12,12,2)
+							+chart-card1("chart5","75")
+						+col(12,12,12,12,2)
+							+chart-card1("chart6","75")
+block scripts
+	// Easy Pie Charts JavaScript
+	script(src="libs/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js")
+	script( src="js/pages/easypiecharts-data.min.js")

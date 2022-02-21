@@ -1,0 +1,27 @@
+extends layouts/base
+block page-content
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Animated Line Chart","chart1")
+		+col(12,12,12,12,6)           
+			+chart-card("Line Chart","chart2")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Pie Chart","chart3")
+		+col(12,12,12,12,6)           
+			+chart-card("Animated Area Chart","chart4")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Bar Chart","chart5")
+		+col(12,12,12,12,6)           
+			+chart-card("Stock Chart","chart6")
+block scripts
+	// Flot Charts JavaScript
+	script(src="libs/Flot/excanvas.min.js")
+	script(src="libs/Flot/jquery.flot.js")
+	script(src="libs/Flot/jquery.flot.pie.js")
+	script(src="libs/Flot/jquery.flot.time.js")
+	script(src="libs/Flot/jquery.flot.stack.js")
+	script(src="libs/Flot/jquery.flot.crosshair.js")
+	script(src="js/pages/flotcharts.tooltip.min.js")
+	script(src="js/pages/flotcharts.data.min.js")

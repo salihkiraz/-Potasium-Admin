@@ -1,0 +1,71 @@
+extends layouts/base
+block page-content
+	+row()
+		+col("12","12","12","12","6")
+			+basiccardwithactions("Bootstrap Buttons")
+				.button-group
+					button.btn.btn-primary(type='button') Primary
+					button.btn.btn-secondary(type='button') Secondary
+					button.btn.btn-success(type='button') Success
+					button.btn.btn-danger(type='button') Danger
+					button.btn.btn-warning(type='button') Warning
+					button.btn.btn-info(type='button') Info
+					button.btn.btn-light(type='button') Light
+					button.btn.btn-dark(type='button') Dark
+					button.btn.btn-link(type='button') Link
+		+col("12","12","12","12","6")
+			+basiccardwithactions("Bootstrap Outline Buttons")
+				.button-group
+					button.btn.btn-outline-primary(type='button') Primary
+					button.btn.btn-outline-secondary(type='button') Secondary
+					button.btn.btn-outline-success(type='button') Success
+					button.btn.btn-outline-danger(type='button') Danger
+					button.btn.btn-outline-warning(type='button') Warning
+					button.btn.btn-outline-info(type='button') Info
+					button.btn.btn-outline-dark(type='button') Dark
+		+col("12","12","12","12","6")
+			+basiccardwithactions("Bootstrap Button Tags")
+				.button-group
+					a.btn.btn-primary(href='#', role='button') Link
+					button.btn.btn-primary(type='submit') Button
+					input.btn.btn-primary(type='button', value='Input')
+					input.btn.btn-primary(type='submit', value='Submit')
+					input.btn.btn-primary(type='reset', value='Reset')
+		+col("12","12","12","12","6")
+			+basiccardwithactions("Bootstrap Button Size")
+				.button-group
+					button.btn.btn-primary.btn-lg(type="button") Large button
+					button.btn.btn-secondary.btn-lg(type="button") Large button
+					button.btn.btn-primary.btn-sm(type="button") Small button
+					button.btn.btn-secondary.btn-sm(type="button") Small button
+		+col("12","12","12","12","6")
+			+basiccardwithactions("Bootstrap Block Buttons")
+				.button-group
+					button.btn.btn-primary.btn-lg.btn-block(type="button") Block level button
+					button.btn.btn-secondary.btn-lg.btn-block(type="button") Block level button
+		+col("12","12","12","12","6")
+			+basiccardwithactions("Bootstrap Active/Disable State Buttons")
+				.button-group
+					a.btn.btn-primary.btn-lg.active(href="#", role="button", aria-pressed="true") Primary link
+					a.btn.btn-secondary.btn-lg.active(href="#", role="button", aria-pressed="true") Link
+					button.btn.btn-lg.btn-primary(type="button", disabled="") Primary button
+					button.btn.btn-secondary.btn-lg(type="button", disabled="") Button
+		+col("12","12","12","12","6")
+			+basiccardwithactions("Bootstrap Check Buttons")
+				.button-group
+					.btn-group-toggle(data-toggle="buttons")
+						label.btn.btn-primary.active
+							input(type="checkbox", checked="", autocomplete="off")
+							|  Checked
+		+col("12","12","12","12","6")
+			+basiccardwithactions("Bootstrap Radio Buttons")
+				.btn-group.btn-group-toggle(data-toggle="buttons")
+					label.btn.btn-primary.active
+						input#option1(type="radio", name="options", autocomplete="off", checked="")
+						|  Active
+					label.btn.btn-primary
+						input#option2(type="radio", name="options", autocomplete="off")
+						|  Radio
+					label.btn.btn-primary
+						input#option3(type="radio", name="options", autocomplete="off")
+						|  Radio

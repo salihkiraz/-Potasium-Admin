@@ -1,0 +1,985 @@
+include grid.pug
+mixin basiccard(title,hidden="",textPosition="")
+  .card(class=hidden)
+    .card-header
+      h4.card-title=title
+      a.heading-elements-toggle
+        i.fa.fa-ellipsis.font-medium-3
+      .heading-elements
+        ul.list-inline.mb-0
+          li
+            a(data-action='copy')
+              i.icon.iconfont.icon-xitongcaidan
+          li
+            a(data-action='collapse')
+              i.icon.iconfont.icon-BAI-qiehuan
+          li
+            a(data-action='reload')
+              i.icon.iconfont.icon-shuaxin
+          li
+            a(data-action='expand')
+              i.icon.iconfont.icon-saoyisao
+          li
+            a(data-action='close')
+              i.icon.iconfont.icon-guanbijiantou
+    .collapse.show
+      .card-body
+        .ui.inverted.dimmer
+          .ui.text.loader Loading
+        .card-block(class=textPosition)
+          block
+
+mixin basiccardwithactions(title)
+    .card.home-dashboard-card
+        .card-header
+            h4.card-title=title
+        .card-body
+            block
+
+mixin colorcards(color,colorname,colorcode)
+  .ui.segments.color-segments 
+    .ui.inverted.segment.first(class=color)
+    .ui.segment.second
+      .ui.list
+        .item=colorname
+        .item=colorcode
+      block
+
+mixin home-dashboard-weather-card(day,icon,value,size)
+    +col("12","12","12","12","3")
+        .card.weather-icon-card
+            .card-body
+                .ui.one.statistics.inverted.grey(class=size)
+                    .statistic
+                        .value
+                            | #{day}
+                        .value
+                            svg.ui.image(aria-hidden="true")
+                                use(xlink:href="#icon-"+icon+"")
+                        .value
+                            | #{value} &#x2103;
+mixin home-dashboard-color-icon-card(title,icon)
+    .card.toolbox.color-icon-card
+        .card-body
+            h3.ui.inverted.header=title
+            svg(aria-hidden="true")
+                use(xlink:href="#icon-"+icon+"")
+mixin home-dashboard-card(title,value,chartid,icon)
+    .card.home-dashboard-card
+        .card-body
+            h6.card-subtitle.mb-2.text-muted
+                i.icon.iconfont(class=icon)
+                | #{title}
+            h1
+                | #{value}
+                small.text-muted mpg
+            div(id="home-chart"+chartid+"",style="height:50px;width:100%",class="dash-charts")
+mixin home-dashboard-city-card(title,icon,chartid)
+    .card.home-dashboard.card
+        .card-body
+            h6.card-subtitle.mb-2.text-muted.blue
+                i.icon.iconfont(class=icon)              
+                | #{title}
+            div(id="home-chart"+chartid+"",style="height:239px;width:100%",class="dash-charts")
+mixin home-dashboard-control-card(title,icon,checked)
+    .card.home-dashboard-control-card
+        h6.card-subtitle.mb-2.text-muted
+            | #{title}
+        .card-body
+            if(checked=="true")
+                i.icon.iconfont(class="icon-"+icon+"",style="color:#266DD3")
+                label.switch.home-control-switch
+                    input(type='checkbox',checked="true")
+                    span
+            else
+                i.icon.iconfont(class="icon-"+icon+"",style="color:#6c757d")
+                label.switch.home-control-switch
+                    input(type='checkbox')
+                    span
+mixin cryptoCard(cryptoicon,shortcryptoname,cryptoname,cryptoiconcolor,chart_id,value,increase,arrowtype,arrowcolor)
+    .card.crypto-card.z-depth-3
+        .card-body
+            .row
+                .col-md-2
+                    i.cf.crypto-icon(class=cryptoicon,style="color:#{cryptoiconcolor}")
+                .col-md-5.pl-3
+                    h3=shortcryptoname
+                    h6.text-muted=cryptoname
+                .col-md-5.text-right
+                    h3=value
+                    h6(class=arrowcolor)=increase
+                        i.fa(class=arrowtype)
+        .row
+            .col-md-12
+                div(id=chart_id,style="height:100px;width:100%",class="dash-charts")
+mixin cryptoCard-1(caption,text,chartid)
+    .row.mb-3
+        .col-md-3.text-center
+            h5.text-white=caption
+            span.text-muted=text
+        .col-md-9
+            div(id="crypto-chart"+chartid+"",style="height:50px;width:100%",class="dash-charts")
+mixin cryptoTable()
+    table.table.crypto-table
+        thead
+            tr
+                th(scope="col") #
+                |         
+                th(scope="col") Name
+                |         
+                th(scope="col") Symbol
+                |         
+                th(scope="col") Market Cap
+                |         
+                th(scope="col") Price
+                |         
+                th(scope="col") Supply
+                |         
+                th(scope="col") Vol(24h)
+                |         
+                th(scope="col") %(24h)
+        |     
+        tbody
+            tr
+                td 1
+                |         
+                td
+                    i.cf.cf-btc(style="color:#F7931A")
+                    span.text-warning  Bitcoin
+                |         
+                td BTC
+                |         
+                td $134.655,333
+                |         
+                td.text-warning $768.655
+                |         
+                td.text-warning $122.998
+                |         
+                td.text-warning $5.443.233,600
+                |         
+                td.text-success
+                    .ui.label.teal
+                        | %5.54 
+                    i.fa.fa-arrow-up
+            |       
+            tr
+                td 2
+                |         
+                td
+                    i.cf.cf-ppc(style="color:#3FA30C")
+                    |  
+                    span.text-warning  Peercoin
+                |         
+                td PPC
+                |         
+                td $134.655,333
+                |         
+                td.text-warning $768.655
+                |         
+                td.text-warning $122.998
+                |         
+                td.text-warning $5.443.233,600
+                |         
+                td.text-danger
+                    .ui.label.red
+                        | %8.14 
+                    i.fa.fa-arrow-down
+            |       
+            tr
+                td 3
+                |         
+                td
+                    i.cf.cf-amp(style="color:#048DD2")
+                    |  
+                    span.text-warning  Synereo
+                |         
+                td AMP
+                |         
+                td $134.655,333
+                |         
+                td.text-warning $768.655
+                |         
+                td.text-warning $122.998
+                |         
+                td.text-warning $5.443.233,600
+                |         
+                td.text-success
+                    .ui.label.teal
+                        | %6.85 
+                    i.fa.fa-arrow-up
+            tr
+                td 4
+                |         
+                td
+                    i.cf.cf-etc(style="color:#2F3130")
+                    |  
+                    span.text-warning  Etherium
+                |         
+                td ETC
+                |         
+                td $548.334
+                |         
+                td.text-warning $143.443
+                |         
+                td.text-warning $111.544
+                |         
+                td.text-warning $3.345.446
+                |         
+                td.text-success
+                    .ui.label.teal
+                        | %9.10
+                    i.fa.fa-arrow-up
+            tr
+                td 5
+                |         
+                td
+                    i.cf.cf-xmr(style="color:#FC6621")
+                    |  
+                    span.text-warning  Monero
+                |         
+                td XMR
+                |         
+                td $987.666
+                |         
+                td.text-warning $43.443
+                |         
+                td.text-warning $191.755
+                |         
+                td.text-warning $2.436.777
+                |         
+                td.text-danger
+                    .ui.label.red
+                        | %4.49
+                    i.fa.fa-arrow-down
+            tr
+                td 6
+                |         
+                td
+                    i.cf.cf-dash(style="color:#A057E5")
+                    |  
+                    span.text-warning  Dashcoin
+                |         
+                td Dash
+                |         
+                td $476.900
+                |         
+                td.text-warning $654.778
+                |         
+                td.text-warning $345.655
+                |         
+                td.text-warning $6.899.655
+                |         
+                td.text-success
+                    .ui.label.teal
+                        | %7.06
+                    i.fa.fa-arrow-up
+            tr
+                td 7
+                |         
+                td
+                    i.cf.cf-ltc(style="color:#2CDFA2")
+                    |  
+                    span.text-warning  Litecoin
+                |         
+                td LTC
+                |         
+                td $654.900
+                |         
+                td.text-warning $378.877
+                |         
+                td.text-warning $1.877.900
+                |         
+                td.text-warning $2.656.899
+                |         
+                td.text-danger
+                    .ui.label.red
+                        | %1.75
+                    i.fa.fa-arrow-down
+
+mixin cryptoCard-2(text)
+    +col("12","12","12","12","4")
+        .card.crypto-gradient-card.gradient-1
+            .card-body=text
+
+mixin analysticcard(title,value,icon,chart_id,color)
+    +col("12","12","12","12","3")
+        .card.analystic-icon-card
+            .card-body
+                .ui.items.unstackable
+                    .item
+                        .image.ui.tiny
+                            i.icon.iconfont(class=icon)
+                        .content
+                            a.header=title
+                            |       
+                            .meta(style={ color: color})
+                                span=value
+                            |       
+                            .description
+                                p
+                            |       
+                            .extra
+                                | this month
+                .card-footer
+                    div(id=chart_id,style="height:50px;width:100%",class="dash-charts")
+
+mixin analysticcard-1(title,smalltitle,chartid)
+    .card
+        h5.card-header=title
+            small=smalltitle
+        .card-body(style="padding:0")
+            div(style="width:100%;height:300px",class="dash-charts",id=chartid)
+
+mixin analysticcard-2(date,desc,chartid)
+    .item
+        .image.ui.mini
+            i.icon.iconfont.icon-hot
+        .content
+            a.header 20 Apr 2017  
+            .meta
+                span.cinema Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            .description
+                p
+            .extra
+                a.ui.label
+                    i.iconfont.icon.icon-quguo
+                    |  Go to ToDo
+                a.ui.label
+                    i.iconfont.icon.icon-wangwangcuifu
+                    | Reminder
+
+mixin analysticcard-3(imgsrc,date,name,desc,comment)
+    .event
+        .label
+            img(src="../assets/img/avatar/"+imgsrc+".jpg")
+        .content
+            .date=date
+            .summary
+                a.user=name
+                |   #{desc}
+            .meta
+                a.like
+                    i.icon.iconfont.icon-duanxin1
+                span=comment
+
+mixin restaurantcard(title,price,icon,chartid,color)
+    +col("12","12","12","12","3")
+        .card.restaurant-icon-card
+            .card-body
+                .ui.items.unstackable
+                    .item
+                        .content
+                            .description
+                                i.icon.iconfont(class="icon-"+icon+"")
+                            |       
+                            .meta(style={ color: color})
+                                span=price
+                            |       
+                            .extra=title
+                        .image.ui.tiny
+                            div(id="restaurant-card-chart-"+chartid+"",style="height:50px;width:100%",class="dash-charts")
+
+mixin restaurantcard-1()
+    +col("12","12","12","12","12")
+        .card
+            .card-body
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-4
+                        h5 This Month Statistic
+                        p.text-muted Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus.
+                        p.text-muted Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+                        p.text-muted Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus.
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-8  
+                        .card
+                            .ui.buttons.circular.mini.basic.four
+                                button.ui.active.button.to-users.waves-effect.waves-light User 
+                                button.ui.button.to-earnings.waves-effect.waves-light  Earnings
+                                button.ui.button.to-orders.waves-effect.waves-light  Orders
+                                button.ui.button.to-reviews.waves-effect.waves-light  Reviews
+                        div(id="this-month-chart",style="height:305px;width:100%",class="dash-charts")
+
+mixin restaurantcard-2(icon,desc,date,remain)
+    .item
+        .image.ui.tiny
+            svg(aria-hidden="true")
+                use(xlink:href="#icon-"+icon+"")
+        .content
+            .description=desc
+            .meta
+                span.cinema=date   
+            .extra
+                a.ui.label.mini=remain
+
+mixin restaurantcard-3(icon,title,desc)
+    .item
+        .image.ui.tiny
+            img(src="assets/img/food/"+icon+".jpeg")
+        .content
+            .description=title
+            .meta
+                span.cinema=desc
+
+mixin tablerow(name,orderid,foodname,price,labelcolor,label)
+    tr
+        td=name
+            br
+            | #{orderid}
+        td=foodname 
+        td=price       
+        td
+            a.ui.label.waves-effect.waves-light(class=labelcolor)=label
+
+mixin restauranttable()
+    +col("12","12","12","12","6")
+        .card.restaurant-order-received-card
+            .card-body
+                h5.card-title Order List Received
+                table.ui.celled.table.stackable
+                    tbody
+                        +tablerow("Pedro Hicks","Order ID : #12458546","Chicken Wrap","3 x $14 = $42","teal","Paid")
+                        +tablerow("Meghan Duncan","Order ID : #25469854","Chinesse Food","2 x $29 = $58","yellow","Pending")
+                        +tablerow("Bernard Simpson","Order ID : #54647754","French Breakfast","1 x $30 = $30","teal","Paid")
+                        +tablerow("Jackie Ellis","Order ID : #21145584","Duble Burger","3 x $17 = $41","red","Failed")
+                        +tablerow("Herman Cole","Order ID : #12544856","Roasted Garlic Filet Medallions","1 x $42 = $42","teal","Paid")
+                        +tablerow("Penny Campbell","Order ID : #12458546","Parisien Eggs Benedict","4 x $18 = $72","teal","Paid")
+
+mixin restaurantcard-4(imagesrc,name,supportid,desc)
+    .item
+        .image.ui.tiny
+            img(src="assets/img/avatar/"+imagesrc+".jpg")
+        .content
+            a.header=name  
+            .meta
+                span Support ID - #{supportid}   
+            .description
+                p  
+            .extra=desc
+
+mixin fitnesscard-1(title,chartid)
+    +col("12","12","12","12","3")
+        .card.fitness-card
+            .card-header
+                h4.card-title=title
+            .card-body
+                .card-block
+                    div(id="fitness-chart-"+chartid+"",style="height:300px;width:100%",class="dash-charts")
+
+mixin fitnesscard-2(title,chartid)
+    +col("12","12","12","12","6")
+        .card.fitness-card(style="padding:0")
+            .card-header
+                h4.card-title=title
+            .card-body(style="padding:0")
+                div(id="fitness-chart-"+chartid+"",style="height:400px;width:100%",class="dash-charts")
+
+mixin fitnesscard-3(title,chartid)
+    +col("12","12","12","12","4")
+        .card.fitness-card
+            .card-header
+                h4.card-title=title
+            .card-body
+                .card-block
+                    div(id="fitness-chart-"+chartid+"",style="height:300px;width:100%",class="dash-charts")
+
+mixin eventcard-1()
+    .card.event-dash-card
+        .card-body
+            h1.card-title
+                span.event-dash-card-icon
+                    i.fa.fa-calendar
+                span.day 25
+                |             
+                small
+                    | OCT 
+                    br
+                    |               4:30
+            |             
+            p.card-text New Orleans Jazz & Herritage Festival
+            |             
+            .card-footer
+                ul.guest-list
+                    li
+                        a(href="#" data-tooltip="Gail S" data-position="top left" data-variation="mini")
+                            img(src="assets/img/avatar/1.jpg", alt="Guests")
+                    |                 
+                    li
+                        a(href="#" data-tooltip="Jane" data-position="top left" data-variation="mini")
+                            img(src="assets/img/avatar/2.jpg", alt="Guests")
+                    |                 
+                    li
+                        a(href="#" data-tooltip="Alma H" data-position="top left" data-variation="mini")
+                            img(src="assets/img/avatar/3.jpg", alt="Guests")
+                    |                 
+                    li
+                        a(href="#" data-tooltip="Aubree C" data-position="top left" data-variation="mini")
+                            img(src="assets/img/avatar/4.jpg", alt="Guests")
+                    |                 
+                    li
+                        a(href="#" data-tooltip="+99 Others" data-position="top left" data-variation="mini")
+                            span +99
+
+mixin eventcard-2()
+    .card.event-dash-higlight-card
+        .card-header
+            h4.card-title Net Sales
+            a.heading-elements-toggle
+                i.fa.fa-ellipsis.font-medium-3
+            .heading-elements
+                ul.list-inline.mb-0.highlight-chart-buttons
+                    li
+                        a.ui.button.orange.mini.basic.circular.active.inverted(id="past24") 24h
+                    li
+                        a.ui.button.mini.basic.circular(id="past7") 7 Days
+                    li
+                        a.ui.button.mini.basic.circular(id="past30") 30 Days
+        .card-body
+            #highlight-chart(style="width:100%;height:300px",class="dash-charts")
+
+mixin eventcard-3()
+    .card.event-dash-social-card
+        .card-header
+            h4.card-title Recent Sales
+            a.heading-elements-toggle
+                i.fa.fa-ellipsis.font-medium-3
+            .heading-elements
+                ul.list-inline.mb-0.social-media-chart-buttons
+                    li
+                        a.ui.button.mini.basic.circular(id="followers") Week
+                    li
+                        a.ui.button.orange.mini.basic.circular.active.inverted(id="shares") Last Week
+                    li
+                        a.ui.button.mini.basic.circular(id="ctr") Today
+        .card-body
+            #social-chart(style="width:100%;height:300px",class="dash-charts")
+
+mixin eventcard-4(title,desc,chartid)
+    .card.event-dash-ctr1-card
+        h5.card-header=title
+        .card-body
+            p=desc
+            div(style="width:100%;height:160px",class="dash-charts",id=""+chartid+"")
+
+mixin salescard(money,title,chart_id)
+    .card.sales-card.z-depth-1
+        .card-body
+            .card-statistic
+                .ui.statistic.small
+                    .value=money
+                    .label=title
+            div(id=chart_id,style="height:200px;width:100%",class="dash-charts")
+
+mixin earningcard(chart_id)
+    .card.z-depth-1
+        .card-header
+            h2.card-title Monthly Earnings
+        .card-body
+            div(id=chart_id,style="height:400px;width:100%",class="dash-charts")
+        .card-footer
+            .btn-group
+                a.btn.btn-outline-secondary Daily
+                a.btn.btn-outline-secondary Weekly
+                a.btn.btn-outline-secondary Monthly
+
+mixin customercard(chart_id)
+    .card.z-depth-1
+        .card-header
+            h2.card-title Customers
+        .card-body
+            div(id=chart_id,style="height:400px;width:100%",class="dash-charts")
+        .card-footer
+            .btn-group
+                a.btn.btn-outline-secondary YESTERDAY - 16 JUL, 2017
+
+mixin dailysalepeakscard(chart_id,title)
+    .card.z-depth-1
+        .card-header
+            h2.card-title=title
+        .card-body
+            div(id=chart_id,style="height:400px;width:100%",class="dash-charts")
+
+mixin salescard-2(title,header1,header2,chartid)
+    .card.color-card-1.z-depth-1
+        .card-header
+            h2.card-title=title
+        .card-body
+            h3=header1
+            h1=header2
+            div(id=""+chartid+"",style="height:400px;width:100%",class="dash-charts")
+
+mixin salescard-3(title,header1,header2,imgsrc)
+    .card.color-card-2.z-depth-1
+        .card-header
+            h2.card-title=title
+        .card-body
+            h3=header1
+            h1=header2
+            img(src="assets/img/mockup/"+imgsrc+".png")
+
+mixin calendarcard-item(name,imgsrc)
+    .item.fc-event
+        img.ui.avatar.image(src="assets/img/avatar/"+imgsrc+".jpg")
+        .content
+            .header=name
+
+mixin support-card(header1,header2,grclass)
+    +col("12","12","12","12","3")
+        .card.support-gradient-card(class=""+grclass+"")
+            .card-body.text-center
+                h4=header1
+                h6=header2
+
+- var supportList = [{id: "987",imgsrc:"1",name:"Charles Bowman",email:"charles.bowman26@example.com",subject:"How to use Pug?",labelcolor:"blue",label:"New",assigned:"John",date:"10/02/2018"},{id: "886",imgsrc:"2",name:"Ross Reid",email:"ross.reid33@example.com",subject:"How to add new page?",labelcolor:"teal",label:"Solved",assigned:"Jane",date:"5/02/2018"},{id: "865",imgsrc:"3",name:"Wyatt Cooper",email:"wyatt.copper4@example.com",subject:"How to use Charts?",labelcolor:"teal",label:"Solved",assigned:"Jonathan",date:"3/02/2018"},{id: "766",imgsrc:"4",name:"Joseph Lewis",email:"joseph.lewss@example.com",subject:"How to use Jquery?",labelcolor:"red",label:"Pending",assigned:"John",date:"1/02/2018"},{id: "529",imgsrc:"5",name:"Katie Watkins",email:"katie.watkins1@example.com",subject:"How to use Gulp?",labelcolor:"teal",label:"Solved",assigned:"Jonathan",date:"28/01/2018"},{id: "468",imgsrc:"6",name:"Wayne Ryan",email:"wayne.ryan@example.com",subject:"How to use HTML?",labelcolor:"teal",label:"Solved",assigned:"Sam",date:"21/01/2018"},{id: "322",imgsrc:"7",name:"Bonnie Cunningham",email:"bonnie.cunning@example.com",subject:"How to use Bower?",labelcolor:"red",label:"Pending",assigned:"Cheryl",date:"20/01/2018"},{id: "428",imgsrc:"8",name:"Morris Walker",email:"morris.walkker@example.com",subject:"How to use Pug?",labelcolor:"purple",label:"Responded",assigned:"Kelly",date:"18/01/2018"},{id: "412",imgsrc:"9",name:"Christian Olson",email:"christian.olss@example.com",subject:"How to use Scss?",labelcolor:"orange",label:"Closed",assigned:"Sam",date:"16/01/2018"},{id: "404",imgsrc:"10",name:"Lisa James",email:"lisa.james75@example.com",subject:"How to use NPM?",labelcolor:"teal",label:"Solved",assigned:"Jane",date:"14/01/2018"},{id: "401",imgsrc:"10",name:"Curtis Barrett",email:"curtiss.barr@example.com",subject:"How to use Bower?",labelcolor:"red",label:"Pending",assigned:"Sam",date:"10/01/2018"}];
+mixin support-table()
+    table.table.support-table
+        thead
+            tr
+                th(scope="col") #ID
+                th(scope="col") By Opened
+                th(scope="col") Email
+                th(scope="col") Subject
+                th(scope="col") Status
+                th(scope="col") Assigned
+                th(scope="col") Date
+        tbody
+            each value, index in supportList
+                tr
+                    td=value.id
+                    td
+                        img.ui.mini.circular.image(src="assets/img/avatar/"+value.imgsrc+".jpg")
+                        span.text-primary=value.name
+                    td=value.email
+                    td=value.subject
+                    td
+                        .ui.label(class=""+value.labelcolor+"")=value.label
+                    td=value.assigned
+                    td=value.date
+        tfoot
+            tr
+                td(colspan="2")
+                    button.btn.btn-success.btn-rounded(type="button", data-toggle="modal", data-target="#add-contact") Add New Contact
+                td(colspan="6")
+                    .text-right
+
+- var contactsList = [{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Jenny Hess",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"},{imgsrc:"1",name:"Ida Fleming",desc:"Elliot requested permission to view your contact details",assigned:"Friends of Veronika"}]
+mixin contact-list()
+    each value, index in contactsList
+        li.card
+            .content
+                img.right.floated.tiny.ui.image(src="assets/img/avatar/"+value.imgsrc+".jpg")
+                .header=value.name   
+                .meta=value.assigned  
+                .description=value.desc
+            .extra.content
+                .ui.two.buttons
+                    .ui.basic.green.button Approve
+                    .ui.basic.red.button Decline
+
+mixin bootstrap-card-1(imgsrc,title,desc,btntext)
+    .card
+        img.card-img-top.img-responsive(src="assets/img/landscape/"+imgsrc+".jpg", alt=""+title+"")                   
+        .card-body
+            h4.card-title=title          
+            p.card-text=desc
+            a.btn.btn-primary(href="#")
+                | #{btntext}
+
+mixin bootstrap-card-2(title,subtitle,desc,btntext1,btntext2)
+    .card
+        .card-body
+            h5.card-title=title
+            h6.card-subtitle.mb-2.text-muted=subtitle
+            p.card-text=desc
+            a.card-link(href="#")=btntext1
+            a.card-link(href="#")=btntext2
+
+mixin bootstrap-card-3(type="")
+    .card(class=""+type+"")
+        .card-body
+            h5.card-title Pellentesque habitant
+            p.card-text Aenean commodo ligula eget dolor. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.
+            a.btn.btn-primary(href='#') Maecenas egestas
+
+mixin bootstrap-card-4(color="")
+    .card.text-white(class=""+color+"")
+        .card-header Praesent
+        .card-body
+            h5.card-title Fusce commodo aliquam arcu.
+            p.card-text
+            | Praesent nec nisl a purus blandit viverra. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Donec vitae sapien ut libero venenatis faucibus.
+
+mixin bootstrap-card-5(borderColor="")
+    .card(class=""+borderColor+"")
+        .card-header Morbi
+        .card-body.text-primary
+            h5.card-title Ut id nisl
+            p.card-text
+            | Phasellus dolor. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc.
+
+mixin semantic-card-1(imgsrc,header,date,desc,icon)
+  .ui.card.fluid
+    .image
+      img(src="assets/img/gallery/"+imgsrc+".jpg")
+    |   
+    .content
+      a.header=header
+      |     
+      .meta
+        span.date=date
+      |     
+      .description=desc
+    .extra.content
+      a
+        i.user.icon
+        span=icon
+
+mixin semantic-card-2(clock,imgsrc,coverimg,header,rficon,lficon)
+  .ui.card.fluid
+    .content
+      .right.floated.meta=clock
+      |     
+      img.ui.avatar.image(src="assets/img/gallery/"+imgsrc+".jpg",style="object-fit:cover")
+      span=header
+    |   
+    .image
+      img(src="assets/img/landscape/"+coverimg+".jpg")
+    .content
+      span.right.floated
+        i.heart.outline.like.icon
+        span=rficon
+      |     
+      i.comment.icon
+      span=lficon
+    |   
+    .extra.content
+      .ui.large.transparent.left.icon.input
+        i.heart.outline.icon
+        |       
+        input(type="text", placeholder="Add Comment...")
+
+mixin semantic-card-3(imgsrc,header,meta,desc)
+  .ui.card.fluid
+    .content
+      img.right.floated.mini.ui.image(src="assets/img/gallery/"+imgsrc+".jpg")
+      |       
+      .header=header
+      .meta=meta
+      .description=desc
+    .extra.content
+      .ui.two.buttons
+        .ui.basic.green.button Approve
+        |         
+        .ui.basic.red.button Decline
+
+mixin semantic-card-4(imgsrc,name,meta,desc,date,fcount)
+    .card
+        .image
+            img(src="assets/img/gallery/"+imgsrc+".jpg")
+        |     
+        .content
+            .header=name
+            .meta
+                a(href="")
+                    | #{meta}
+            .description=desc
+        .extra.content
+            span.right.floated=date
+            span
+                i.user.icon
+                #{fcount}
+
+mixin semantic-card-5()
+    .ui.card.fluid
+        .content
+            .header Project Timeline
+        |   
+        .content
+            h4.ui.sub.header Activity
+            |     
+            .ui.small.feed
+                .event
+                    .content
+                        .summary
+                            a Elliot Fu
+                            |  added 
+                            a Jenny Hess
+                            |  to the project
+                |       
+                .event
+                    .content
+                        .summary
+                            a Stevie Feliciano
+                            |  was added as an 
+                            a Administrator
+                |       
+                .event
+                    .content
+                        .summary
+                            a Helen Troy
+                            |  added two pictures
+        |   
+        .extra.content
+            button.ui.button Join Project
+
+mixin semantic-card-6()
+    .card
+        .blurring.dimmable.image
+            .ui.dimmer
+                .content
+                    .center
+                        .ui.inverted.button Add Friend
+            |       
+            img(src="assets/img/gallery/22.jpg")
+        |     
+        .content
+            a.header Team Fu
+            |       
+            .meta
+                span.date Create in Sep 2014
+        |     
+        .extra.content
+            a
+                i.users.icon
+                |         2 Members
+
+mixin advanced-cards-1(color,value, label,chart_id)
+    +col(12,12,12,12,3)
+        .card(class=color)
+            .card-body
+                .ui.statistic.inverted
+                    .value=value
+                    .label=label
+                div(id=chart_id,style="height:100px;width:100%",class="dash-charts")
+
+mixin advanced-cards-2(value, label,chart_id,imgsrc)
+    +col(12,12,12,12,3)
+        .card.advanced-card
+            .card-background(style="background:url('assets/img/landscape/fitness-"+imgsrc+".jpeg')")
+            .card-body
+                .ui.one.statistics.small
+                    .ui.statistic.inverted
+                        .value=value
+                        .label=label
+                div(id=chart_id,style="height:200px;width:100%",class="dash-charts")
+
+mixin advanced-cards-3(value, icon,imgsrc,degree,weather_kind)
+  +col(12,12,12,12,3)
+    .card.weather-card.advanced-card
+      .card-background(style="background:url('assets/img/landscape/"+imgsrc+".jpeg')")
+      .card-body
+        .ui.statistics.one.tiny
+          .ui.statistic.inverted
+            .value=value
+            .label
+              svg.svg-weather-icon(aria-hidden="true")
+                use(xlink:href=icon)
+            .value=weather_kind  + " " + degree
+              | &#x2103;
+
+mixin advanced-cards-4(chartid)
+    +col(12,12,12,12,6)
+        .card
+            .card-header(style="background:#727CD2;border-radius:0")
+                h2(style="color:#fff;text-align:center") Burned Calories
+            .card-body(style="padding:0")
+                div(id="calories-chart-"+chartid+"",style="height:400px;width:100%",class="dash-charts")
+
+mixin advanced-cards-5(title,imgsrc)
+    +col(12,12,12,12,3)
+        .card.svg-card.z-depth-2
+            .card-body
+                img(src="assets/img/svg/"+imgsrc+".svg")
+                .hobi-type
+                    h3=title
+
+mixin advanced-cards-6(title,h1,br,desc,price,imgsrc)
+    +col(12,12,12,12,4)
+        .card.wrapper.shop-card.z-depth-2
+            .outer
+                .content.animated.fadeInLeft
+                    span.bg.animated.fadeInDown=title
+                    h1
+                        | #{h1}
+                        br
+                        | #{br}	
+                    p=desc		
+                    .button
+                        a(href="#")
+                            | #{price}
+                        a.cart-btn(href="#")
+                            i.icon.iconfont.icon-cart
+                            | ADD TO CART
+                    | 		
+                img.animated.fadeInRight(src="assets/img/svg/"+imgsrc+".svg", width="200px")
+
+mixin breadcrumbs()
+    .ui.segment.basic(style="margin-bottom:0")
+        block
+
+mixin messages()
+    .ui.segment.basic(style="margin-bottom:0")
+        block
+
+mixin labels(title)
+  .card.fitness-card
+    .card-header
+      h4.card-title=title
+    .card-body
+      .card-block.animate-card
+        block
+
+mixin grid-12()
+  .card.grid-card.z-depth-2
+    block
+
+mixin chart-card(title,chartid)
+  .card.chart-card
+      .card-body
+        h5.card-title=title
+        .card-block
+          div.echarts(id=chartid,style="height:350px;width:100%")
+          block
+
+mixin chart-card1(chartid,datapercent)
+          div.chart(id=chartid,data-percent=datapercent)
+            span.percent=datapercent
+
+mixin chart-card2(title,chartid)
+  .card.chart-card
+      .card-body
+        h5.card-title=title
+        .card-block
+          canvas(id=chartid,style="height:400px;width:100%")
+          block
+
+mixin animate-css-card(title,animate)
+    +col(12,12,12,12,3)
+        .card.animate-card
+            .card-header
+                h4.card-title=title
+            .card-body
+                .card-block
+                    img.ui.small.centered.image.animated.animated-image(src="assets/img/svg/8.svg")
+                    a.fluid.animatecss.gradient-button.alchemist-lab(data-animate=""+animate+"")
+                        | #{title}
+
+mixin semantic-transition-card(title,animate)
+    +col(12,12,12,12,3)
+        .card.animate-card
+            .card-header
+                h4.card-title=title
+            .card-body
+                .card-block
+                    img.ui.small.centered.image.animated.animated-image(src="assets/img/svg/8.svg")
+                    a.fluid.sui-transition.gradient-button.alchemist-lab(data-animate=""+animate+"")
+                        | #{title}
+
+mixin extra-alerts-card(title,buttontext,desc,buttonclass,dataposition="",alerttype="")
+    +col(12,12,12,12,3)
+        .card.alerts-card
+            .card-header
+                h4.card-title=title
+            .card-body
+                .card-block
+                    | #{desc}
+                    a.fluid.gradient-button.alchemist-lab(class=""+buttonclass+"",data-easy-alert-position=""+dataposition+"",data-alert-type=""+alerttype+"")
+                        | #{buttontext}

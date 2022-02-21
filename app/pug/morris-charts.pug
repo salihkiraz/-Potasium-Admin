@@ -1,0 +1,24 @@
+extends layouts/base
+block styles
+	link(rel='stylesheet', href='libs/morris.js/morris.css')
+block page-content
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Line Chart","chart1")
+		+col(12,12,12,12,6)           
+			+chart-card("Area Chart","chart2")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Line Chart","chart3")
+		+col(12,12,12,12,6)           
+			+chart-card("Pie Chart","chart4")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Bar Chart","chart5")
+		+col(12,12,12,12,6)           
+			+chart-card("Area Chart","chart6")
+block scripts
+	// Morris Charts JavaScript
+	script(src="libs/raphael/raphael.min.js")
+	script(src="libs/morris.js/morris.min.js")
+	script( src="js/pages/morrischarts-data.min.js")

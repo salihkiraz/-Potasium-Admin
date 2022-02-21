@@ -1,0 +1,70 @@
+extends layouts/base
+block  page-title
+	|	Sweet Alert 2
+block breadcrumb-item-1
+	| 	Alerts
+block breadcrumb-item-2
+	| 	Sweet Alert 2
+block styles
+	link(rel='stylesheet', href='libs/sweetalert2/dist/sweetalert2.min.css')
+	link(rel='stylesheet', href='libs/animate.css/animate.min.css')  
+block page-content
+	+row()
+
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("A basic message")
+				a.fluid.gradient-button.alchemist-lab.s-alert-1 Alert It
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("A title with a text under")
+				a.fluid.gradient-button.alchemist-lab.s-alert-2 Alert It
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("An error message")
+				a.fluid.gradient-button.alchemist-lab.s-alert-3 Alert It
+	+row()
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("A modal window with a long text inside")
+				a.fluid.gradient-button.alchemist-lab.s-alert-4 Alert It
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("Custom HTML description and buttons with ARIA labels")
+				a.fluid.gradient-button.alchemist-lab.s-alert-5 Alert It
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("A custom positioned dialog")
+				a.fluid.gradient-button.alchemist-lab.s-alert-6 Alert It
+	+row()
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("jQuery HTML with custom animation ")
+				a.fluid.gradient-button.alchemist-lab.s-alert-7 Alert It
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("A warning message, with a function attached to the Confirm-button...")
+				a.fluid.gradient-button.alchemist-lab.s-alert-8 Alert It
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("... and by passing a parameter, you can execute something else for \"Cancel\".")
+				a.fluid.gradient-button.alchemist-lab.s-alert-9 Alert It
+	+row()
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("A message with a custom image and CSS animation disabled")
+				a.fluid.gradient-button.alchemist-lab.s-alert-10 Alert It
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("A message with custom width, padding and background")
+				a.fluid.gradient-button.alchemist-lab.s-alert-11 Alert It
+		+col(12,12,12,12,4)           
+			+basiccardwithactions("Right-to-left support for Arabic, Hebrew, and other RTL languages")
+				a.fluid.gradient-button.alchemist-lab.s-alert-13 Alert It
+	+row()
+		+col(12,12,12,12,6)           
+			+basiccardwithactions("A message with auto close timer")
+				a.fluid.gradient-button.alchemist-lab.s-alert-12 Alert It
+		+col(12,12,12,12,6)           
+			+basiccardwithactions("Ajax request example")
+				a.fluid.gradient-button.alchemist-lab.s-alert-14 Alert It
+	+row()
+
+		+col(12,12,12,12,6)           
+			+basiccardwithactions("Chaining modals (queue) example")
+				a.fluid.gradient-button.alchemist-lab.s-alert-15 Alert It
+		+col(12,12,12,12,6)           
+			+basiccardwithactions("Dynamic queue example")
+				a.fluid.gradient-button.alchemist-lab.s-alert-16 Alert It
+block scripts
+	script( src="libs/sweetalert2/dist/sweetalert2.min.js")
+	script( src="js/pages/sweet-alert.min.js")

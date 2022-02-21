@@ -1,0 +1,16 @@
+extends layouts/base
+block page-content
+	#contacts
+		.ui.fluid.icon.input
+			input(class="search",type="text", placeholder="Search for contacts")
+			i.search.icon
+		ul.ui.cards.three.stackable.list
+			+contact-list()
+block scripts
+	script( src="./libs/list.js/dist/list.min.js")
+	script.
+		//Contact List search settings
+		var options = {
+		valueNames: [ 'header', 'meta','description' ]
+		};
+		var userList = new List('contacts', options);

@@ -1,0 +1,19 @@
+extends layouts/base
+block page-content
+	+row()
+		+fitnesscard-1("Burned Calories","1")
+		+fitnesscard-1("Drinked Water","2")
+		+fitnesscard-1("Sleep","3")
+		+fitnesscard-1("Weight","4")
+	+row()
+		+fitnesscard-2("Burned Calories by Activity","5")
+		+fitnesscard-2("Steps Per Days","6")
+	+row()
+		+fitnesscard-3("Burned Calories by Days","7")
+		+fitnesscard-3("Activity Kind","8")
+		+fitnesscard-3("Activity Rate","9")
+
+block scripts
+	//Echarts
+	script( src='./libs/echarts/dist/echarts.min.js')
+	script( src='./js/dashboards/fitness-dashboard.min.js')

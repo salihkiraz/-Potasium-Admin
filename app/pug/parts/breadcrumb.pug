@@ -1,0 +1,23 @@
+include ../mixin/grid.pug
+.page-breadcrumb
+	+row()
+		+col(12,12,12,12,12)
+			.ui.segment.breadcrumb-segment
+				+row()
+					+col(12,12,12,12,6)
+						.ui.basic.segment
+							h3.page-subtitle
+								block page-title
+									| Home
+					+col(12,12,12,12,6)
+						.ui.right.aligned.basic.segment
+							.ui.breadcrumb
+								a.section(href='index.html') Home
+								.divider  /
+								a.section
+									block breadcrumb-item-1
+										| Dashboards
+								.divider  /
+								.active.section
+									block breadcrumb-item-2
+										| Home Dashboard

@@ -1,0 +1,604 @@
+extends layouts/base
+block  page-title
+	|	Basic Form Semantic UI
+block breadcrumb-item-1
+	| 	Form
+block breadcrumb-item-2
+	| 	Basic Form Semantic UI
+block page-content
+	+row()
+		+col("12","12","12","12","12")
+
+			+basiccard("Basic  Table")             
+				table.ui.celled.padded.table
+					thead
+						tr
+							th.single.line Evidence Rating
+							th Effect
+							th Consensus
+							th Comments
+					tbody
+						tr
+							td
+								h2.ui.center.aligned.header A
+							td.single.line
+								| Power Output
+							td.right.aligned
+								| 80% 
+								br
+								a(href='#') 18 studies
+							td
+								| Creatine supplementation is the reference compound for increasing muscular creatine levels; there is variability in this increase, however, with some nonresponders.
+						tr
+							td
+								h2.ui.center.aligned.header A
+							td.single.line
+								| Weight
+
+							td.right.aligned
+								| 100% 
+								br
+								a(href='#') 65 studies
+							td
+								| Creatine is the reference compound for power improvement, with numbers from one meta-analysis to assess potency
+			+basiccard("Definition")
+				table.ui.compact.celled.definition.table
+					thead
+						tr
+							th
+							th Name
+							th Registration Date
+							th E-mail address
+							th Premium Plan
+					tbody
+						tr
+							td.collapsing
+								.ui.fitted.slider.checkbox
+									input(type='checkbox')
+									label
+							td John Lilki
+							td September 14, 2013
+							td jhlilk22@yahoo.com
+							td No
+						tr
+							td.collapsing
+								.ui.fitted.slider.checkbox
+									input(type='checkbox')
+									label
+							td Jamie Harington
+							td January 11, 2014
+							td jamion@yahoo.com
+							td Yes
+						tr
+							td.collapsing
+								.ui.fitted.slider.checkbox
+									input(type='checkbox')
+									label
+							td Jill Lewis
+							td May 11, 2014
+							td jilsewris22@yahoo.com
+							td Yes
+					tfoot.full-width
+						tr
+							th
+							th(colspan='4')
+								.ui.right.floated.small.primary.labeled.icon.button
+									i.user.icon
+									|  Add User
+								.ui.small.button
+									| Approve
+								.ui.small.disabled.button
+									| Approve All
+								.clearfix
+		+col("12","12","12","12","6")
+			+basiccard("Basic Table")          
+				table.ui.celled.table
+					thead
+						tr
+							th Header
+							th Header
+							th Header
+					tbody
+						tr
+							td
+								.ui.ribbon.label First
+							td Cell
+							td Cell
+						tr
+							td Cell
+							td Cell
+							td Cell
+						tr
+							td Cell
+							td Cell
+							td Cell
+			+basiccard("Basic  Table")
+				table.ui.celled.structured.table
+					thead
+						tr
+							th(rowspan='2') Name
+							th(rowspan='2') Type
+							th(rowspan='2') Files
+							th(colspan='3') Languages
+						tr
+							th Ruby
+							th JavaScript
+							th Python
+					tbody
+						tr
+							td Alpha Team
+							td Project 1
+							td.right.aligned 2
+							td.center.aligned
+								i.large.green.checkmark.icon
+							td
+							td
+						tr
+							td(rowspan='3') Beta Team
+							td Project 1
+							td.right.aligned 52
+							td.center.aligned
+								i.large.green.checkmark.icon
+							td
+							td
+						tr
+							td Project 2
+							td.right.aligned 12
+							td
+							td.center.aligned
+								i.large.green.checkmark.icon
+							td
+						tr
+							td Project 3
+							td.right.aligned 21
+							td.center.aligned
+								i.large.green.checkmark.icon
+							td
+							td
+			+basiccard("Basic  Table")
+				table.ui.celled.table
+					thead
+						tr
+							th Name
+							th Status
+							th Notes
+					tbody
+						tr
+							td No Name Specified
+							td Unknown
+							td.negative None
+						tr.positive
+							td Jimmy
+							td
+								i.icon.checkmark
+								|  Approved
+							td None
+						tr
+							td Jamie
+							td Unknown
+							td.positive
+								i.icon.close
+								|  Requires call
+						tr.negative
+							td Jill
+							td Unknown
+							td None
+			+basiccard("Colored  Table")
+				table.ui.red.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.orange.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.yellow.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.olive.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.green.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.teal.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.blue.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.violet.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.purple.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.pink.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.grey.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+
+		+col("12","12","12","12","6")
+
+			+basiccard("Basic  Table")
+				table.ui.celled.striped.table
+					thead
+						tr
+							th(colspan='3')
+								| Git Repository
+					tbody
+						tr
+							td.collapsing
+								i.folder.icon
+								|  node_modules
+							td Initial commit
+							td.right.aligned.collapsing 10 hours ago
+						tr
+							td
+								i.folder.icon
+								|  test
+							td Initial commit
+							td.right.aligned 10 hours ago
+						tr
+							td
+								i.folder.icon
+								|  build
+							td Initial commit
+							td.right.aligned 10 hours ago
+						tr
+							td
+								i.file.outline.icon
+								|  package.json
+							td Initial commit
+							td.right.aligned 10 hours ago
+						tr
+							td
+								i.file.outline.icon
+								|  Gruntfile.js
+							td Initial commit
+							td.right.aligned 10 hours ago
+			+basiccard("Basic  Table")
+				table.ui.selectable.celled.table
+					thead
+						tr
+							th Name
+							th Status
+							th Notes
+					tbody
+						tr
+							td John
+							td No Action
+							td None
+						tr
+							td Jamie
+							td Approved
+							td Requires call
+						tr
+							td Jill
+							td Denied
+							td None
+						tr.warning
+							td John
+							td No Action
+							td None
+						tr
+							td Jamie
+							td.positive Approved
+							td.warning Requires call
+						tr
+							td Jill
+							td.negative Denied
+							td None
+			+basiccard("Colored Table")
+				table.ui.inverted.red.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.orange.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.yellow.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.olive.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.green.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.teal.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.blue.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.violet.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.purple.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.pink.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.brown.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g
+				table.ui.inverted.grey.table
+					thead
+						tr
+							th Food
+							th Calories
+							th Protein
+					tbody
+						tr
+							td Apples
+							td 200
+							td 0g
+						tr
+							td Orange
+							td 310
+							td 0g

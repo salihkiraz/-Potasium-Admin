@@ -1,0 +1,14 @@
+extends layouts/base
+block page-content
+	+row()
+		+support-card("5.655","All Tickets","plum-plate-g")
+		+support-card("4.325","Responded Tickets","cherry-g")
+		+support-card("3.879","Resolved Tickets","sea-weed-g")
+		+support-card("417","Pending Tickets","aqua-marine-g")
+	+row()
+		+col()
+			+support-table()
+block scripts
+	//Echarts
+	script( src='./libs/echarts/dist/echarts.min.js')
+	script( src='./js/home-dashboard.min.js')

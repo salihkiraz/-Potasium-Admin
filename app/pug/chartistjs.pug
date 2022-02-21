@@ -1,0 +1,30 @@
+extends layouts/base
+block styles
+	link(rel='stylesheet', href='libs/chartist/dist/chartist.min.css')
+	link(rel='stylesheet', href='css/pages/chartist-page.css')
+block page-content
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Line Chart","chart1")
+		+col(12,12,12,12,6)           
+			+chart-card("Area Chart","chart2")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Fixed Chart","chart3")
+		+col(12,12,12,12,6)           
+			+chart-card("Line Chart","chart4")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Fixed Chart","chart5")
+		+col(12,12,12,12,6)           
+			+chart-card("Bar Chart","chart6")
+	+row()
+		+col(12,12,12,12,6)           
+			+chart-card("Donut Chart","chart7")
+		+col(12,12,12,12,6)           
+			+chart-card("Animated Donut Chart","chart8")
+block scripts
+	// Chartist Charts JavaScript
+	script(src="libs/chartist/dist/chartist.min.js")
+	script(src="js/pages/chartistjs-tooltip.min.js")
+	script(src="js/pages/chartistjs-data.min.js")

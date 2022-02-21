@@ -1,0 +1,153 @@
+extends layouts/base
+block  page-title
+	|	E-Commerce
+block breadcrumb-item-1
+	| 	Pages
+block breadcrumb-item-2
+	| 	E-Commerce
+block styles
+	link(rel='stylesheet', href='css/pages/e-commerce-page.css')
+	header.cd-header
+		h1 Ecommerce Fashion
+	| 	
+	main.cd-main-content
+		.cd-tab-filter-wrapper
+			.cd-tab-filter
+				ul.cd-filters
+					li.placeholder
+						a(data-type="all", href="#0") All
+						// selected option on mobile
+					|  
+					| 					
+					li.filter
+						a.selected(href="#0", data-type="all") All
+					| 					
+					li.filter(data-filter=".girl")
+						a(href="#0", data-type="girl") girl
+					| 					
+					li.filter(data-filter=".boy")
+						a(href="#0", data-type="boy") boy
+				// cd-filters
+				// cd-tab-filter
+				// cd-tab-filter-wrapper
+				section.cd-gallery
+					ul
+						li.mix.girl.relax.skirt.shoe
+							img(src="assets/img/ecommerce/1.jpeg", alt="Image 1")
+						| 				
+						li.mix.girl.sport.skirt.hat
+							img(src="assets/img/ecommerce/2.jpeg", alt="Image 2")
+						| 				
+						li.mix.girl.night.dress.jeans
+							img(src="assets/img/ecommerce/3.jpeg", alt="Image 3")
+						| 				
+						li.mix.boy.night.skirt.shirt
+							img(src="assets/img/ecommerce/4.jpeg", alt="Image 4")
+						| 				
+						li.mix.girl.relax.dress.hat
+							img(src="assets/img/ecommerce/5.jpeg", alt="Image 5")
+						| 				
+						li.mix.boy.sport.dress.shoe
+							img(src="assets/img/ecommerce/6.jpeg", alt="Image 6")
+						| 				
+						li.mix.girl.sport.skirt.jeans
+							img(src="assets/img/ecommerce/7.jpeg", alt="Image 7")
+						| 				
+						li.mix.girl.relax.dress.shirt
+							img(src="assets/img/ecommerce/8.jpeg", alt="Image 8")
+						| 				
+						li.mix.boy.relax.skirt.shoe
+							img(src="assets/img/ecommerce/9.jpeg", alt="Image 9")
+						| 				
+						li.mix.boy.night.skirt.shirt
+							img(src="assets/img/ecommerce/10.jpeg", alt="Image 10")
+						| 				
+						li.mix.girl.night.dress.hat
+							img(src="assets/img/ecommerce/11.jpeg", alt="Image 11")
+						| 				
+						li.mix.girl.relax.dress.jeans
+							img(src="assets/img/ecommerce/12.jpeg", alt="Image 12")
+						| 				
+						li.gap
+						| 				
+						li.gap
+						| 				
+						li.gap
+					| 			
+					.cd-fail-message No results found
+				// cd-gallery
+				.cd-filter
+					form
+						.cd-filter-block
+							h4 Search
+							| 					
+							| 					
+							.cd-filter-content
+								input(type="search", placeholder="Try girl...")
+							// cd-filter-content
+							// cd-filter-block
+							.cd-filter-block
+								h4 Check boxes
+								| 					
+								ul.cd-filter-content.cd-filters.list
+									li
+										input#checkbox1.filter(data-filter=".relax", type="checkbox")
+										| 			    			
+										label.checkbox-label(for="checkbox1") Relax
+									| 						
+									li
+										input#checkbox2.filter(data-filter=".sport", type="checkbox")
+										| 							
+										label.checkbox-label(for="checkbox2") Sport
+									| 						
+									li
+										input#checkbox3.filter(data-filter=".night", type="checkbox")
+										| 							
+										label.checkbox-label(for="checkbox3") Night
+								// cd-filter-content
+								// cd-filter-block
+								.cd-filter-block
+									h4 Select
+									| 					
+									| 					
+									.cd-filter-content
+										.cd-select.cd-filters
+											select#selectThis.filter(name="selectThis")
+												option(value="") Choose an option
+												| 								
+												option(value=".jeans") Jeans
+												| 								
+												option(value=".hat") Hat
+												| 								
+												option(value=".shoe") Shoe
+												| 								
+												option(value=".shirt") Shirt
+										// cd-select
+										// cd-filter-content
+										// cd-filter-block
+										.cd-filter-block
+											h4 Radio buttons
+											| 					
+											ul.cd-filter-content.cd-filters.list
+												li
+													input#radio1.filter(data-filter="", type="radio", name="radioButton", checked="")
+													| 							
+													label.radio-label(for="radio1") All
+												| 						
+												li
+													input#skirt.filter(data-filter=".skirt", type="radio", name="radioButton")
+													| 							
+													label.radio-label(for="skirt") Skirt
+												| 						
+												li
+													input#dress.filter(data-filter=".dress", type="radio", name="radioButton")
+													| 							
+													label.radio-label(for="dress") Dress
+											// cd-filter-content
+											// cd-filter-block
+					| 			
+					a.cd-close(href="#0") Close
+				a.cd-filter-trigger(href="#0") Filters
+block scripts
+	script(src="js/pages/jquery.mixitup.min.js")
+	script(src="js/pages/ecommerce.min.js")

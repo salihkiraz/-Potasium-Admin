@@ -1,0 +1,57 @@
+extends layouts/base
+block page-content
+	+row()
+		+restaurantcard("Total Earning","$ 6920",'gaoxiaofei',"1",'#17cedc')
+		+restaurantcard("Daily Orders","128",'canyin',"2",'#02a2ec')
+		+restaurantcard("Today's Orders","249",'cart',"3",'#f46092')
+		+restaurantcard("Monthly Feed","10+",'tuandui',"4",'#7d57ce')
+	+row()
+		+restaurantcard-1()
+	+row()
+		+col("12","12","12","12","4")
+			.card.restaurant-activities-card
+				.card-body
+					h5.card-title Recent Activities
+					.ui.divided.items
+						+restaurantcard-2("Taco","12 Peoples ordered Taco","10 min. ago","99+ Remain")
+						+restaurantcard-2("Porridge","4 Peoples ordered Porridge","16 min. ago","50 Remain")
+						+restaurantcard-2("Pizza","24 Peoples ordered Pizza","1 hour ago","99+ Remain")
+						+restaurantcard-2("Hamburger","21 Peoples ordered Hamburger","2 days ago","99+ Remain")
+						+restaurantcard-2("Pancake","18 Peoples ordered Pancake","3 days ago","20 Remain")
+		+col("12","12","12","12","4")
+			.card.restaurant-activities-card
+				.card-body
+					h5.card-title Month's Best Sales Menus
+					.ui.divided.items
+						+restaurantcard-3("1","Alder Grilled Prosciutto Pesto Crusted Salmon","Shrimp, Arugula Risotto, Grilled White Asparagus Pink Peppercorn And Lemon Vinaigrette")
+						+restaurantcard-3("2","Grilled Chicken Wrap","Our Grilled Chicken Breast is dressed to impress with crisp lettuce, cheddar cheese and smoky honey mustard. This time, it's all wrapped up and ready to go in a flour tortilla")
+						+restaurantcard-3("3","Chicken And Yorkshire Pudding Dinner","Chicken fillet with mash, peas, gravy and a jumbo Yorkshire pudding")
+						+restaurantcard-3("4","Roasted Garlic Filet Medallions","Seared filet medallions topped with roasted garlic butter. Served with homestyle mashed potatoes and fresh steamed broccoli.")
+						+restaurantcard-3("5","Black Angus Burger","10oz steak burger minced with chilli, onion, garlic & capers")
+		+col("12","12","12","12","4")
+			.card.restaurant-activities-card
+				.card-body
+					h5.card-title Hot Sales
+					.ui.divided.items
+						+restaurantcard-3("6","Mexican Taco Monk Special","Scrambled Eggs, Bacon, Green Chiles & Freshly Grated Cheddar Jack Cheese With Tomatillo Sauce On Your Choice Of Tortilla.")
+						+restaurantcard-3("7","Indian Food Menu","Tasting Of Papads, Pork Belly Pickle, Prawn Balchao, Chicken Chaat, House Chutneys")
+						+restaurantcard-3("8","Parisien Eggs Benedict","Two poached eggs served on a fresh, butter croissant with ham, bacon and hollandaise sauce.")
+						+restaurantcard-3("9","Westlake Rice Porridge","Chopped Beef, Dungeness Crab, Sawtooth Herb, Egg")
+						+restaurantcard-3("10","Penne al Forno","Sautéed Spicy Italian Sausage, Prosciutto & Pepperoni Tossed With Ricotta & Our Homemade Marinara Sauce, Topped With Provolone, Mozzarella & Parmesan.")
+	+row()
+		+restauranttable()
+		+col("12","12","12","12","6")
+			.card.restaurant-support-tickets-card
+				.card-body
+					h5.card-title Support Tickets
+					.ui.unstackable.items
+						+restaurantcard-4("8","Gary Green","#14511254","Proin eget tortor risus. Donec rutrum congue leo eget malesuada.")
+						+restaurantcard-4("17","Letitia Morrison","#21564857","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor accumsan tincidunt.")
+						+restaurantcard-4("30","Bonnie Patterson","#18524456","Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat.")
+						+restaurantcard-4("21","Gary Green","#14511254","Proin eget tortor risus. Donec rutrum congue leo eget malesuada.")
+						+restaurantcard-4("14","Bonnie Patterson","#18524456","Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat.")
+
+block scripts
+	//Echarts
+	script( src='./libs/echarts/dist/echarts.min.js')
+	script( src='./js/dashboards/restaurant-dashboard.min.js')

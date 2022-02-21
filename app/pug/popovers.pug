@@ -1,0 +1,239 @@
+extends layouts/base
+block styles
+	link(rel='stylesheet', href='libs/semantic-ui/dist/components/popup.min.css')
+	link(rel='stylesheet', href='libs/ggpopover/assets/css/ggpopover.min.css')
+block page-content
+	+row()
+		+col("12","12","12","12","12")     
+			+basiccard("Bootstrap popover")
+				button.btn.btn-secondary.mb-2(type='button', data-toggle='popover', title='Popover title', data-content="And here's some amazing content. It's very engaging. Right?") Click to toggle popover
+				h5 Position
+				button.btn.btn-secondary(type='button', data-container='body', data-toggle='popover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on top
+				button.btn.btn-secondary(type='button', data-container='body', data-toggle='popover', data-placement='right', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')  Popover on right
+				button.btn.btn-secondary(type='button', data-container='body', data-toggle='popover', data-placement='bottom', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Popover on bottom
+				button.btn.btn-secondary(type='button', data-container='body', data-toggle='popover', data-placement='left', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')  Popover on left
+
+				h5 Dismiss on next click
+				a.btn.btn-danger(tabindex='0', role='button', data-toggle='popover', data-trigger='focus', title='Dismissible popover', data-content="And here's some amazing content. It's very engaging. Right?") Dismissible popover
+
+				span.d-inline-block(data-toggle='popover', data-content='Disabled popover')
+					button.btn.btn-primary(style='pointer-events: none;', type='button', disabled='') Disabled button
+		+col("12","12","12","12","12")     
+			+basiccard("Semantic UI popover")
+				.semantic_example    
+					.ui.icon.button.ex1(data-content='Add users to your feed')
+						i.add.icon
+					.ui.teal.button.ex2(data-title='Using click events', data-content='Clicked popups will close if you click away, but not if you click inside the popup') Click Me
+					.ui.icon.input.ex3
+						input(type='text', placeholder='Focus me...', data-content='You can use me to enter data')
+						i.search.icon
+					.ui.divider
+					.ui.button(data-tooltip='Add users to your feed', data-position='top left')
+						| Top Left
+					.ui.button(data-tooltip='Add users to your feed', data-position='top center')
+						| Top Center
+					.ui.button(data-tooltip='Add users to your feed', data-position='top right')
+						| Top Right
+
+					.ui.divider
+					.ui.button(data-tooltip='Add users to your feed', data-position='bottom left')
+						| Bottom Left
+					.ui.button(data-tooltip='Add users to your feed', data-position='bottom center')
+						| Bottom Center
+					.ui.button(data-tooltip='Add users to your feed', data-position='bottom right')
+						| Bottom Right
+
+					.ui.button(data-tooltip='Add users to your feed', data-position='right center')
+						| Right Center
+					.ui.button(data-tooltip='Add users to your feed', data-position='left center')
+						| Left Center
+
+			+basiccard("gg Popover","hidden-mobile")
+
+				.table-responsive.gg-examples2
+					table.table.table-bordered
+						thead.cf
+							tr
+								th(style='width: 100px;') title-backcolor
+								th(style='width: 100px;') title-bordercolor
+								th(style='width: 100px;') title-textcolor
+								th(style='width: 100px;') bordercolor
+								th(style='width: 100px;') arrowcolor
+								th preview
+						tbody
+							tr
+								td #0099cc
+								td #0099cc
+								td #ffffff
+								td #0099cc
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#0099cc', data-title-bordercolor='#0099cc', data-title-textcolor='#ffffff', data-bordercolor='#0099cc') preview
+							tr
+								td #6633cc
+								td #6633cc
+								td #ffffff
+
+								td #6633cc
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#6633cc', data-title-bordercolor='#6633cc', data-title-textcolor='#ffffff', data-bordercolor='#6633cc') preview
+							tr
+								td #990099
+								td #990099
+								td #ffffff
+
+								td #990099
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#990099', data-title-bordercolor='#990099', data-title-textcolor='#ffffff', data-bordercolor='#990099') preview
+							tr
+								td #0066cc
+								td #0066cc
+								td #ffffff
+
+								td #0066cc
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#0066cc', data-title-bordercolor='#0066cc', data-title-textcolor='#ffffff', data-bordercolor='#0066cc') preview
+							tr
+								td #cc3333
+								td #cc3333
+								td #ffffff
+
+								td #cc3333
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#cc3333', data-title-bordercolor='#cc3333', data-title-textcolor='#ffffff', data-bordercolor='#cc3333') preview
+							tr
+								td #009900
+								td #009900
+								td #ffffff
+
+								td #009900
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#009900', data-title-bordercolor='#009900', data-title-textcolor='#ffffff', data-bordercolor='#009900') preview
+							tr
+								td #cc6633
+								td #cc6633
+								td #ffffff
+
+								td #cc6633
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#cc6633', data-title-bordercolor='#cc6633', data-title-textcolor='#ffffff', data-bordercolor='#cc6633') preview
+							tr
+								td #ccffff
+								td #33ffff
+								td #333333
+
+								td #33ffff
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#ccffff', data-title-textcolor='#333333', data-title-bordercolor='#33ffff', data-bordercolor='#33ffff') preview
+							tr
+								td #ccccff
+								td #9999ff
+								td #333333
+
+								td #9999ff
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#ccccff', data-title-textcolor='#333333', data-title-bordercolor='#9999ff', data-bordercolor='#9999ff') preview
+							tr
+								td #ffcccc
+								td #ff9999
+								td #333333
+
+								td #ff9999
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#ffcccc', data-title-textcolor='#333333', data-title-bordercolor='#ff9999', data-bordercolor='#ff9999') preview
+							tr
+								td #99ccff
+								td #4d8ed0
+								td #333333
+
+								td #4d8ed0
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#99ccff', data-title-textcolor='#333333', data-title-bordercolor='#4d8ed0', data-bordercolor='#4d8ed0') preview
+							tr
+								td #ffcc99
+								td #cc9999
+								td #333333
+
+								td #cc9999
+								td
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#ffcc99', data-title-textcolor='#333333', data-title-bordercolor='#cc9999', data-bordercolor='#cc9999') preview
+							tr
+								td #cccccc
+								td #bbbbbb
+								td #444444
+
+								td #bbbbbb
+								td #eeeeee
+								td
+									a(href='#_', data-placement='right', data-arrowcolor='#eeeeee', data-bordercolor='#bbbbbb', data-title-backcolor='#cccccc', data-title-bordercolor='#bbbbbb', data-title-textcolor='#444444', data-content-backcolor='#eeeeee', data-content-textcolor='#888888') preview
+							tr
+								td #990099
+								td #990099
+								td #ffffff
+
+								td #990099
+								td #f1ddf1
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#990099', data-title-bordercolor='#990099', data-title-textcolor='#ffffff', data-bordercolor='#990099', data-content-backcolor='#f1ddf1', data-arrowcolor='#f1ddf1') preview
+							tr
+								td #0066cc
+								td #0066cc
+								td #ffffff
+
+								td #0066cc
+								td #e0ebf6
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#0066cc', data-title-bordercolor='#0066cc', data-title-textcolor='#ffffff', data-bordercolor='#0066cc', data-content-backcolor='#e0ebf6', data-arrowcolor='#e0ebf6') preview
+							tr
+								td #cc3333
+								td #cc3333
+								td #ffffff
+
+								td #cc3333
+								td #f8ecec
+								td
+									a(href='#_', data-placement='right', data-title-backcolor='#cc3333', data-title-bordercolor='#cc3333', data-title-textcolor='#ffffff', data-bordercolor='#cc3333', data-content-backcolor='#f8ecec', data-arrowcolor='#f8ecec') preview
+block scripts
+	script( src="libs/ggpopover/assets/js/ggpopover.min.js")
+	script( src="libs/semantic-ui/dist/components/popup.min.js")
+	style.
+		.semantic_example .button{
+			margin-top:3px;
+		}
+	script.
+
+		$(function () {
+			$('[data-toggle="popover"]').popover();
+			$('.popover-dismiss').popover({
+				trigger: 'focus'
+				})
+			})
+
+				// ggpopover 
+		$('.gg-examples2 a').ggpopover({
+			container: 'body',
+			title: 'Popover title',
+			content: 'And here\'s some amazing content. It\'s very engaging. Right?'
+						});
+
+					//semantic ui
+					$('.ex1').popup({inline: true});
+					$('.ex2')
+					.popup({
+						on: 'click'
+					});
+					$('.ex3 input')
+					.popup({
+						on: 'focus'
+					});

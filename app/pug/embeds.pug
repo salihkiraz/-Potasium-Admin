@@ -1,0 +1,19 @@
+extends layouts/base
+block page-content
+	.example
+		+row()
+			+col("12","12","12","12","6")
+
+				+basiccard("Embed")
+					p An embed displays content from other websites like YouTube videos or Google Maps
+					.ui.embed(data-source='youtube', data-id='O6Xo21L0ybE', data-placeholder='./assets/img/image-16by9.png')
+			+col("12","12","12","12","6")
+				+basiccard("Vimeo")
+					p An embed can be used to display Vimeo content.
+					.ui.embed(data-source='vimeo', data-id='125292332', data-placeholder='./assets/img/vimeo-example.jpg')
+			+col("12","12","12","12","6")
+				+basiccard("Custom Content")
+					.ui.embed(data-url='http://www.myfav.es/jack', data-placeholder='./assets/img/image-16by9.png', data-icon='right circle arrow')
+			+col("12","12","12","12","6")
+				+basiccard("Aspect Ratio")
+					.ui.embed(class='4:3', data-source='youtube', data-id='HTZudKi36bo', data-placeholder='./assets/img/landscape/2.jpg')
